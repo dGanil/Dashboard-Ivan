@@ -19,7 +19,13 @@ h6 {
 }
 
 input:focus {
-	outline: 0;
+    outline: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .mr-auto {
@@ -96,7 +102,9 @@ input:focus {
     box-shadow: none;
 }
 
-.list-group-item.now path {
+.list-group-item.now path,
+.list-group-item.now rect,
+.list-group-item.now circle {
     fill: #0068FC;
 }
 
@@ -245,7 +253,7 @@ input:focus {
 
 
 .clients__table tr:hover td {
-	background: #ebebeb;
+    background: #ebebeb;
 }
 
 
@@ -604,72 +612,204 @@ input:focus {
     padding-left: 24px;
     display: none;
 }
+
 .short-search {
-	position: relative;
-	height: 27px;
-	width: 16px
+    position: relative;
+    height: 27px;
+    width: 16px
 }
 
 .clients__search-btn {
-	position: absolute;
+    position: absolute;
 }
 
 .short-search.open .search__field {
-	display: block;
+    display: block;
 }
 
 .card .dropdown-menu {
-	width: 100px;
+    width: 100px;
     min-width: 0;
 }
 
 /* --Modals-- */
 
 .modal-content {
-	border-radius: 0;
+    border-radius: 0;
 }
 
 .modal {
-	z-index: 111100;
+    z-index: 111100;
 }
 
 .modal-dialog {
-	max-width: none;
-	width: 463px;
+    max-width: none;
+    width: 463px;
 }
 
 .modal-header {
-	padding: 20px 15px 0;
-	display: block;
-	border: 0;
+    padding: 20px 15px 0;
+    display: block;
+    border: 0;
 }
 
 .modal__dropdown {
-	margin-right: 56px;
+    margin-right: 56px;
 }
 
 .modal__tabs {
-	margin-top: 32px;
+    margin-top: 32px;
 }
 
 .modal__tabs .nav-link {
-	padding: 7px 49px;
+    padding: 7px 49px;
 }
 
 .modals-notify__date {
-	margin-top: 11px;
+    margin-top: 11px;
 }
 
 .modal-body {
-	padding: 12px 0 0 0;
+    padding: 12px 0 0 0;
 }
 
 .modal .signal {
-	padding-top: 20px;
-	padding-bottom: 30px;
-	padding-right: 15px;
-	padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
+
 .modal .signal:first-child {
-	background: #FFFCF7;
+    background: #FFFCF7;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.close-this {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    cursor: pointer;
+}
+
+/* --Quiz-- */
+
+.quiz-steps {
+    margin-top: 30px;
+}
+
+.quiz-steps__item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 43px;
+}
+
+.quiz-steps__item:last-child {
+    margin-bottom: 0;
+}
+
+.quiz-steps__item.active {
+    color: #3285D2;
+}
+
+
+.quiz-steps__item.active .quiz-steps__icon {
+    color: white;
+    background: #3285D2;
+}
+
+.quiz-steps__icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #DDE1ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    position: relative;
+}
+
+.quiz-steps__icon:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 43px;
+    background: #DDE1ED;
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 0.5px);
+}
+
+.quiz-steps__item:last-child .quiz-steps__icon:after {
+    display: none;
+}
+
+.quiz__card .card-header {
+    padding: 30px;
+    border-bottom: 2px solid #F4F4F6;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    color: #0068FC;
+}
+
+.quiz__card .card-header svg {
+    margin-right: 15px;
+}
+
+.quiz__card .card-body {
+    padding: 26px 38px 26px 30px;
+}
+
+.quiz__main {
+    width: 455px;
+}
+
+
+.quiz__card_1 .quiz__right {
+    width: 307px;
+}
+
+input[type="radio"] {
+    width: 16px;
+    height: 16px;
+}
+
+.choice label {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    margin-left: 10px;
+}
+
+.radio-block {
+    border: 2px solid #F4F4F6;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.radio-block__header {
+    padding: 18px 20px 15px 20px;
+}
+
+.radio-block__hidden {
+    padding: 29px 20px;
+    border-top: 2px solid #F4F4F6;
+}
+
+.quiz__card .dropdown-menu {
+    width: 100%;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+}
+
+.bootstrap-select>.dropdown-toggle:after {
+    display: none;
 }
