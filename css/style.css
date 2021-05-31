@@ -247,7 +247,7 @@ ul {
 
 .clients__table thead th:nth-child(4) {
     width: 101px;
-    text-align: center;
+    text-align: right;
 }
 
 .clients__table thead th:nth-child(5) {
@@ -351,15 +351,28 @@ ul {
     color: #11CDA9 !important;
 }
 
+.clients__table a {
+    color: #FECF76;
+    position: relative;
+}
+
 .tooltip>.tooltip-inner {
 
-    padding: 5px 11px;
+    padding: 5px 7px;
     font-size: 10px;
     line-height: 12px;
     background-color: white;
     color: #2E364A;
-    border: 1px solid #F4F4F6;
+    border-radius: 100px;
+    box-shadow: 0px 2px 10px rgba(46, 54, 74, 0.07);
+    position: absolute;
+    bottom: 0 !important;
+    left: 0px !important;
+    width: 56px;
+    min-height: 20px !important;
+
 }
+
 
 /* --Assets-- */
 
@@ -557,6 +570,15 @@ ul {
     font-size: 12px;
     line-height: 14px;
     color: #0068FC;
+}
+
+.already-read {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #2E364A;
+    opacity: 0.7;
+    margin-right: 10px;
 }
 
 .notify .long-search {
