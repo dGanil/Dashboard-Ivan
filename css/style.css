@@ -49,6 +49,12 @@ ul {
     text-align: left;
 }
 
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1165px;
+    }
+}
+
 
 /* --Header-- */
 
@@ -343,6 +349,16 @@ ul {
 
 .clients__table .text-success {
     color: #11CDA9 !important;
+}
+
+.tooltip>.tooltip-inner {
+
+    padding: 5px 11px;
+    font-size: 10px;
+    line-height: 12px;
+    background-color: white;
+    color: #2E364A;
+    border: 1px solid #F4F4F6;
 }
 
 /* --Assets-- */
@@ -1447,7 +1463,8 @@ input[type="checkbox"] {
     margin-bottom: 16px;
 }
 
-.quiz__card, .complete-step {
+.quiz__card,
+.complete-step {
     display: none;
 }
 
