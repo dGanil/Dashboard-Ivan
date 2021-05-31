@@ -52,7 +52,7 @@ $('#prev2').bind('click', function() {
     $('.quiz__card_1').fadeIn(500)
     $('#step2').removeClass('active')
     $('#step1').removeClass('closed')
-    $('#step1').addClass('active')  
+    $('#step1').addClass('active')
 })
 
 
@@ -68,7 +68,7 @@ $('#prev3').bind('click', function() {
     $('.quiz__card_2').fadeIn(500)
     $('#step3').removeClass('active')
     $('#step2').removeClass('closed')
-    $('#step2').addClass('active')  
+    $('#step2').addClass('active')
 })
 
 $('#next4').bind('click', function() {
@@ -83,8 +83,14 @@ $('#prev4').bind('click', function() {
     $('.quiz__card_3').fadeIn(500)
     $('#step4').removeClass('active')
     $('#step3').removeClass('closed')
-    $('#step3').addClass('active')  
+    $('#step3').addClass('active')
 })
+
+
+let clientSelect, clientName, descClient, birthday, pension,
+    busyness, drawdowns, typeFond, typeInvest, timeInvest, riskCapital,
+    riskFull, riskPercent, riskPriority, riskDrawdowns, riskFocus, classActives, removeSectors,
+    removeActions, etf, strategy
 
 
 $('#next5').bind('click', function() {
@@ -92,6 +98,42 @@ $('#next5').bind('click', function() {
     $('.quiz__card_6').fadeIn(500)
     $('#step5').addClass('closed')
     $('#step6').addClass('active')
+
+    clientSelect = $('#clientSelect').val()
+    clientName = $('#nameClient').val()
+    descClient = $('#desc').val()
+    birthday = $('#birthday').val()
+    pension = $('#pension').val()
+    busyness = $('#busyness').val()
+    drawdowns = $('#drawdowns').val()
+    timeInvest = $('#investHorizont').val()
+    riskCapital = $("#startCapital").val()
+    riskFull = $("#fullPortfolioCost").val()
+    riskPercent = $(".risk__slider-field").val()
+    riskPriority = $("#clientPriority").val()
+    riskDrawdowns = $("#clientVolatility").val()
+    riskFocus = $("input[name='focus-potfolio']:checked").val()
+
+    if ($("#existingClient").prop('checked')) {
+        $('#infoName').text(clientSelect)
+    } else if ($("#newClient").prop('checked')) {
+        $('#infoName').text(clientName)
+        $('#infoDesc').text(descClient)
+        $('#infoBirthday').text(birthday)
+        $('#infoPension').text(pension)
+        $('#infoBusyness').text(busyness)
+        $('#infoDrawdowns').text(drawdowns)
+    }
+
+    $("#infoTimeInvest").text(timeInvest)
+    $("#infoStartCapital").text(riskCapital)
+    $("#infoFullCost").text(riskFull)
+    $("#infoRiskPercent").text(riskPercent)
+    $("#infoInvestPriority").text(riskPriority)
+    $("#infoDoDrawdowns").text(riskDrawdowns)
+    $("#infoFocus").text(riskFocus)
+
+
 })
 
 $('#prev5').bind('click', function() {
@@ -99,7 +141,7 @@ $('#prev5').bind('click', function() {
     $('.quiz__card_4').fadeIn(500)
     $('#step5').removeClass('active')
     $('#step4').removeClass('closed')
-    $('#step4').addClass('active')  
+    $('#step4').addClass('active')
 })
 
 
@@ -114,7 +156,7 @@ $('#prev6').bind('click', function() {
     $('.quiz__card_5').fadeIn(500)
     $('#step6').removeClass('active')
     $('#step5').removeClass('closed')
-    $('#step5').addClass('active')  
+    $('#step5').addClass('active')
 })
 
 

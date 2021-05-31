@@ -1,6 +1,11 @@
 body {
     background: #F1F6FF;
     color: #2E364A;
+    font-weight: 400;
+}
+
+.table tbody {
+    font-weight: 400;
 }
 
 /* --Reset-- */
@@ -300,7 +305,7 @@ ul {
 }
 
 .clients__table .badge {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
 
 }

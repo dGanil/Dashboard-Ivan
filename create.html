@@ -173,15 +173,15 @@
                                         </div>
                                     </div>
                                     <div class="radio-block__hidden active">
-                                        <select class="bs-select" title="Выберите клиента из списка">
-                                            <option value="0">Иван Иванов</option>
-                                            <option value="1">Павел Горбунов</option>
-                                            <option value="2">Павел Горбунов</option>
-                                            <option value="3">Иван Иванов</option>
-                                            <option value="4">Иван Иванов</option>
-                                            <option value="5">Иван Иванов</option>
-                                            <option value="6">Иван Иванов</option>
-                                            <option value="7">Иван Иванов</option>
+                                        <select class="bs-select" id="clientSelect" title="Выберите клиента из списка">
+                                            <option value="Иван Иванов">Иван Иванов</option>
+                                            <option value="Павел Горбунов">Павел Горбунов</option>
+                                            <option value="Павел Горбунов">Павел Горбунов</option>
+                                            <option value="Иван Иванов">Иван Иванов</option>
+                                            <option value="Иван Иванов">Иван Иванов</option>
+                                            <option value="Иван Иванов">Иван Иванов</option>
+                                            <option value="Иван Иванов">Иван Иванов</option>
+                                            <option value="Иван Иванов">Иван Иванов</option>
                                         </select>
                                     </div>
                                 </div>
@@ -194,8 +194,8 @@
                                     </div>
                                     <div class="radio-block__hidden">
                                         <div class="field-row">
-                                            <label for="name">Имя</label>
-                                            <input class="field" id="name" type="text">
+                                            <label for="nameClient">Имя</label>
+                                            <input class="field" id="nameClient" type="text">
                                         </div>
                                         <div class="field-row">
                                             <label for="desc">Описание</label>
@@ -214,7 +214,7 @@
                                             <input class="field" id="busyness" type="text">
                                         </div>
                                         <div class="field-row">
-                                            <label for="drawdowns">Повеление при просадках</label>
+                                            <label for="drawdowns">Поведение при просадках</label>
                                             <input class="field" id="drawdowns" type="text">
                                         </div>
                                     </div>
@@ -370,7 +370,7 @@
                                     <div class="quiz__inner">
                                         <div class="quiz__left">
                                             <p class="quiz__caption">Когда дело доходит до инвестирования, что больше всего волнует клиента?</p>
-                                            <select class="bs-select" title="Выберите приоритет">
+                                            <select class="bs-select" id="clientPriority" title="Выберите приоритет">
                                                 <option value="0">Preservation of Capital</option>
                                                 <option value="1">Keep Risk to a Minimum, wiht Opportunity for Long-Term Growth</option>
                                                 <option value="2">Focus on Long Groeht, while Maintaining Risk</option>
@@ -381,7 +381,7 @@
                                                     Отношение к волотильности
                                                 </h3>
                                                 <p class="quiz__caption">Как бы клиент отреагировал на снижение своего портфеля на 20%?</p>
-                                                <select class="bs-select" title="Choose a priority">
+                                                <select class="bs-select" id="clientVolatility" title="Choose a priority">
                                                     <option value="0">Do Nothing</option>
                                                     <option value="1">Wait 3 Months before Making Changes</option>
                                                     <option value="2">Wait 1 Year before Making Changes</option>
@@ -392,11 +392,11 @@
                                                     Выберите фокус портфеля
                                                 </h3>
                                                 <div class="d-flex align-items-center radio__row radio__row_ml">
-                                                    <input type="radio" name="focus-potfolio" id="tolerance">
+                                                    <input type="radio" name="focus-potfolio" id="tolerance" value="Терпимость к просадкам">
                                                     <label for="tolerance">Терпимость к просадкам</label>
                                                 </div>
                                                 <div class="d-flex align-items-center radio__row radio__row_ml">
-                                                    <input type="radio" name="focus-potfolio" id="fullCostFocus">
+                                                    <input type="radio" name="focus-potfolio" id="fullCostFocus" value="Целевая стоимость портфеля">
                                                     <label for="fullCostFocus">Целевая стоимость портфеля</label>
                                                 </div>
                                             </div>
@@ -641,27 +641,27 @@
                                     <div class="info-block__content">
                                         <div class="info-block__row">
                                             <div class="info-block__left">Имя</div>
-                                            <div class="info-block__right">Иван Иванов</div>
+                                            <div class="info-block__right" id="infoName">Иван Иванов</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Описание</div>
-                                            <div class="info-block__right"></div>
+                                            <div class="info-block__right" id="infoDesc"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Дата рождения</div>
-                                            <div class="info-block__right">02/03/1970</div>
+                                            <div class="info-block__right" id="infoBirthday">02/03/1970</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Выход на пенсию</div>
-                                            <div class="info-block__right">02/03/2025</div>
+                                            <div class="info-block__right" id="infoPension">02/03/2025</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Статус Занятости</div>
-                                            <div class="info-block__right">Работает</div>
+                                            <div class="info-block__right" id="infoBusyness">Работает</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Поведение при просадках</div>
-                                            <div class="info-block__right">Держать</div>
+                                            <div class="info-block__right" id="infoDrawdowns">Держать</div>
                                         </div>
                                     </div>
                                 </div>
@@ -677,15 +677,15 @@
                                     <div class="info-block__content">
                                         <div class="info-block__row">
                                             <div class="info-block__left">Тип фонда</div>
-                                            <div class="info-block__right">Инвестиционный</div>
+                                            <div class="info-block__right" id="infoTypeFond">Инвестиционный</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Тип инвестиций</div>
-                                            <div class="info-block__right">Индивидуальный</div>
+                                            <div class="info-block__right" id="infoTypeInvest">Индивидуальный</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Срок инвестирования</div>
-                                            <div class="info-block__right">25 лет</div>
+                                            <div class="info-block__right" id="infoTimeInvest">25 лет</div>
                                         </div>
                                     </div>
                                 </div>
@@ -701,27 +701,27 @@
                                     <div class="info-block__content">
                                         <div class="info-block__row">
                                             <div class="info-block__left">Начальный капитал</div>
-                                            <div class="info-block__right">$250.000</div>
+                                            <div class="info-block__right" id="infoStartCapital">$250.000</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Целевое значение</div>
-                                            <div class="info-block__right">$700.000</div>
+                                            <div class="info-block__right" id="infoFullCost">$700.000</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Риск</div>
-                                            <div class="info-block__right">75%</div>
+                                            <div class="info-block__right" id="infoRiskPercent">75%</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Инвестиционный приоритет</div>
-                                            <div class="info-block__right">Maximaze Long-Term Retur...</div>
+                                            <div class="info-block__right" id="infoInvestPriority">Maximaze Long-Term Retur...</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Поведение при просадках</div>
-                                            <div class="info-block__right">Change the Portfolio Immed...</div>
+                                            <div class="info-block__right" id="infoDoDrawdowns">Change the Portfolio Immed...</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Фокус</div>
-                                            <div class="info-block__right">Целевая стоимость портфеля</div>
+                                            <div class="info-block__right" id="infoFocus">Целевая стоимость портфеля</div>
                                         </div>
                                     </div>
                                 </div>
@@ -737,19 +737,19 @@
                                     <div class="info-block__content">
                                         <div class="info-block__row">
                                             <div class="info-block__left">Классы активов</div>
-                                            <div class="info-block__right">US Equites, US Bonds(...</div>
+                                            <div class="info-block__right" id="infoActives">US Equites, US Bonds(...</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Исключенные секторы</div>
-                                            <div class="info-block__right"></div>
+                                            <div class="info-block__right" id="infoRemoveSectors"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Исключенные акции</div>
-                                            <div class="info-block__right">FB</div>
+                                            <div class="info-block__right" id="infoRemoveActions">FB</div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Только ETF</div>
-                                            <div class="info-block__right">Нет</div>
+                                            <div class="info-block__right" id="infoEtf">Нет</div>
                                         </div>
                                     </div>
                                 </div>
