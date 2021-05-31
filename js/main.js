@@ -24,11 +24,11 @@ $('.clients__search-btn').bind('click', function() {
 })
 
 $('.radio-block input[type="radio"]').bind('change', function() {
-    if ($(this).prop('checked')) {
-        $(this).parents('.card').find('.radio-block__hidden').removeClass('active')
-        $(this).parents('.radio-block').find('.radio-block__hidden').addClass('active')
+    if ($(this).prop('checked') && !$(this).parents('.radio-block').find('.radio-block__hidden').hasClass('open-all')) {
+        $(this).parents('.card').find('.radio-block__hidden').slideUp(250)
+        $(this).parents('.radio-block').find('.radio-block__hidden').slideDown(250)
     } else if (!$(this).prop('checked')) {
-        $(this).parents('.radio-block').find('.radio-block__hidden').removeClass('active')
+        $(this).parents('.radio-block').find('.radio-block__hidden').slideDown(250)
     }
 })
 
