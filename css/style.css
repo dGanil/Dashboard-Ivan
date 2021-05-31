@@ -140,6 +140,7 @@ ul {
 
 .content {
     padding-top: 171px;
+    padding-bottom: 70px;
 }
 
 .updated {
@@ -594,6 +595,14 @@ ul {
     background: #F4F4F6;
     left: -15px;
     bottom: 0;
+}
+
+.notification:last-child {
+    padding-bottom: 0;
+}
+
+.notification:last-child:after {
+    display: none;
 }
 
 .notification .badge.bg-light {
