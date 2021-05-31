@@ -25,7 +25,7 @@ $('.clients__search-btn').bind('click', function() {
 
 $('input[type="radio"]').bind('change', function() {
     if ($(this).prop('checked')) {
-        $('.radio-block__hidden').removeClass('active')
+        $(this).parents('.card').find('.radio-block__hidden').removeClass('active')
         $(this).parents('.radio-block').find('.radio-block__hidden').addClass('active')
     } else if (!$(this).prop('checked')) {
         $(this).parents('.radio-block').find('.radio-block__hidden').removeClass('active')
