@@ -34,22 +34,22 @@ $('.radio-block input[type="radio"]').bind('change', function() {
 
 
 $('#next1').bind('click', function() {
-    $('.quiz__card_1').hide()
-    $('.quiz__card_2').show()
+    $('.quiz__card_1').fadeOut(1)
+    $('.quiz__card_2').fadeIn(500)
     $('#step1').addClass('closed')
     $('#step2').addClass('active')
 })
 
 $('#next2').bind('click', function() {
-    $('.quiz__card_2').hide()
-    $('.quiz__card_3').show()
+    $('.quiz__card_2').fadeOut(1)
+    $('.quiz__card_3').fadeIn(500)
     $('#step2').addClass('closed')
     $('#step3').addClass('active')
 })
 
 $('#prev2').bind('click', function() {
-    $('.quiz__card_2').hide()
-    $('.quiz__card_1').show()
+    $('.quiz__card_2').fadeOut(1)
+    $('.quiz__card_1').fadeIn(500)
     $('#step2').removeClass('active')
     $('#step1').removeClass('closed')
     $('#step1').addClass('active')  
@@ -57,30 +57,30 @@ $('#prev2').bind('click', function() {
 
 
 $('#next3').bind('click', function() {
-    $('.quiz__card_3').hide()
-    $('.quiz__card_4').show()
+    $('.quiz__card_3').fadeOut(1)
+    $('.quiz__card_4').fadeIn(500)
     $('#step3').addClass('closed')
     $('#step4').addClass('active')
 })
 
 $('#prev3').bind('click', function() {
-    $('.quiz__card_3').hide()
-    $('.quiz__card_2').show()
+    $('.quiz__card_3').fadeOut(1)
+    $('.quiz__card_2').fadeIn(500)
     $('#step3').removeClass('active')
     $('#step2').removeClass('closed')
     $('#step2').addClass('active')  
 })
 
 $('#next4').bind('click', function() {
-    $('.quiz__card_4').hide()
-    $('.quiz__card_5').show()
+    $('.quiz__card_4').fadeOut(1)
+    $('.quiz__card_5').fadeIn(500)
     $('#step4').addClass('closed')
     $('#step5').addClass('active')
 })
 
 $('#prev4').bind('click', function() {
-    $('.quiz__card_4').hide()
-    $('.quiz__card_3').show()
+    $('.quiz__card_4').fadeOut(1)
+    $('.quiz__card_3').fadeIn(500)
     $('#step4').removeClass('active')
     $('#step3').removeClass('closed')
     $('#step3').addClass('active')  
@@ -88,15 +88,15 @@ $('#prev4').bind('click', function() {
 
 
 $('#next5').bind('click', function() {
-    $('.quiz__card_5').hide()
-    $('.quiz__card_6').show()
+    $('.quiz__card_5').fadeOut(1)
+    $('.quiz__card_6').fadeIn(500)
     $('#step5').addClass('closed')
     $('#step6').addClass('active')
 })
 
 $('#prev5').bind('click', function() {
-    $('.quiz__card_5').hide()
-    $('.quiz__card_4').show()
+    $('.quiz__card_5').fadeOut(1)
+    $('.quiz__card_4').fadeIn(500)
     $('#step5').removeClass('active')
     $('#step4').removeClass('closed')
     $('#step4').addClass('active')  
@@ -105,13 +105,13 @@ $('#prev5').bind('click', function() {
 
 
 $('#next6').bind('click', function() {
-    $('.quiz__card').hide()
+    $('.quiz__card').fadeOut(1)
     $('#step6').addClass('closed')
 })
 
 $('#prev6').bind('click', function() {
-    $('.quiz__card_6').hide()
-    $('.quiz__card_5').show()
+    $('.quiz__card_6').fadeOut(1)
+    $('.quiz__card_5').fadeIn(500)
     $('#step6').removeClass('active')
     $('#step5').removeClass('closed')
     $('#step5').addClass('active')  
