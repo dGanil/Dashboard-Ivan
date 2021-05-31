@@ -106,6 +106,7 @@ $('#prev5').bind('click', function() {
 
 $('#next6').bind('click', function() {
     $('.quiz__card').hide()
+    $('#step6').addClass('closed')
 })
 
 $('#prev6').bind('click', function() {
