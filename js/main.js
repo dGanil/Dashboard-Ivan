@@ -490,12 +490,15 @@ $('#prev5').bind('click', function() {
     $('#step4').addClass('active')
 })
 
-
+var urlView = "view.html";
 
 $('#next6').bind('click', function() {
-    $('.quiz__card').fadeOut(1)
     $('#step6').addClass('closed')
-    calculte();
+    // calculte();
+    $(".preloader").fadeIn(500)
+    setTimeout(function() { 
+        $(location).attr('href', urlView);
+    }, 4000);
 })
 
 $('#prev6').bind('click', function() {

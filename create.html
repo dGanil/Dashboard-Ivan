@@ -267,7 +267,7 @@
                                         </div>
                                         <div class="radio-block__hidden active">
                                             <p class="quiz__caption">Какой тип учетной записи?</p>
-                                            <select class="bs-select" id="typeProfile"title="Выберите тип учетной записи">
+                                            <select class="bs-select" id="typeProfile" title="Выберите тип учетной записи">
                                                 <option value="0">Individual</option>
                                                 <option value="1">Joint</option>
                                                 <option value="2">Trust</option>
@@ -442,7 +442,7 @@
                                             <label for="promotions">Акции</label>
                                         </div>
                                         <div class="field-row d-flex align-items-center">
-                                            <input type="checkbox" id="bonds" name="types-assets"  value="Облигации (Муниципальные, Корпоративные, Казначейские)">
+                                            <input type="checkbox" id="bonds" name="types-assets" value="Облигации (Муниципальные, Корпоративные, Казначейские)">
                                             <label for="bonds">Облигации (Муниципальные, Корпоративные, Казначейские)</label>
                                         </div>
                                         <div class="field-row d-flex align-items-center">
@@ -779,9 +779,17 @@
                 </div>
             </div>
         </div>
-<!--         <button class="next-forth">
-            К резюме
-        </button> -->
+        <div class="preloader">
+            <div class="preloader__wrap">
+                <div class="preloader__block">
+                    <svg class="preloader__logo" width="122" height="87" viewBox="0 0 122 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M60.8206 63.3379L86.8353 0H122L78.0441 87H43.5971L0 0H34.8956L60.8206 63.3379Z" fill="#32A7D4" />
+                    </svg>
+                    <div class="linePreloader"></div>
+                    <p class="preloader__text">Loading assets</p>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- Modals -->
     <div class="modal fade" id="notificationsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
