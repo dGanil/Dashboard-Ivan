@@ -267,7 +267,7 @@
                                         </div>
                                         <div class="radio-block__hidden active">
                                             <p class="quiz__caption">Какой тип учетной записи?</p>
-                                            <select class="bs-select" title="Выберите тип учетной записи">
+                                            <select class="bs-select" id="typeProfile"title="Выберите тип учетной записи">
                                                 <option value="0">Individual</option>
                                                 <option value="1">Joint</option>
                                                 <option value="2">Trust</option>
@@ -371,10 +371,10 @@
                                         <div class="quiz__left">
                                             <p class="quiz__caption">Когда дело доходит до инвестирования, что больше всего волнует клиента?</p>
                                             <select class="bs-select" id="clientPriority" title="Выберите приоритет">
-                                                <option value="0">Preservation of Capital</option>
-                                                <option value="1">Keep Risk to a Minimum, wiht Opportunity for Long-Term Growth</option>
-                                                <option value="2">Focus on Long Groeht, while Maintaining Risk</option>
-                                                <option value="3">Maximaze Long-Term Returns, while Accepting Large Short-Term Losses</option>
+                                                <option value="Preservation of Capital">Preservation of Capital</option>
+                                                <option value="Keep Risk to a Minimum, wiht Opportunity for Long-Term Growth">Keep Risk to a Minimum, wiht Opportunity for Long-Term Growth</option>
+                                                <option value="Focus on Long Groeht, while Maintaining Risk">Focus on Long Groeht, while Maintaining Risk</option>
+                                                <option value="Maximaze Long-Term Returns, while Accepting Large Short-Term Losses">Maximaze Long-Term Returns, while Accepting Large Short-Term Losses</option>
                                             </select>
                                             <div class="volatility">
                                                 <h3 class="quiz__heading">
@@ -438,35 +438,35 @@
                                 <div class="quiz__inner">
                                     <div class="quiz__left">
                                         <div class="field-row d-flex align-items-center">
-                                            <input type="checkbox" id="promotions" name="types-assets">
+                                            <input type="checkbox" id="promotions" name="types-assets" value="Акции">
                                             <label for="promotions">Акции</label>
                                         </div>
                                         <div class="field-row d-flex align-items-center">
-                                            <input type="checkbox" id="bonds" name="types-assets">
+                                            <input type="checkbox" id="bonds" name="types-assets"  value="Облигации (Муниципальные, Корпоративные, Казначейские)">
                                             <label for="bonds">Облигации (Муниципальные, Корпоративные, Казначейские)</label>
                                         </div>
                                         <div class="field-row d-flex align-items-center">
-                                            <input type="checkbox" id="treasury" name="types-assets">
+                                            <input type="checkbox" id="treasury" name="types-assets" value="Казначейские Ценные бумаги, защищенные от инфляции">
                                             <label for="treasury">Казначейские Ценные бумаги, защищенные от инфляции</label>
                                         </div>
                                         <div class="field-row d-flex align-items-center">
-                                            <input type="checkbox" id="international" name="types-assets">
+                                            <input type="checkbox" id="international" name="types-assets" value="Международные акции">
                                             <label for="international">Международные акции</label>
                                         </div>
                                         <div class="field-row d-flex align-items-center">
-                                            <input type="checkbox" id="markets" name="types-assets">
+                                            <input type="checkbox" id="markets" name="types-assets" value="Товарные рынки">
                                             <label for="markets">Товарные рынки</label>
                                         </div>
                                         <div class="field-row d-flex align-items-center">
-                                            <input type="checkbox" id="property" name="types-assets">
+                                            <input type="checkbox" id="property" name="types-assets" value="Недвижимость">
                                             <label for="property">Недвижимость</label>
                                         </div>
                                         <div class="field-row d-flex align-items-center">
-                                            <input type="checkbox" id="master_limited" name="types-assets">
+                                            <input type="checkbox" id="master_limited" name="types-assets" value="Master limeted Partnerships">
                                             <label for="master_limited">Master limeted Partnerships</label>
                                         </div>
                                         <div class="field-row d-flex align-items-center">
-                                            <input type="checkbox" id="international_bonds" name="types-assets">
+                                            <input type="checkbox" id="international_bonds" name="types-assets" value="Международные облигации">
                                             <label for="international_bonds">Международные облигации</label>
                                         </div>
                                     </div>
@@ -481,43 +481,43 @@
                                     </h3>
                                     <div class="sectors-list">
                                         <div class="sector">
-                                            <input type="checkbox" id="finance" name="sectors">
+                                            <input type="checkbox" id="finance" name="sectors" value="Финансовый">
                                             <label for="finance">Финансовый</label>
                                         </div>
                                         <div class="sector">
-                                            <input type="checkbox" id="health" name="sectors">
+                                            <input type="checkbox" id="health" name="sectors" value="Здравоохранение">
                                             <label for="health">Здравоохранение</label>
                                         </div>
                                         <div class="sector">
-                                            <input type="checkbox" id="consumer" name="sectors">
+                                            <input type="checkbox" id="consumer" name="sectors" value="Потребительские услуги">
                                             <label for="consumer">Потребительские услуги</label>
                                         </div>
                                         <div class="sector">
-                                            <input type="checkbox" id="energy" name="sectors">
+                                            <input type="checkbox" id="energy" name="sectors" value="Энергетический">
                                             <label for="energy">Энергетический</label>
                                         </div>
                                         <div class="sector">
-                                            <input type="checkbox" id="industrial" name="sectors">
+                                            <input type="checkbox" id="industrial" name="sectors" value="Промышленный">
                                             <label for="industrial">Промышленный</label>
                                         </div>
                                         <div class="sector">
-                                            <input type="checkbox" id="consumer_goods" name="sectors">
+                                            <input type="checkbox" id="consumer_goods" name="sectors" value="Потребительские товары">
                                             <label for="consumer_goods">Потребительские товары</label>
                                         </div>
                                         <div class="sector">
-                                            <input type="checkbox" id="estate" name="sectors">
+                                            <input type="checkbox" id="estate" name="sectors" value="Недвижимость">
                                             <label for="estate">Недвижимость</label>
                                         </div>
                                         <div class="sector">
-                                            <input type="checkbox" id="technological" name="sectors">
+                                            <input type="checkbox" id="technological" name="sectors" value="Технологический">
                                             <label for="technological">Технологический</label>
                                         </div>
                                         <div class="sector">
-                                            <input type="checkbox" id="materials" name="sectors">
+                                            <input type="checkbox" id="materials" name="sectors" value="Сырьевой">
                                             <label for="materials">Сырьевой</label>
                                         </div>
                                         <div class="sector">
-                                            <input type="checkbox" id="telecommunication" name="sectors">
+                                            <input type="checkbox" id="telecommunication" name="sectors" value="Телекоммуникационный">
                                             <label for="telecommunication">Телекоммуникационный</label>
                                         </div>
                                     </div>
@@ -540,11 +540,11 @@
                                         Комиссия фондов ETF
                                     </div>
                                     <div class="d-flex align-items-center radio__row radio__row_ml">
-                                        <input type="radio" name="etf" id="etfNo">
+                                        <input type="radio" name="etf" id="etfNo" value="Нет">
                                         <label for="etfNo">Нет</label>
                                     </div>
                                     <div class="d-flex align-items-center radio__row radio__row_ml">
-                                        <input type="radio" name="etf" id="etfYes">
+                                        <input type="radio" name="etf" id="etfYes" value="Да">
                                         <label for="etfYes">Да</label>
                                     </div>
                                 </div>
@@ -570,7 +570,7 @@
                                 <div class="radio-block">
                                     <div class="radio-block__header">
                                         <div class="choice d-flex align-items-center">
-                                            <input type="radio" id="default" name="invest-strategy" checked>
+                                            <input type="radio" id="default" name="invest-strategy" checked value="По умолчанию">
                                             <label for="default">По умолчанию</label>
                                         </div>
                                     </div>
@@ -583,7 +583,7 @@
                                 <div class="radio-block">
                                     <div class="radio-block__header">
                                         <div class="choice d-flex align-items-center">
-                                            <input type="radio" id="focusGrowth" name="invest-strategy">
+                                            <input type="radio" id="focusGrowth" name="invest-strategy" value="Фокус на рост">
                                             <label for="focusGrowth">Фокус на рост</label>
                                         </div>
                                     </div>
@@ -596,7 +596,7 @@
                                 <div class="radio-block">
                                     <div class="radio-block__header">
                                         <div class="choice d-flex align-items-center">
-                                            <input type="radio" id="diversification" name="invest-strategy">
+                                            <input type="radio" id="diversification" name="invest-strategy" value="Фокус на диверсификацию">
                                             <label for="diversification">Фокус на диверсификацию</label>
                                         </div>
                                     </div>
@@ -641,7 +641,7 @@
                                     <div class="info-block__content">
                                         <div class="info-block__row">
                                             <div class="info-block__left">Имя</div>
-                                            <div class="info-block__right" id="infoName">Иван Иванов</div>
+                                            <div class="info-block__right" id="infoName"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Описание</div>
@@ -649,19 +649,19 @@
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Дата рождения</div>
-                                            <div class="info-block__right" id="infoBirthday">02/03/1970</div>
+                                            <div class="info-block__right" id="infoBirthday"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Выход на пенсию</div>
-                                            <div class="info-block__right" id="infoPension">02/03/2025</div>
+                                            <div class="info-block__right" id="infoPension"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Статус Занятости</div>
-                                            <div class="info-block__right" id="infoBusyness">Работает</div>
+                                            <div class="info-block__right" id="infoBusyness"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Поведение при просадках</div>
-                                            <div class="info-block__right" id="infoDrawdowns">Держать</div>
+                                            <div class="info-block__right" id="infoDrawdowns"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -677,15 +677,15 @@
                                     <div class="info-block__content">
                                         <div class="info-block__row">
                                             <div class="info-block__left">Тип фонда</div>
-                                            <div class="info-block__right" id="infoTypeFond">Инвестиционный</div>
+                                            <div class="info-block__right" id="infoTypeFond"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Тип инвестиций</div>
-                                            <div class="info-block__right" id="infoTypeInvest">Индивидуальный</div>
+                                            <div class="info-block__right" id="infoTypeInvest"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Срок инвестирования</div>
-                                            <div class="info-block__right" id="infoTimeInvest">25 лет</div>
+                                            <div class="info-block__right" id="infoTimeInvest"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -701,27 +701,27 @@
                                     <div class="info-block__content">
                                         <div class="info-block__row">
                                             <div class="info-block__left">Начальный капитал</div>
-                                            <div class="info-block__right" id="infoStartCapital">$250.000</div>
+                                            <div class="info-block__right" id="infoStartCapital"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Целевое значение</div>
-                                            <div class="info-block__right" id="infoFullCost">$700.000</div>
+                                            <div class="info-block__right" id="infoFullCost"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Риск</div>
-                                            <div class="info-block__right" id="infoRiskPercent">75%</div>
+                                            <div class="info-block__right" id="infoRiskPercent"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Инвестиционный приоритет</div>
-                                            <div class="info-block__right" id="infoInvestPriority">Maximaze Long-Term Retur...</div>
+                                            <div class="info-block__right" id="infoInvestPriority"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Поведение при просадках</div>
-                                            <div class="info-block__right" id="infoDoDrawdowns">Change the Portfolio Immed...</div>
+                                            <div class="info-block__right" id="infoDoDrawdowns"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Фокус</div>
-                                            <div class="info-block__right" id="infoFocus">Целевая стоимость портфеля</div>
+                                            <div class="info-block__right" id="infoFocus"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -737,7 +737,7 @@
                                     <div class="info-block__content">
                                         <div class="info-block__row">
                                             <div class="info-block__left">Классы активов</div>
-                                            <div class="info-block__right" id="infoActives">US Equites, US Bonds(...</div>
+                                            <div class="info-block__right" id="infoActives"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Исключенные секторы</div>
@@ -745,11 +745,11 @@
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Исключенные акции</div>
-                                            <div class="info-block__right" id="infoRemoveActions">FB</div>
+                                            <div class="info-block__right" id="infoRemoveActions"></div>
                                         </div>
                                         <div class="info-block__row">
                                             <div class="info-block__left">Только ETF</div>
-                                            <div class="info-block__right" id="infoEtf">Нет</div>
+                                            <div class="info-block__right" id="infoEtf"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -765,7 +765,7 @@
                                     <div class="info-block__content">
                                         <div class="info-block__row">
                                             <div class="info-block__left">Стратегия</div>
-                                            <div class="info-block__right">По умолчанию</div>
+                                            <div class="info-block__right" id="infoStrategy"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -779,6 +779,9 @@
                 </div>
             </div>
         </div>
+        <button class="next-forth">
+            К резюме
+        </button>
     </main>
     <!-- Modals -->
     <div class="modal fade" id="notificationsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

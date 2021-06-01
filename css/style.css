@@ -991,7 +991,7 @@ label {
     position: fixed;
     bottom: 0;
     z-index: 100;
-    width: 1319px;
+    width: calc(100% - 46px);
     right: 0;
     background: #FFFFFF;
     padding: 15px 30px;
@@ -1509,4 +1509,15 @@ input[type="checkbox"] {
 
 .quiz-steps__item.closed .complete-step {
     display: block;
+}
+
+.next-forth {
+    position: fixed;
+    right: 0;
+    top: 150px;
+}
+
+
+.go-last {
+    cursor: pointer;
 }
