@@ -1638,3 +1638,105 @@ input[type="checkbox"] {
 .srtoke__info {
     font-weight: 500;
 }
+
+.cancel {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    opacity: 0.8;
+    margin-left: 37px;
+    color: #2E364A;
+}
+
+.navbar-settings {
+    margin-top: 25px;
+}
+
+.go-start {
+    color: #3285D2;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0;
+    border: 0;
+    background: none;
+    margin-right: 30px;
+}
+
+.btn_small {
+    width: 130px;
+    height: 35px;
+    padding: 0;
+}
+
+.export-btn {
+    margin-right: 10px;
+}
+
+.target-cost-card .card-body {
+    padding: 12px 15px 20px;
+}
+
+
+.small-heading {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+}
+
+
+.huge-text {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: right;
+
+    color: #000000;
+}
+
+
+.target-cost-card__caption {
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    opacity: 0.5;
+    margin-bottom: 11px;
+}
+
+.progress-block__line {
+    height: 4px;
+    background: #C1DAF1;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress-block__percent {
+    position: absolute;
+    width: 158px;
+    height: 4px;
+    background: #0068FC;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+.progress-block__bottom {
+    margin-top: 10px;
+}
+
+.risk-progress {
+    margin-top: 15px;
+}
+
+.risk-progress .progress-block {
+    margin-top: 11px;
+}
+
+.progress-block .target-cost-card__caption {
+    margin-bottom: 0;
+}
