@@ -1740,3 +1740,32 @@ input[type="checkbox"] {
 .progress-block .target-cost-card__caption {
     margin-bottom: 0;
 }
+
+.odds {
+    margin-top: 20px;
+}
+
+.odds .card-body {
+    padding: 40px 15px 43px 15px;
+}
+
+.odds-list__item {
+    color: #000000;
+    margin-bottom: 22px;
+}
+
+.odds-list__item:last-child {
+    margin-bottom: 0;
+}
+
+.odds-list__main {
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.odds-list__odd {
+    font-size: 17px;
+    line-height: 20px;
+    font-size: 20px;
+    line-height: 23px;
+}
