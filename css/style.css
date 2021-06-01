@@ -1529,5 +1529,13 @@ input[type="checkbox"] {
 
 
 .req {
-    border: 2px solid #ff8123d4 !important;
+    border: 2px solid #e04959 !important;
+}
+
+.req-text {
+    color: #e04959;
+}
+
+.req-text path:first-child {
+    fill: #e04959;
 }

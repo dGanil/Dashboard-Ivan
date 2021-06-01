@@ -280,47 +280,47 @@ $('#clientVolatility').bind('change', function() {
 })
 
 var tooltip = $('<div class="slider-tooltip" id="tooltip" />').css({
-        position: 'absolute',
-        top: -29,
-        left: -6
-    }).hide();
+    position: 'absolute',
+    top: -29,
+    left: -6
+}).hide();
 
- $("#sliderRisk").each(function() {
-        let $this = $(this);
-        let min = parseInt($this.data('min'));
-        let max = parseInt($this.data('max'));
-        $(this).slider({
-            animate: true,
-            range: "min",
-            value: 1,
-            min: min,
-            max: max,
-            step: 1,
-            slide: function(event, ui) {
-                $(".risk__slider-field").val(ui.value + '%');
-                tooltip.text(ui.value);
-                if (ui.value >= 0) {
-                    step3key3 = 1
-                } else {
-                    step3key3 = 0
-                }
-                check3();
-
+$("#sliderRisk").each(function() {
+    let $this = $(this);
+    let min = parseInt($this.data('min'));
+    let max = parseInt($this.data('max'));
+    $(this).slider({
+        animate: true,
+        range: "min",
+        value: 1,
+        min: min,
+        max: max,
+        step: 1,
+        slide: function(event, ui) {
+            $(".risk__slider-field").val(ui.value + '%');
+            tooltip.text(ui.value);
+            if (ui.value >= 0) {
+                step3key3 = 1
+            } else {
+                step3key3 = 0
             }
-        });
+            check3();
+
+        }
+    });
 
 
-        $(".risk__slider-field").keyup(function() {
-            let sum = $(this).val();
-            $("#sliderRisk").slider("value", sum);
+    $(".risk__slider-field").keyup(function() {
+        let sum = $(this).val();
+        $("#sliderRisk").slider("value", sum);
 
-        });
+    });
 
-    }).find(".ui-slider-handle").append(tooltip).hover(function() {
-        tooltip.show()
-    }, function() {
-        tooltip.hide()
-    })
+}).find(".ui-slider-handle").append(tooltip).hover(function() {
+    tooltip.show()
+}, function() {
+    tooltip.hide()
+})
 
 
 
@@ -333,13 +333,25 @@ $('#prev3').bind('click', function() {
 })
 
 $('#next4').bind('click', function() {
-    if ($('input[name="types-assets"]:checked').length == 0 || $('input[name="etf"]:checked').length == 0) {
-
-    } else {
+    if (!$('input[name="types-assets"]:checked').length == 0 && !$('input[name="etf"]:checked').length == 0) {
         $('.quiz__card_4').fadeOut(1)
         $('.quiz__card_5').fadeIn(500)
         $('#step4').addClass('closed')
         $('#step5').addClass('active')
+
+
+    } else {
+        if ($('input[name="types-assets"]:checked').length == 0) {
+            $('.quiz__warning_1').addClass('req-text')
+        } else {
+            $('.quiz__warning_1').removeClass('req-text')
+        }
+
+        if ($('input[name="etf"]:checked').length == 0) {
+            $('.quiz__warning_2').addClass('req-text')
+        } else {
+            $('.quiz__warning_2').removeClass('req-text')
+        }
     }
 })
 
