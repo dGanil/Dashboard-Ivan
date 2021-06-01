@@ -392,7 +392,7 @@
                                                     Выберите фокус портфеля
                                                 </h3>
                                                 <div class="d-flex align-items-center radio__row radio__row_ml">
-                                                    <input type="radio" name="focus-potfolio" id="tolerance" value="Терпимость к просадкам">
+                                                    <input type="radio" name="focus-potfolio" id="tolerance" value="Терпимость к просадкам" checked>
                                                     <label for="tolerance">Терпимость к просадкам</label>
                                                 </div>
                                                 <div class="d-flex align-items-center radio__row radio__row_ml">
@@ -616,7 +616,7 @@
                         </div>
                         <div class="quiz__toggler d-flex">
                             <button class="quiz__prev-btn ml-auto" id="prev5">Предыдущий шаг</button>
-                            <button type="button" class="btn btn-light quiz__next waves-effect" id="next5">Далее</button>
+                            <button type="button" class="btn btn-light quiz__next waves-effect active" id="next5">Далее</button>
                         </div>
                     </div>
                     <div class="card quiz__card quiz__card_6">
@@ -926,45 +926,6 @@
     $(function() {
         $('select').selectpicker();
     });
-
-    var tooltip = $('<div class="slider-tooltip" id="tooltip" />').css({
-        position: 'absolute',
-        top: -29,
-        left: -6
-    }).hide();
-
-
-    $("#sliderRisk").each(function() {
-        let $this = $(this);
-        let min = parseInt($this.data('min'));
-        let max = parseInt($this.data('max'));
-        $(this).slider({
-            animate: true,
-            range: "min",
-            value: 1,
-            min: min,
-            max: max,
-            step: 1,
-            slide: function(event, ui) {
-                $(".risk__slider-field").val(ui.value + '%');
-                tooltip.text(ui.value);
-
-            }
-        });
-
-
-        $(".risk__slider-field").keyup(function() {
-            let sum = $(this).val();
-            $("#sliderRisk").slider("value", sum);
-
-        });
-
-    }).find(".ui-slider-handle").append(tooltip).hover(function() {
-        tooltip.show()
-    }, function() {
-        tooltip.hide()
-    })
-
 
     $('#securitiesField').selectize({
         plugins: ['remove_button'],

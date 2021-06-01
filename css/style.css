@@ -1010,6 +1010,11 @@ label {
     color: rgba(46, 54, 74, 0.5);
 }
 
+.quiz__next.active {
+    background: #0068FC;
+    color: white;
+}
+
 
 .radio__row input {
     margin-right: 10px;
@@ -1520,4 +1525,9 @@ input[type="checkbox"] {
 
 .go-last {
     cursor: pointer;
+}
+
+
+.req {
+    border: 2px solid #ff8123d4 !important;
 }

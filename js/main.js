@@ -34,20 +34,23 @@ $('.radio-block input[type="radio"]').bind('change', function() {
 
 function chek1() {
     if ($('#existingClient').prop('checked')) {
-        if ($('.bootstrap-select .filter-option-inner-inner').text() == "Выберите клиента из спискаВыберите тип учетной записиВыберите приоритетChoose a priority") {
+        if ($('#clientSelect').val() == "") {
             yeah = 0
+            $('#clientSelect').siblings('button').addClass('req')
+            setTimeout(function() {
+                $('#clientSelect').siblings('button').removeClass('req')
+            }, 2000);
         } else {
             yeah = 1
         }
     } else if ($('#newClient').prop('checked')) {
         if (
-            $('#nameClient').val() == "" ||
-            $('#desc').val() == "" ||
-            $('#birthday').val() == "" ||
-            $("#pension").val() == "" ||
-            $("#busyness").val() == "" ||
-            $("#drawdowns").val() == "") {
+            $('#nameClient').val() == "") {
             yeah = 0
+            $('#nameClient').addClass('req')
+            setTimeout(function() {
+                $('#nameClient').removeClass('req')
+            }, 2000);
         } else {
             yeah = 1
         }
@@ -70,41 +73,87 @@ $('#next1').bind('click', function() {
 
 })
 
+$('input[name="clientInfo"]').bind('change', function() {
+    $('#next1').removeClass('active')
+})
 
+
+
+$('#clientSelect').bind('change', function() {
+    $('#next1').addClass('active')
+})
+
+$('#nameClient').bind('input', function() {
+    if (!$(this).val() == "") {
+        $('#next1').addClass('active')
+    } else {
+        $('#next1').removeClass('active')
+    }
+
+})
 
 
 
 $('#next2').bind('click', function() {
 
-
-    if ($('#taxPortfolio').prop('checked') || $("#investHorizont").val() == "") {
-        if ($("#typeProfile").val() == "") {
-
-        } else {
+    if ($('#investHorizont').val() == "") {
+        $('#investHorizont').addClass('req')
+        setTimeout(function() {
+            $('#investHorizont').removeClass('req')
+        }, 2000);
+        if ($('#taxPortfolio').prop('checked')) {
+            if ($("#typeProfile").val() == "") {
+                $('#typeProfile').siblings('button').addClass('req')
+                setTimeout(function() {
+                    $('#typeProfile').siblings('button').removeClass('req')
+                }, 2000);
+            }
+        }
+    } else {
+        if ($('#taxPortfolio').prop('checked')) {
+            if ($("#typeProfile").val() == "") {
+                $('#typeProfile').siblings('button').addClass('req')
+                setTimeout(function() {
+                    $('#typeProfile').siblings('button').removeClass('req')
+                }, 2000);
+            } else {
+                $('.quiz__card_2').fadeOut(1)
+                $('.quiz__card_3').fadeIn(500)
+                $('#step2').addClass('closed')
+                $('#step3').addClass('active')
+            }
+        } else if ($('#cofalifiedPortfolio').prop('checked')) {
             $('.quiz__card_2').fadeOut(1)
             $('.quiz__card_3').fadeIn(500)
             $('#step2').addClass('closed')
             $('#step3').addClass('active')
         }
-    } else if ($('#cofalifiedPortfolio').prop('checked') || $("#investHorizont").val() == "") {
-        $('.quiz__card_2').fadeOut(1)
-        $('.quiz__card_3').fadeIn(500)
-        $('#step2').addClass('closed')
-        $('#step3').addClass('active')
-    } else if (!$('#cofalifiedPortfolio').prop('checked') || $("#investHorizont").val() == "") {
+    }
+})
 
+// $('input[name="typePortfolio"]').bind('change', function() {
+//     $('#next2').removeClass('active')
+// })
+
+
+
+$('#typeProfile').bind('change', function() {
+    if (!$('#investHorizont').val() == "") {
+        $('#next2').addClass('active')
+    } else {
+        $('#next2').removeClass('active')
+    }
+})
+
+$('#investHorizont').bind('input', function() {
+    if (!$(this).val() == "" && !$('#typeProfile').val() == "") {
+        $('#next2').addClass('active')
+    } else {
+        $('#next2').removeClass('active')
     }
 
-
-    // if ($("#investHorizont").val() == "") {
-
-    // } else {
-    //     $('.quiz__card_2').fadeOut(1)
-    //     $('.quiz__card_3').fadeIn(500)
-    //     $('#step2').addClass('closed')
-    //     $('#step3').addClass('active')
-    // }
 })
+
 
 $('#prev2').bind('click', function() {
     $('.quiz__card_2').fadeOut(1)
@@ -120,20 +169,160 @@ $('#prev2').bind('click', function() {
 $('#next3').bind('click', function() {
 
 
-    if ($('#startCapital').val() == "" ||
-        $('#fullPortfolioCost').val == "" ||
-        $('.risk__slider-field').val() == "" ||
-        $('#clientPriority').val() == "" ||
-        $('#clientVolatility').val() == "" ||
-        $('input[name="focus-potfolio"]:checked').length == 0) {
-
-    } else {
+    if (!$('#startCapital').val() == "" &&
+        !$('#fullPortfolioCost').val() == "" &&
+        !$('.risk__slider-field').val() == "" &&
+        !$('#clientPriority').val() == "" &&
+        !$('#clientVolatility').val() == "") {
         $('.quiz__card_3').fadeOut(1)
         $('.quiz__card_4').fadeIn(500)
         $('#step3').addClass('closed')
         $('#step4').addClass('active')
+    } else {
+        if ($('#startCapital').val() == "") {
+            $('#startCapital').addClass('req')
+            setTimeout(function() {
+                $('#startCapital').removeClass('req')
+            }, 2000);
+        }
+
+        if ($('#fullPortfolioCost').val() == "") {
+            $('#fullPortfolioCost').addClass('req')
+            setTimeout(function() {
+                $('#fullPortfolioCost').removeClass('req')
+            }, 2000);
+        }
+
+        if ($('.risk__slider-field').val() == "") {
+            $('.risk__slider-field').addClass('req')
+            setTimeout(function() {
+                $('.risk__slider-field').removeClass('req')
+            }, 2000);
+        }
+
+        if ($('#clientPriority').val() == "") {
+            $('#clientPriority').siblings('button').addClass('req')
+            setTimeout(function() {
+                $('#clientPriority').siblings('button').removeClass('req')
+            }, 2000);
+        }
+
+        if ($('#clientVolatility').val() == "") {
+            $('#clientVolatility').siblings('button').addClass('req')
+            setTimeout(function() {
+                $('#clientVolatility').siblings('button').removeClass('req')
+            }, 2000);
+        }
+
     }
 })
+
+
+let step3key1, step3key2, step3key3, step3key4, step3key5
+
+
+function check3() {
+    if (step3key1 == 1 &&
+        step3key2 == 1 &&
+        step3key3 == 1 &&
+        step3key4 == 1 &&
+        step3key5 == 1) {
+        $('#next3').addClass('active')
+    } else {
+        $('#next3').removeClass('active')
+    }
+}
+
+
+$('#startCapital').bind('input', function() {
+    if (!$(this).val() == "") {
+        step3key1 = 1
+    } else {
+        step3key1 = 0
+    }
+
+    check3();
+
+})
+
+$('#fullPortfolioCost').bind('input', function() {
+    if (!$(this).val() == "") {
+        step3key2 = 1
+    } else {
+        step3key2 = 0
+    }
+
+    check3();
+
+})
+
+$('.risk__slider-field').bind('input', function() {
+    if (!$(this).val() == "") {
+        step3key3 = 1
+    } else {
+        step3key3 = 0
+    }
+
+    check3();
+
+})
+
+
+$('#clientPriority').bind('change', function() {
+    step3key4 = 1
+
+    check3();
+})
+
+$('#clientVolatility').bind('change', function() {
+    step3key5 = 1
+    check3();
+})
+
+var tooltip = $('<div class="slider-tooltip" id="tooltip" />').css({
+        position: 'absolute',
+        top: -29,
+        left: -6
+    }).hide();
+
+ $("#sliderRisk").each(function() {
+        let $this = $(this);
+        let min = parseInt($this.data('min'));
+        let max = parseInt($this.data('max'));
+        $(this).slider({
+            animate: true,
+            range: "min",
+            value: 1,
+            min: min,
+            max: max,
+            step: 1,
+            slide: function(event, ui) {
+                $(".risk__slider-field").val(ui.value + '%');
+                tooltip.text(ui.value);
+                if (ui.value >= 0) {
+                    step3key3 = 1
+                } else {
+                    step3key3 = 0
+                }
+                check3();
+
+            }
+        });
+
+
+        $(".risk__slider-field").keyup(function() {
+            let sum = $(this).val();
+            $("#sliderRisk").slider("value", sum);
+
+        });
+
+    }).find(".ui-slider-handle").append(tooltip).hover(function() {
+        tooltip.show()
+    }, function() {
+        tooltip.hide()
+    })
+
+
 
 $('#prev3').bind('click', function() {
     $('.quiz__card_3').fadeOut(1)
@@ -151,6 +340,23 @@ $('#next4').bind('click', function() {
         $('.quiz__card_5').fadeIn(500)
         $('#step4').addClass('closed')
         $('#step5').addClass('active')
+    }
+})
+
+$('input[name="types-assets"]').bind('change', function() {
+    if ($('input[name="types-assets"]:checked').length > 0 && $('input[name="etf"]:checked').length > 0) {
+        $('#next4').addClass('active')
+    } else {
+        $('#next4').removeClass('active')
+    }
+})
+
+
+$('input[name="etf"]').bind('change', function() {
+    if ($('input[name="types-assets"]:checked').length > 0 && $('input[name="etf"]:checked').length > 0) {
+        $('#next4').addClass('active')
+    } else {
+        $('#next4').removeClass('active')
     }
 })
 
@@ -306,37 +512,37 @@ $('#change1').bind('click', function() {
 
 
 
-$('#step6').bind('click', function() {
-    if (endWay && counterNav == "step-change" && numberStep == 1) {
-        chek1()
-        if (yeah == 1) {
-            $('.quiz__card').fadeOut(1)
-            $('.quiz__card_6').fadeIn(500)
-            $(this).addClass('go-last')
-            calculte();
-        } else {}
+// $('#step6').bind('click', function() {
+//     if (endWay && counterNav == "step-change" && numberStep == 1) {
+//         chek1()
+//         if (yeah == 1) {
+//             $('.quiz__card').fadeOut(1)
+//             $('.quiz__card_6').fadeIn(500)
+//             $(this).addClass('go-last')
+//             calculte();
+//         } else {}
 
-    } else if (endWay && counterNav == "step-change" && numberStep == 2) {
-        if ($('#taxPortfolio').prop('checked') || $("#investHorizont").val() != "") {
-            if ($("#typeProfile").val() == "") {
+//     } else if (endWay && counterNav == "step-change" && numberStep == 2) {
+//         if ($('#taxPortfolio').prop('checked') || $("#investHorizont").val() != "") {
+//             if ($("#typeProfile").val() == "") {
 
-            } else {
-                $('.quiz__card').fadeOut(1)
-                $('.quiz__card_6').fadeIn(500)
-                $(this).addClass('go-last')
-                calculte();
-            }
-        } else if ($('#cofalifiedPortfolio').prop('checked') || $("#investHorizont").val() == "") {
-            $('.quiz__card').fadeOut(1)
-            $('.quiz__card_6').fadeIn(500)
-            $(this).addClass('go-last')
-            calculte();
-        } else if (!$('#cofalifiedPortfolio').prop('checked') || $("#investHorizont").val() == "") {
+//             } else {
+//                 $('.quiz__card').fadeOut(1)
+//                 $('.quiz__card_6').fadeIn(500)
+//                 $(this).addClass('go-last')
+//                 calculte();
+//             }
+//         } else if ($('#cofalifiedPortfolio').prop('checked') || $("#investHorizont").val() == "") {
+//             $('.quiz__card').fadeOut(1)
+//             $('.quiz__card_6').fadeIn(500)
+//             $(this).addClass('go-last')
+//             calculte();
+//         } else if (!$('#cofalifiedPortfolio').prop('checked') || $("#investHorizont").val() == "") {
 
-        }
+//         }
 
-    }
-})
+//     }
+// })
 
 
 
