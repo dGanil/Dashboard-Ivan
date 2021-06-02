@@ -1609,10 +1609,6 @@ input[type="checkbox"] {
     padding: 20px 15px;
 }
 
-.portfolio-info-card {
-    margin-bottom: 28px;
-}
-
 
 .portfolio-info-card .card-body {
     padding: 0 15px 32px 15px;
@@ -1741,9 +1737,6 @@ input[type="checkbox"] {
     margin-bottom: 0;
 }
 
-.odds {
-    margin-top: 20px;
-}
 
 .odds .card-body {
     padding: 40px 15px 43px 15px;
@@ -1768,4 +1761,123 @@ input[type="checkbox"] {
     line-height: 20px;
     font-size: 20px;
     line-height: 23px;
+}
+
+.distribution .card-header {
+    padding: 20px 15px;
+}
+
+.canvas-wrapper {
+    width: 190px;
+    height: 190px;
+    margin-left: 65px;
+}
+
+.distribution .card-body {
+    padding-top: 32px;
+    padding-bottom: 48px;
+}
+
+.graph-options {
+    width: 428px;
+}
+
+.progress-block__top {
+    margin-bottom: 10px;
+}
+
+.progress-block__percent_1 {
+    width: 15px;
+    background: #0633BE;
+}
+
+.progress-block__percent_2 {
+    width: 217px;
+    background: #3868CE;
+}
+
+.progress-block__percent_3 {
+    width: 156px;
+    background: #4697FE;
+}
+
+.progress-block__percent_4 {
+    width: 142px;
+    background: #02BFFB;
+}
+
+.graph-options .progress-block {
+    margin-bottom: 15px;
+}
+
+
+.graph-options .progress-block:last-child {
+    margin-bottom: 0;
+}
+
+.forecast {
+    margin-top: 20px;
+}
+
+.graph-settings {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.zoom p {
+    margin-right: 17px;
+}
+
+.zoom__btn {
+    padding: 1px 2px;
+    border: 0;
+    margin-right: 17px;
+    background: rgba(192, 195, 201, 0.2);
+    border-radius: 2px;
+    color: rgba(46, 54, 74, 0.5);
+    font-weight: 500;
+}
+
+.zoom__btn.active {
+    background: #F1F3FB;
+    color: #2E364A;
+}
+
+.zoom__btn:nth-of-type(4) {
+    margin-right: 14px;
+}
+
+.zoom__btn:nth-of-type(5) {
+    margin-right: 5px;
+}
+
+.zoom__btn:nth-of-type(6) {
+    width: 30px;
+    margin-right: 0;
+}
+
+.graph-date input {
+    width: 80px;
+    height: 20px !important;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    color: #2E364A;
+    padding: 0 10px !important;
+    margin: 0 12px 0 6px;
+}
+
+.graph-date input:last-of-type {
+    margin-right: 0;
+}
+
+.forecast .card-header {
+    padding: 20px 19px 20px 15px;
+}
+
+.forecast .card-body {
+    padding: 0 19px 21px 45px;
 }

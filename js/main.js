@@ -609,3 +609,8 @@ $('#change5').bind('click', function() {
     $('#step5').addClass('active')
     counterNav = "step-change"
 })
+
+$('.zoom__btn').bind('click', function() {
+    $('.zoom__btn').removeClass('active')
+    $(this).addClass('active')
+})
