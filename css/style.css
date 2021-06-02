@@ -1914,3 +1914,49 @@ input[type="checkbox"] {
     font-size: 14px;
     line-height: 150%;
 }
+
+.pay-offer {
+    padding: 12px 18px;
+}
+
+.btn_off {
+    border: 0;
+    background: none;
+    padding: 0;
+}
+
+.save-draft {
+    height: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #0068FC;
+    margin-left: 20px;
+}
+
+
+.analytics .card-header {
+    padding: 30px 18px 15px;
+}
+
+.analytics .card-body {
+    padding: 15px 14px 55px;
+}
+
+.analytics__block {
+    width: 353px;
+}
+
+.analytics__heading {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.analytics__text {
+    font-size: 12px;
+    line-height: 150%;
+    color: #000000;
+    opacity: 0.5;
+    margin-top: 20px;
+}
