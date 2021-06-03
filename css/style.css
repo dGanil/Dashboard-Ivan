@@ -2026,7 +2026,11 @@ input[type="checkbox"] {
 
 .table-view tbody {
     background: #F8F9FA;
+}
+
+.table-view.blur tbody {
     filter: blur(5px);
+
 }
 
 .table-view tr td:last-child {
@@ -2049,10 +2053,6 @@ input[type="checkbox"] {
     padding-bottom: 25px;
 }
 
-.table-view>tbody {
-    vertical-align: top;
-}
-
 
 
 .table-view th,
@@ -2065,4 +2065,25 @@ input[type="checkbox"] {
 .fonds .card-header {
     padding-top: 30px;
     padding-bottom: 21px;
+}
+
+.search-wrapper .search {
+    width: 236px;
+    padding-left: 36px !important;
+}
+
+.btn-search {
+    left: 15px;
+    top: 4px;
+    position: absolute;
+
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.sort-dropdown {
+    margin-left: 40px;
+    margin-right: 40px;
 }
