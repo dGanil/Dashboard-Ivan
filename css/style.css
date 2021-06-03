@@ -1960,3 +1960,109 @@ input[type="checkbox"] {
     opacity: 0.5;
     margin-top: 20px;
 }
+
+.fonds .card-body {
+    padding: 0;
+}
+
+
+.table>:not(caption)>*>* {
+    padding: 0;
+    border: 0;
+
+}
+
+.table-view th {
+    border-bottom: 2px solid #F4F4F6;
+}
+
+.table-view {
+    margin-bottom: 0;
+    min-height: 190px;
+}
+
+.table-view tr th:last-child {
+    padding-right: 254px;
+    width: 338px;
+    text-align: right;
+}
+
+.table-view tr th:first-child {
+    padding-left: 15px;
+    width: 115px;
+}
+
+.table-view tr th:nth-child(2) {
+    width: 250px;
+}
+
+.table-view tr th:nth-child(3) {
+    width: 134px;
+}
+
+.table-view tr th:nth-child(4) {
+    width: 141px;
+    text-align: right;
+}
+
+.table-view tr th:nth-child(5) {
+    width: 164px;
+    text-align: right;
+}
+
+
+.table-view tr td:first-child {
+    padding-left: 15px;
+}
+
+
+.table-view tr td:nth-child(4) {
+    text-align: right;
+}
+
+.table-view tr td:nth-child(5) {
+    text-align: right;
+}
+
+.table-view tbody {
+    background: #F8F9FA;
+    filter: blur(5px);
+}
+
+.table-view tr td:last-child {
+    text-align: right;
+    padding-right: 254px;
+}
+
+.table-view tr th {
+    padding-bottom: 15px;
+    width: 84px;
+    /*text-align: right;*/
+}
+
+.table-view tr td {
+    padding-top: 20px;
+    height: 35px;
+}
+
+.table-view tbody tr:last-child td {
+    padding-bottom: 25px;
+}
+
+.table-view>tbody {
+    vertical-align: top;
+}
+
+
+
+.table-view th,
+.table-view td {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.fonds .card-header {
+    padding-top: 30px;
+    padding-bottom: 21px;
+}
