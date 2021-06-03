@@ -614,3 +614,13 @@ $('.zoom__btn').bind('click', function() {
     $('.zoom__btn').removeClass('active')
     $(this).addClass('active')
 })
+
+$('.sorting-btn').bind('click', function() {
+    $('.sorting-btn').removeClass('active')
+    $(this).addClass('active')
+})
+
+$('.sorting-btn_2').bind('click', function() {
+    $('.navbar-bottom').addClass('flex-column')
+    $('.navbar-bottom').removeClass('align-items-center')
+})

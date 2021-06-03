@@ -324,12 +324,12 @@ ul {
 
 }
 
-.clients__table .badge.bg-success {
+.badge.bg-success {
     background: #CBF4EB !important;
     color: #11CDA9;
 }
 
-.clients__table .badge.bg-danger {
+.badge.bg-danger {
     color: #D13849;
     background: #FACFCF !important;
 }
@@ -343,11 +343,11 @@ ul {
     padding: 2px 11px;
 }
 
-.clients__table .text-danger {
+.text-danger {
     color: #D13849 !important;
 }
 
-.clients__table .text-success {
+.text-success {
     color: #11CDA9 !important;
 }
 
@@ -2086,4 +2086,124 @@ input[type="checkbox"] {
 .sort-dropdown {
     margin-left: 40px;
     margin-right: 40px;
+}
+
+.sorting-btn {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.sorting-btn svg {
+    margin-right: 8px;
+}
+
+.sorting-btn rect, .sorting-btn path {
+    transition: all 0.15s linear;
+}
+
+
+.sorting-btn.active {
+    color: #0068FC;
+}
+
+.sorting-btn.active rect {
+    fill: #0068FC;
+}
+
+.sorting-btn.active path {
+    stroke: #0068FC;
+}
+
+.sorting-btn_2 {
+    margin-left: 20px;
+    margin-right: 58px;
+
+}
+
+.add-client svg {
+    margin-right: 9px;
+}
+
+.client-card .badge {
+    padding: 0.5px 8px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.client-card {
+    height: 217px;
+}
+
+.client-card .card-body {
+    margin: 0 20px;
+    background: #F8F9FF;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.client-card .card-header {
+    padding: 20px;
+}
+
+.card-title_normal {
+    font-weight: 400;
+}
+
+
+.client-card .huge-text {
+    color: #2E364A;
+    margin-top: 11px;
+}
+
+
+.client-card .badge.bg-danger {
+    padding: 2px;
+    line-height: 1;
+}
+
+.client-card .text-success {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.client-card .text-success svg {
+    margin-left: 3px;
+}
+
+.client-rating__item {
+    margin-bottom: 7px;
+}
+
+.client-rating__item:last-child {
+    margin-bottom: 0;
+}
+
+.client-card .card-footer {
+    border: 0;
+    padding: 9px 20px 14px 20px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.client-cards {
+    height: 686px;
+}
+
+.client-card {
+    margin-bottom: 20px;
+}
+
+.client-card:last-child {
+    margin-bottom: 0;
+}
+
+.client-card .card-footer .badge {
+    margin: 0;
+}
+
+.client-card .text-danger svg {
+    margin-left: 5px;
 }

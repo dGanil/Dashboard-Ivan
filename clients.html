@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="css/mdb.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .content {
+            padding-top: 161px;
+            padding-bottom: 31px;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,33 +46,58 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="dropdown ml-auto">
-                        <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownFilters" data-mdb-toggle="dropdown" aria-expanded="false">
-                            Фильтры
-                            <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L7 7L13 1" stroke="#2E364A" stroke-width="2" />
+                    <div class="navbar__card-settings ml-auto d-flex align-items-center">
+                        <div class="dropdown">
+                            <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownFilters" data-mdb-toggle="dropdown" aria-expanded="false">
+                                Фильтры
+                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="#2E364A" stroke-width="2" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownFilters">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown sort-dropdown">
+                            <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownSorting" data-mdb-toggle="dropdown" aria-expanded="false">
+                                Сортировка
+                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L13 1" stroke="#2E364A" stroke-width="2" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownSorting">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+                        </div>
+                        <button class="sorting-btn btn_off active">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="4" width="7" height="7" fill="#2E364A" />
+                                <rect x="13" y="4" width="7" height="7" fill="#2E364A" />
+                                <rect x="13" y="13" width="7" height="7" fill="#2E364A" />
+                                <rect x="3" y="13" width="7" height="7" fill="#2E364A" />
                             </svg>
+                            Карточки
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownFilters">
-                            <li><a class="dropdown-item" href="#">1</a></li>
-                            <li><a class="dropdown-item" href="#">2</a></li>
-                            <li><a class="dropdown-item" href="#">3</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown sort-dropdown">
-                        <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownSorting" data-mdb-toggle="dropdown" aria-expanded="false">
-                            Сортировка
-                            <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L7 7L13 1" stroke="#2E364A" stroke-width="2" />
+                        <button class="sorting-btn btn_off sorting-btn_2">
+                            <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 1H20M0 6.2H20M0 11H20" stroke="#2E364A" stroke-width="2" />
                             </svg>
+                            Таблица
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownSorting">
-                            <li><a class="dropdown-item" href="#">1</a></li>
-                            <li><a class="dropdown-item" href="#">2</a></li>
-                            <li><a class="dropdown-item" href="#">3</a></li>
-                        </ul>
+                        <button type="button" class="btn btn-primary add-client">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 14C1 14 0 14 0 13C0 12 1 9 6 9C11 9 12 12 12 13C12 14 11 14 11 14H1ZM6 8C6.79565 8 7.55871 7.68393 8.12132 7.12132C8.68393 6.55871 9 5.79565 9 5C9 4.20435 8.68393 3.44129 8.12132 2.87868C7.55871 2.31607 6.79565 2 6 2C5.20435 2 4.44129 2.31607 3.87868 2.87868C3.31607 3.44129 3 4.20435 3 5C3 5.79565 3.31607 6.55871 3.87868 7.12132C4.44129 7.68393 5.20435 8 6 8Z" fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 5C13.6326 5 13.7598 5.05268 13.8536 5.14645C13.9473 5.24021 14 5.36739 14 5.5V7H15.5C15.6326 7 15.7598 7.05268 15.8536 7.14645C15.9473 7.24021 16 7.36739 16 7.5C16 7.63261 15.9473 7.75979 15.8536 7.85355C15.7598 7.94732 15.6326 8 15.5 8H14V9.5C14 9.63261 13.9473 9.75979 13.8536 9.85355C13.7598 9.94732 13.6326 10 13.5 10C13.3674 10 13.2402 9.94732 13.1464 9.85355C13.0527 9.75979 13 9.63261 13 9.5V8H11.5C11.3674 8 11.2402 7.94732 11.1464 7.85355C11.0527 7.75979 11 7.63261 11 7.5C11 7.36739 11.0527 7.24021 11.1464 7.14645C11.2402 7.05268 11.3674 7 11.5 7H13V5.5C13 5.36739 13.0527 5.24021 13.1464 5.14645C13.2402 5.05268 13.3674 5 13.5 5Z" fill="white" />
+                            </svg>
+                            <span>Добавить клиента</span>
+                        </button>
                     </div>
-                    <button class="sorting-btn btn_off"></button>
+                </div>
+                <div class="navbar-footer">
                 </div>
             </div>
         </nav>
@@ -84,7 +115,7 @@
                         <path d="M0 11H16" stroke="black" />
                     </svg>
                 </a>
-                <a href="index.html" class="list-group-item waves-effect now">
+                <a href="index.html" class="list-group-item waves-effect">
                     <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.5 9.50004C15.4342 9.50042 15.369 9.4878 15.3081 9.46292C15.2471 9.43804 15.1917 9.40138 15.145 9.35503L8.00001 2.20503L0.855014 9.35503C0.759363 9.43695 0.636325 9.47975 0.510487 9.47489C0.384649 9.47003 0.265279 9.41786 0.176232 9.32882C0.0871848 9.23977 0.0350186 9.1204 0.030158 8.99456C0.0252975 8.86872 0.0681005 8.74569 0.150014 8.65003L7.65001 1.15004C7.74369 1.05691 7.87042 1.00464 8.00251 1.00464C8.13461 1.00464 8.26133 1.05691 8.35501 1.15004L15.855 8.65003C15.9238 8.72023 15.9704 8.80914 15.989 8.90566C16.0075 9.00219 15.9972 9.10204 15.9593 9.19273C15.9214 9.28343 15.8577 9.36095 15.776 9.41561C15.6943 9.47026 15.5983 9.49963 15.5 9.50004Z" fill="#2E364A" />
                         <path d="M8 3.89502L2 9.91502V16C2 16.2652 2.10536 16.5196 2.29289 16.7071C2.48043 16.8947 2.73478 17 3 17H6.5V12H9.5V17H13C13.2652 17 13.5196 16.8947 13.7071 16.7071C13.8946 16.5196 14 16.2652 14 16V9.88002L8 3.89502Z" fill="#2E364A" />
@@ -97,7 +128,7 @@
                         <path d="M8 12.2H13M10.5 9.70001V14.7" stroke="white" />
                     </svg>
                 </a>
-                <a href="#" class="list-group-item waves-effect">
+                <a href="#" class="list-group-item waves-effect now">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0-973477)">
                             <path d="M12 0H4C3.46957 0 2.96086 0.210714 2.58579 0.585786C2.21071 0.960859 2 1.46957 2 2V14C2 14.5304 2.21071 15.0391 2.58579 15.4142C2.96086 15.7893 3.46957 16 4 16H12C12.5304 16 13.0391 15.7893 13.4142 15.4142C13.7893 15.0391 14 14.5304 14 14V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0V0ZM11 7C11 7.79565 10.6839 8.55871 10.1213 9.12132C9.55871 9.68393 8.79565 10 8 10C7.20435 10 6.44129 9.68393 5.87868 9.12132C5.31607 8.55871 5 7.79565 5 7C5 6.20435 5.31607 5.44129 5.87868 4.87868C6.44129 4.31607 7.20435 4 8 4C8.79565 4 9.55871 4.31607 10.1213 4.87868C10.6839 5.44129 11 6.20435 11 7ZM8 11C10.623 11 12.146 11.826 13 12.755V14C13 14.2652 12.8946 14.5196 12.7071 14.7071C12.5196 14.8946 12.2652 15 12 15H4C3.73478 15 3.48043 14.8946 3.29289 14.7071C3.10536 14.5196 3 14.2652 3 14V12.755C3.854 11.825 5.377 11 8 11Z" fill="#2E364A" />
@@ -126,494 +157,361 @@
     <main class="content">
         <div class="container">
             <p class="updated">Last updated: Thu Oct 03 2019 12:35:10 GMT-0700</p>
-            <div class="row wow fadeIn">
-                <div class="col-md-9">
-                    <div class="card clients">
-                        <div class="card-header d-flex align-items-center">
-                            <p class="clients__title card-title">Клиенты</p>
-                            <div class="short-search ml-auto">
-                                <button class="clients__search-btn">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14 14L11.0093 11.004L14 14ZM12.6667 7C12.6667 8.50289 12.0696 9.94423 11.0069 11.0069C9.94424 12.0696 8.5029 12.6667 7 12.6667C5.49711 12.6667 4.05577 12.0696 2.99306 11.0069C1.93036 9.94423 1.33334 8.50289 1.33334 7C1.33334 5.4971 1.93036 4.05576 2.99306 2.99306C4.05577 1.93035 5.49711 1.33333 7 1.33333C8.5029 1.33333 9.94424 1.93035 11.0069 2.99306C12.0696 4.05576 12.6667 5.4971 12.6667 7V7Z" stroke="#2E364A" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                </button>
-                                <input type="text" class="search__field" placeholder="Поиск">
+            <div class="row fadeIn client-cards">
+                <div class="col-md-4">
+                    <div class="card client-card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <div>
+                                <p class="card-title">Lester Anderson-Locler</p>
+                                <span class="badge bg-success">Отслеживать</span>
                             </div>
-                            <a href="#" class="clients__add-client d-flex align-items-center">
-                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 12C1 12 0 12 0 11C0 10 1 7 6 7C11 7 12 10 12 11C12 12 11 12 11 12H1ZM6 6C6.79565 6 7.55871 5.68393 8.12132 5.12132C8.68393 4.55871 9 3.79565 9 3C9 2.20435 8.68393 1.44129 8.12132 0.87868C7.55871 0.316071 6.79565 0 6 0C5.20435 0 4.44129 0.316071 3.87868 0.87868C3.31607 1.44129 3 2.20435 3 3C3 3.79565 3.31607 4.55871 3.87868 5.12132C4.44129 5.68393 5.20435 6 6 6Z" fill="#0068FC" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 3C13.6326 3 13.7598 3.05268 13.8536 3.14645C13.9473 3.24021 14 3.36739 14 3.5V5H15.5C15.6326 5 15.7598 5.05268 15.8536 5.14645C15.9473 5.24021 16 5.36739 16 5.5C16 5.63261 15.9473 5.75979 15.8536 5.85355C15.7598 5.94732 15.6326 6 15.5 6H14V7.5C14 7.63261 13.9473 7.75979 13.8536 7.85355C13.7598 7.94732 13.6326 8 13.5 8C13.3674 8 13.2402 7.94732 13.1464 7.85355C13.0527 7.75979 13 7.63261 13 7.5V6H11.5C11.3674 6 11.2402 5.94732 11.1464 5.85355C11.0527 5.75979 11 5.63261 11 5.5C11 5.36739 11.0527 5.24021 11.1464 5.14645C11.2402 5.05268 11.3674 5 11.5 5H13V3.5C13 3.36739 13.0527 3.24021 13.1464 3.14645C13.2402 3.05268 13.3674 3 13.5 3Z" fill="#0068FC" />
+                            <button class="client-card__settings btn_off">
+                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
                                 </svg>
-                                <span>Добавить клиента</span>
-                            </a>
+                            </button>
                         </div>
-                        <div class="card-body">
-                            <table class="table clients__table table-borderless">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Имя</th>
-                                        <th scope="col">
-                                            Статус
-                                            <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g opacity="0.2">
-                                                    <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A" />
-                                                    <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A" />
-                                                </g>
-                                            </svg>
-                                        </th>
-                                        <th scope="col">
-                                            Доходность
-                                            <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g opacity="0.2">
-                                                    <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A" />
-                                                    <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A" />
-                                                </g>
-                                            </svg>
-                                        </th>
-                                        <th scope="col">
-                                            Сигналы
-                                            <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g opacity="0.2">
-                                                    <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A" />
-                                                    <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A" />
-                                                </g>
-                                            </svg>
-                                        </th>
-                                        <th scope="col">
-                                            Уведомления
-                                            <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g opacity="0.2">
-                                                    <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A" />
-                                                    <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A" />
-                                                </g>
-                                            </svg>
-                                        </th>
-                                        <th scope="col">
-                                            Портфели
-                                            <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g opacity="0.2">
-                                                    <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A" />
-                                                    <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A" />
-                                                </g>
-                                            </svg>
-                                        </th>
-                                        <th class="text-right" scope="col">
-                                            Активы
-                                            <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g opacity="0.2">
-                                                    <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A" />
-                                                    <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A" />
-                                                </g>
-                                            </svg>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Joan Smith</th>
-                                        <td><span class="badge bg-success">Отслеживать</span></td>
-                                        <td>
-                                            <span class="text-danger">
-                                                <span>0.88 %</span>
-                                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
-                                                </svg>
-                                            </span>
-                                        </td>
-                                        <td></td>
-                                        <td>4</td>
-                                        <td>3 <a href="#" data-mdb-toggle="tooltip" title="2 drafts">(2)</a></td>
-                                        <td>$929.407.994</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Teodorico MacCombe</th>
-                                        <td><span class="badge bg-danger">Не уведомлять</span></td>
-                                        <td>
-                                            <span class="text-success">
-                                                <span>1.88 %</span>
-                                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
-                                                </svg>
-                                            </span>
-                                        </td>
-                                        <td><span class="badge bg-danger">5</span></td>
-                                        </td>
-                                        <td></td>
-                                        <td>3</td>
-                                        <td>$9.407.994</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Misly Treverton</th>
-                                        <td><span class="badge bg-success">Отслеживать</span></td>
-                                        <td>
-                                            <span class="text-success">
-                                                <span>0.88 %</span>
-                                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
-                                                </svg>
-                                            </span>
-                                        </td>
-                                        <td></td>
-                                        <td>4</td>
-                                        <td>3 <a href="#" data-mdb-toggle="tooltip" title="2 drafts">(2)</a></td>
-                                        <td>$12.407.994</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Joan Smith</th>
-                                        <td><span class="badge bg-danger">Не уведомлять</span></td>
-                                        <td>
-                                            <span class="text-danger">
-                                                <span>8.75 %</span>
-                                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849"></path>
-                                                </svg>
-                                            </span>
-                                        </td>
-                                        <td></td>
-                                        <td>4</td>
-                                        <td>3</td>
-                                        <td>$929.454.994</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Teodorico MacCombe</th>
-                                        <td><span class="badge bg-success">Отслеживать</span></td>
-                                        <td>
-                                            <span class="text-success">
-                                                <span>0.88 %</span>
-                                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9"></path>
-                                                </svg>
-                                            </span>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>3</td>
-                                        <td>$80.407.994</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Misly Treverton</th>
-                                        <td><span class="badge bg-success">Отслеживать</span></td>
-                                        <td>
-                                            <span class="text-success">
-                                                <span>0.88 %</span>
-                                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9"></path>
-                                                </svg>
-                                            </span>
-                                        </td>
-                                        <td><span class="badge bg-danger">3</span></td>
-                                        <td></td>
-                                        <td>3 <a href="#" data-mdb-toggle="tooltip" title="2 drafts">(2)</a></td>
-                                        <td>$929.407.994</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Teodorico MacCombe</th>
-                                        <td><span class="badge bg-success">Отслеживать</span></td>
-                                        <td>
-                                            <span class="text-success">
-                                                <span>7.88 %</span>
-                                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9"></path>
-                                                </svg>
-                                            </span>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>3</td>
-                                        <td>$45.407.994</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="card-body d-flex align-items-center justify-content-between">
+                            <div class="card-client__cost">
+                                <p class="card-title card-title_normal">Активы</p>
+                                <p class="huge-text">$ 345,533</p>
+                            </div>
+                            <div class="client-rating">
+                                <span class="text-success d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
+                                    </svg>
+                                </span>
+                                <span class="text-success d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right">
+                            Портфели: 3
+                        </div>
+                    </div>
+                    <div class="card client-card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <div>
+                                <p class="card-title">Lester Anderson-Locler</p>
+                                <span class="badge bg-danger">Не уведомлять</span>
+                            </div>
+                            <button class="client-card__settings btn_off">
+                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-between">
+                            <div class="card-client__cost">
+                                <p class="card-title card-title_normal">Активы</p>
+                                <p class="huge-text">$ 345,533</p>
+                            </div>
+                            <div class="client-rating">
+                                <span class="text-danger d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
+                                    </svg>
+                                </span>
+                                <span class="text-danger d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <span class="badge bg-danger">Сигналы: 5</span>
+                            <p>Портфели: 3</p>
+                        </div>
+                    </div>
+                    <div class="card client-card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <div>
+                                <p class="card-title">Lester Anderson-Locler</p>
+                                <span class="badge bg-success">Отслеживать</span>
+                            </div>
+                            <button class="client-card__settings btn_off">
+                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-between">
+                            <div class="card-client__cost">
+                                <p class="card-title card-title_normal">Активы</p>
+                                <p class="huge-text">$ 345,533</p>
+                            </div>
+                            <div class="client-rating">
+                                <span class="text-success d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
+                                    </svg>
+                                </span>
+                                <span class="text-success d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right">
+                            Портфели: 3
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 justify-content-between d-flex flex-column">
-                    <div class="card assets">
-                        <div class="card-header pb-0 d-flex align-items-start">
-                            <p class="card-title">Активы</p>
-                            <p class="card-number ml-auto">
-                                $ 5,929,407
-                            </p>
-                        </div>
-                        <div class="card-body pt-0">
-                            <p class="rating-up text-right d-flex align-items-bottom justify-content-end">
-                                <span>YTD 0.88 %</span>
-                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
-                                </svg>
-                            </p>
-                            <div class="chart assets__chart">
-                                <svg width="240" height="29" viewBox="0 0 240 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0-278121)">
-                                        <path d="M52.6473 8.5L0 17.5V29H244V17.5L224.257 8.5L194.39 17.5L154.398 1L124.531 13.5L99.2199 8.5L77.9585 13.5L52.6473 8.5Z" fill="url(#paint0_linear-086374)" />
-                                        <path d="M-0.5 18L53 8.5L78.5 13.5L100 8.5L125.5 13.5L155 1L195.5 18L224.5 8.5L244.5 17.5" stroke="#3285D2" />
-                                    </g>
-                                    <defs>
-                                        <linearGradient id="paint0_linear-086374" x1="122" y1="1" x2="122.494" y2="44.0001" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#E3F2FF" />
-                                            <stop offset="1" stop-color="#E3F2FF" stop-opacity="0" />
-                                        </linearGradient>
-                                        <clipPath id="clip0-278121">
-                                            <rect width="240" height="29" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                <div class="col-md-4">
+                    <div class="card client-card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <div>
+                                <p class="card-title">Lester Anderson-Locler</p>
+                                <span class="badge bg-danger">Не уведомлять</span>
                             </div>
-                            <!-- <canvas id="assetsChart"></canvas> -->
+                            <button class="client-card__settings btn_off">
+                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-between">
+                            <div class="card-client__cost">
+                                <p class="card-title card-title_normal">Активы</p>
+                                <p class="huge-text">$ 345,533</p>
+                            </div>
+                            <div class="client-rating">
+                                <span class="text-danger d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
+                                    </svg>
+                                </span>
+                                <span class="text-danger d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <span class="badge bg-danger">Сигналы: 5</span>
+                            <p>Портфели: 3</p>
                         </div>
                     </div>
-                    <div class="card chart-clients">
-                        <div class="card-header d-flex align-items-start">
-                            <p class="card-title">Клиенты</p>
-                            <p class="card-number ml-auto">
-                                5
-                            </p>
-                        </div>
-                        <div class="card-body pt-0">
-                            <div class="chart assets__chart">
-                                <svg width="240" height="29" viewBox="0 0 240 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0-278121)">
-                                        <path d="M52.6473 8.5L0 17.5V29H244V17.5L224.257 8.5L194.39 17.5L154.398 1L124.531 13.5L99.2199 8.5L77.9585 13.5L52.6473 8.5Z" fill="url(#paint0_linear-086374)" />
-                                        <path d="M-0.5 18L53 8.5L78.5 13.5L100 8.5L125.5 13.5L155 1L195.5 18L224.5 8.5L244.5 17.5" stroke="#3285D2" />
-                                    </g>
-                                    <defs>
-                                        <linearGradient id="paint0_linear-086374" x1="122" y1="1" x2="122.494" y2="44.0001" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#E3F2FF" />
-                                            <stop offset="1" stop-color="#E3F2FF" stop-opacity="0" />
-                                        </linearGradient>
-                                        <clipPath id="clip0-278121">
-                                            <rect width="240" height="29" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                    <div class="card client-card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <div>
+                                <p class="card-title">Lester Anderson-Locler</p>
+                                <span class="badge bg-success">Отслеживать</span>
                             </div>
-                            <!-- <canvas id="assetsChart"></canvas> -->
+                            <button class="client-card__settings btn_off">
+                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-between">
+                            <div class="card-client__cost">
+                                <p class="card-title card-title_normal">Активы</p>
+                                <p class="huge-text">$ 345,533</p>
+                            </div>
+                            <div class="client-rating">
+                                <span class="text-success d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
+                                    </svg>
+                                </span>
+                                <span class="text-success d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right">
+                            Портфели: 3
                         </div>
                     </div>
-                    <div class="card chart-bags">
-                        <div class="card-header d-flex align-items-start">
-                            <p class="card-title">Портфели</p>
-                            <p class="card-number ml-auto">
-                                117
-                            </p>
-                        </div>
-                        <div class="card-body pt-0">
-                            <div class="chart assets__chart">
-                                <svg width="240" height="29" viewBox="0 0 240 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0-278121)">
-                                        <path d="M52.6473 8.5L0 17.5V29H244V17.5L224.257 8.5L194.39 17.5L154.398 1L124.531 13.5L99.2199 8.5L77.9585 13.5L52.6473 8.5Z" fill="url(#paint0_linear-086374)" />
-                                        <path d="M-0.5 18L53 8.5L78.5 13.5L100 8.5L125.5 13.5L155 1L195.5 18L224.5 8.5L244.5 17.5" stroke="#3285D2" />
-                                    </g>
-                                    <defs>
-                                        <linearGradient id="paint0_linear-086374" x1="122" y1="1" x2="122.494" y2="44.0001" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#E3F2FF" />
-                                            <stop offset="1" stop-color="#E3F2FF" stop-opacity="0" />
-                                        </linearGradient>
-                                        <clipPath id="clip0-278121">
-                                            <rect width="240" height="29" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                    <div class="card client-card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <div>
+                                <p class="card-title">Lester Anderson-Locler</p>
+                                <span class="badge bg-danger">Не уведомлять</span>
                             </div>
-                            <!-- <canvas id="assetsChart"></canvas> -->
+                            <button class="client-card__settings btn_off">
+                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-between">
+                            <div class="card-client__cost">
+                                <p class="card-title card-title_normal">Активы</p>
+                                <p class="huge-text">$ 345,533</p>
+                            </div>
+                            <div class="client-rating">
+                                <span class="text-danger d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
+                                    </svg>
+                                </span>
+                                <span class="text-danger d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <span class="badge bg-danger">Сигналы: 5</span>
+                            <p>Портфели: 3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card client-card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <div>
+                                <p class="card-title">Lester Anderson-Locler</p>
+                                <span class="badge bg-success">Отслеживать</span>
+                            </div>
+                            <button class="client-card__settings btn_off">
+                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-between">
+                            <div class="card-client__cost">
+                                <p class="card-title card-title_normal">Активы</p>
+                                <p class="huge-text">$ 345,533</p>
+                            </div>
+                            <div class="client-rating">
+                                <span class="text-success d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
+                                    </svg>
+                                </span>
+                                <span class="text-success d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right">
+                            Портфели: 3
+                        </div>
+                    </div>
+                    <div class="card client-card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <div>
+                                <p class="card-title">Lester Anderson-Locler</p>
+                                <span class="badge bg-danger">Не уведомлять</span>
+                            </div>
+                            <button class="client-card__settings btn_off">
+                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-between">
+                            <div class="card-client__cost">
+                                <p class="card-title card-title_normal">Активы</p>
+                                <p class="huge-text">$ 345,533</p>
+                            </div>
+                            <div class="client-rating">
+                                <span class="text-danger d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
+                                    </svg>
+                                </span>
+                                <span class="text-danger d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <span class="badge bg-danger">Сигналы: 5</span>
+                            <p>Портфели: 3</p>
+                        </div>
+                    </div>
+                    <div class="card client-card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <div>
+                                <p class="card-title">Lester Anderson-Locler</p>
+                                <span class="badge bg-success">Отслеживать</span>
+                            </div>
+                            <button class="client-card__settings btn_off">
+                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
+                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-between">
+                            <div class="card-client__cost">
+                                <p class="card-title card-title_normal">Активы</p>
+                                <p class="huge-text">$ 345,533</p>
+                            </div>
+                            <div class="client-rating">
+                                <span class="text-success d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
+                                    </svg>
+                                </span>
+                                <span class="text-success d-flex align-items-center client-rating__item">
+                                    <span>YTD 0.88 %</span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right">
+                            Портфели: 3
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row wow fadeIn row_2">
-                <div class="col-md-7">
-                    <div class="card signals">
-                        <div class="card-header">
-                            <div class="d-flex align-items-center">
-                                <p class="card-title">Сигналы</p>
-                                <div class="dropdown ml-auto">
-                                    <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
-                                        Сортировать
-                                        <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1L5.5 6L7.75 3.5L10 1" stroke="#2E364A" />
-                                        </svg>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <li><a class="dropdown-item" href="#">1</a></li>
-                                        <li><a class="dropdown-item" href="#">2</a></li>
-                                        <li><a class="dropdown-item" href="#">3</a></li>
-                                    </ul>
-                                </div>
-                                <ul class="nav nav-tabs signals__tabs" id="ex1" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <a class="nav-link waves-effect" id="ex1-tab-1" data-mdb-toggle="tab" href="#ex1-tabs-1" role="tab" aria-controls="ex1-tabs-1" aria-selected="true">Новый</a>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <a class="nav-link waves-effect" id="ex1-tab-2" data-mdb-toggle="tab" href="#ex1-tabs-2" role="tab" aria-controls="ex1-tabs-2" aria-selected="false">Прочитаный</a>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <a class="nav-link waves-effect active" id="ex1-tab-3" data-mdb-toggle="tab" href="#ex1-tabs-3" role="tab" aria-controls="ex1-tabs-3" aria-selected="false">Все</a>
-                                    </li>
-                                </ul>
-                                <!-- Tabs navs -->
-                                <!-- Tabs content -->
-                                <!-- <div class="tab-content" id="ex1-content">
-                                    <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
-                                        Tab 1 content
-                                    </div>
-                                    <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-                                        Tab 2 content
-                                    </div>
-                                    <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-                                        Tab 3 content
-                                    </div>
-                                </div> -->
-                                <!-- Tabs content -->
-                            </div>
-                            <div class="long-search">
-                                <input type="search" id="form1" class="form-control" placeholder="Выбрать" />
-                                <svg class="search-icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 14L11.0093 11.004L14 14ZM12.6666 7.00001C12.6666 8.5029 12.0696 9.94424 11.0069 11.0069C9.94421 12.0697 8.50287 12.6667 6.99998 12.6667C5.49709 12.6667 4.05575 12.0697 2.99304 11.0069C1.93034 9.94424 1.33331 8.5029 1.33331 7.00001C1.33331 5.49712 1.93034 4.05578 2.99304 2.99307C4.05575 1.93037 5.49709 1.33334 6.99998 1.33334C8.50287 1.33334 9.94421 1.93037 11.0069 2.99307C12.0696 4.05578 12.6666 5.49712 12.6666 7.00001V7.00001Z" stroke="#2E364A" stroke-width="2" stroke-linecap="round" />
-                                </svg>
-                            </div>
-                            <p class="signals__date">October 03, 2019 </p>
-                        </div>
-                        <div class="card-body">
-                            <div class="signal">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div class="badge bg-danger">
-                                        Новый
-                                    </div>
-                                    <p class="signal__date">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g opacity="0.3">
-                                                <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
-                                                <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
-                                            </g>
-                                        </svg>
-                                        Today, July 12, 2019, 11:36 AM
-                                    </p>
-                                </div>
-                                <div class="signal__content">
-                                    <h3 class="signal__title">Distribution Request Processed</h3>
-                                    <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed </p>
-                                </div>
-                                <div class="signal__footer">
-                                    <div class="author">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
-                                        </svg>
-                                        Craig Gordon
-                                    </div>
-                                    <div class="d-flex signal__bottom align-items-center justify-content-between">
-                                        <div class="signal__note">
-                                            <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="7" height="8" rx="1" fill="#A5A8C3" />
-                                            </svg>
-                                            Portfolio: Craig Gordon Investment Portfolio
-                                        </div>
-                                        <p class="already-read ml-auto">Прочитано</p>
-                                        <a href="#" class="open-potfolio">Открыть портфель</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="card notify">
-                        <div class="card-header">
-                            <div class="d-flex align-items-center">
-                                <p class="card-title">Уведомления</p>
-                                <div class="dropdown ml-auto">
-                                    <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
-                                        Сортировать
-                                        <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1L5.5 6L7.75 3.5L10 1" stroke="#2E364A" />
-                                        </svg>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <li><a class="dropdown-item" href="#">1</a></li>
-                                        <li><a class="dropdown-item" href="#">2</a></li>
-                                        <li><a class="dropdown-item" href="#">3</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="long-search">
-                                <input type="search" id="form1" class="form-control" placeholder="Выбрать" />
-                                <svg class="search-icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 14L11.0093 11.004L14 14ZM12.6666 7.00001C12.6666 8.5029 12.0696 9.94424 11.0069 11.0069C9.94421 12.0697 8.50287 12.6667 6.99998 12.6667C5.49709 12.6667 4.05575 12.0697 2.99304 11.0069C1.93034 9.94424 1.33331 8.5029 1.33331 7.00001C1.33331 5.49712 1.93034 4.05578 2.99304 2.99307C4.05575 1.93037 5.49709 1.33334 6.99998 1.33334C8.50287 1.33334 9.94421 1.93037 11.0069 2.99307C12.0696 4.05578 12.6666 5.49712 12.6666 7.00001V7.00001Z" stroke="#2E364A" stroke-width="2" stroke-linecap="round" />
-                                </svg>
-                            </div>
-                            <p class="signals__date">October 03, 2019 </p>
-                        </div>
-                        <div class="card-body">
-                            <div class="notification">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <p class="notification__title">
-                                        Major Sentiment Change
-                                    </p>
-                                    <p class="notification__date">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g opacity="0.3">
-                                                <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
-                                                <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
-                                            </g>
-                                        </svg>
-                                        Today, July 12, 2019, 11:36 AM
-                                    </p>
-                                </div>
-                                <div class="notification__content">
-                                    <p class="notification_text">
-                                        <span class="text-success">0.88 %</span> to $300,34 within 13 days
-                                    </p>
-                                </div>
-                                <div class="notification__footer">
-                                    <div class="author">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
-                                        </svg>
-                                        Craig Gordon
-                                    </div>
-                                    <div class="notification__note">
-                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect width="7" height="8" rx="1" fill="#A5A8C3" />
-                                        </svg>
-                                        Portfolio: Craig Gordon Investment Portfolio
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="notification">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <p class="notification__title">
-                                        Dividends paid
-                                    </p>
-                                    <p class="notification__date">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g opacity="0.3">
-                                                <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
-                                                <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
-                                            </g>
-                                        </svg>
-                                        Today, July 12, 2019, 11:36 AM
-                                    </p>
-                                </div>
-                                <div class="notification__content">
-                                    <span class="badge bg-light">PGE, Pacitic Gas Electric Co.</span>
-                                </div>
-                                <div class="notification__footer">
-                                    <div class="author">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
-                                        </svg>
-                                        Craig Gordon
-                                    </div>
-                                    <div class="notification__note">
-                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect width="7" height="8" rx="1" fill="#A5A8C3" />
-                                        </svg>
-                                        Portfolio: Craig Gordon Investment Portfolio
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row fadeIn client-cards_stroke">
             </div>
         </div>
     </main>
