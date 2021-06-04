@@ -496,7 +496,7 @@ $('#next6').bind('click', function() {
     $('#step6').addClass('closed')
     // calculte();
     $(".preloader").fadeIn(500)
-    setTimeout(function() { 
+    setTimeout(function() {
         $(location).attr('href', urlView);
     }, 4000);
 })
@@ -620,7 +620,43 @@ $('.sorting-btn').bind('click', function() {
     $(this).addClass('active')
 })
 
-$('.sorting-btn_2').bind('click', function() {
+$('.filters__dropdown-item').bind('click', function() {
     $('.navbar-bottom').addClass('flex-column')
     $('.navbar-bottom').removeClass('align-items-center')
+    let top = $('.navbar').height()
+    $('.cards-table').css('top', top + 30 + 1)
+    if (cardToggler == 1) {
+        $('.content').css('padding-top', top + 30 + 45)
+    } else if (cardToggler == 0) {
+         $('.content').css('padding-top', top + 30 + 25 + 63)
+    }
+ 
+})
+
+let cardToggler = 1
+
+$('.sorting-btn_2').bind('click', function() {
+    $('.client-cards').fadeOut(1)
+    $('.updated').fadeOut(1)
+    $('.client-cards_stroke').fadeIn(1)
+    $('.cards-table').fadeIn(1)
+
+    let top = $('.navbar').height() + 30 + 1
+    $('.cards-table').css('top', top)
+
+
+    $('.content').css('padding-top', top + 62 + 25)
+
+    cardToggler = 0
+})
+
+$('.sorting-btn_1').bind('click', function() {
+    $('.client-cards').fadeIn(1)
+    $('.updated').fadeIn(1)
+    $('.client-cards_stroke').fadeOut(1)
+    $('.cards-table').fadeOut(1)
+    let top = $('.navbar').height() + 30 + 45
+    $('.content').css('padding-top', top)
+
+    cardToggler = 1
 })

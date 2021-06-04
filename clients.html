@@ -55,9 +55,9 @@
                                 </svg>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownFilters">
-                                <li><a class="dropdown-item" href="#">1</a></li>
-                                <li><a class="dropdown-item" href="#">2</a></li>
-                                <li><a class="dropdown-item" href="#">3</a></li>
+                                <li><a class="dropdown-item filters__dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item filters__dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item filters__dropdown-item" href="#">3</a></li>
                             </ul>
                         </div>
                         <div class="dropdown sort-dropdown">
@@ -73,7 +73,7 @@
                                 <li><a class="dropdown-item" href="#">3</a></li>
                             </ul>
                         </div>
-                        <button class="sorting-btn btn_off active">
+                        <button class="sorting-btn btn_off active sorting-btn_1">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="3" y="4" width="7" height="7" fill="#2E364A" />
                                 <rect x="13" y="4" width="7" height="7" fill="#2E364A" />
@@ -96,8 +96,6 @@
                             <span>Добавить клиента</span>
                         </button>
                     </div>
-                </div>
-                <div class="navbar-footer">
                 </div>
             </div>
         </nav>
@@ -151,6 +149,71 @@
                         <path d="M2.55556 1.5L2.55556 13.5L8 13.5L8 15L2.55556 15C1.69767 15 1 14.3273 1 13.5L1 1.5C1 0.67275 1.69767 1.48716e-07 2.55555 1.28472e-07L8 0L8 1.5L2.55556 1.5Z" fill="#2E364A" />
                     </svg>
                 </a>
+            </div>
+        </div>
+        <div class="cards-table">
+            <div class="container">
+                <table class="table navbar-table">
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>Имя
+                                <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A" />
+                                        <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A" />
+                                    </g>
+                                </svg>
+                            </td>
+                            <td>
+                                Доходность
+                                <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A" />
+                                        <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A" />
+                                    </g>
+                                </svg>
+                            </td>
+                            <td>
+                                Активы
+                                <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A" />
+                                        <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A" />
+                                    </g>
+                                </svg>
+                            </td>
+                            <td>
+                                Портфели
+                                <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A" />
+                                        <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A" />
+                                    </g>
+                                </svg>
+                            </td>
+                            <td>
+                                Сигналы
+                                <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A" />
+                                        <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A" />
+                                    </g>
+                                </svg>
+                            </td>
+                            <td>
+                                Статус
+                                <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A" />
+                                        <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A" />
+                                    </g>
+                                </svg>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                </table>
             </div>
         </div>
     </header>
@@ -512,6 +575,320 @@
                 </div>
             </div>
             <div class="row fadeIn client-cards_stroke">
+                <div class="col-md-12">
+                    <div class="card client-card_stroke">
+                        <div class="card-body">
+                            <div class="client-card__arrow">
+                                <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.956055 1L10.9561 11L20.9561 1" stroke="#2E364A" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <p class="client-card__name">Текст</p>
+                            <p class="client-card__profit d-flex align-items-center justify-content-end">
+                                <span class="text-success d-flex align-items-center justify-content-end">
+                                    <span>1.88 % </span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9"></path>
+                                    </svg>
+                                </span>
+                            </p>
+                            <p class="client-card__actives d-flex align-items-center justify-content-end">$4,475,45</p>
+                            <p class="client-card__porfolio d-flex align-items-center justify-content-end">3</p>
+                            <div class="client-card__signals d-flex align-items-center justify-content-end">
+                                <span class="badge bg-danger">5</span>
+                            </div>
+                            <div class="client-card__status d-flex align-items-center justify-content-end">
+                                <span class="badge bg-success">Отслеживать</span>
+                            </div>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card client-card_stroke">
+                        <div class="card-body">
+                            <div class="client-card__arrow">
+                                <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.956055 1L10.9561 11L20.9561 1" stroke="#2E364A" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <p class="client-card__name">Текст</p>
+                            <p class="client-card__profit d-flex align-items-center justify-content-end">
+                                <span class="text-danger d-flex align-items-center justify-content-end">
+                                    <span>0.88 %  </span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
+                                    </svg>
+                                </span>
+                            </p>
+                            <p class="client-card__actives d-flex align-items-center justify-content-end">$4,475,45</p>
+                            <p class="client-card__porfolio d-flex align-items-center justify-content-end">5</p>
+                            <div class="client-card__signals d-flex align-items-center justify-content-end">
+                                <span class="badge bg-danger">5</span>
+                            </div>
+                            <div class="client-card__status d-flex align-items-center justify-content-end">
+                                <span class="badge bg-danger">Не уведомлять</span>
+                            </div>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card client-card_stroke">
+                        <div class="card-body">
+                            <div class="client-card__arrow">
+                                <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.956055 1L10.9561 11L20.9561 1" stroke="#2E364A" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <p class="client-card__name">Текст</p>
+                            <p class="client-card__profit d-flex align-items-center justify-content-end">
+                                <span class="text-success d-flex align-items-center justify-content-end">
+                                    <span>1.88 % </span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9"></path>
+                                    </svg>
+                                </span>
+                            </p>
+                            <p class="client-card__actives d-flex align-items-center justify-content-end">$4,475,45</p>
+                            <p class="client-card__porfolio d-flex align-items-center justify-content-end">3</p>
+                            <div class="client-card__signals d-flex align-items-center justify-content-end">
+                                <span class="badge bg-danger">5</span>
+                            </div>
+                            <div class="client-card__status d-flex align-items-center justify-content-end">
+                                <span class="badge bg-success">Отслеживать</span>
+                            </div>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card client-card_stroke">
+                        <div class="card-body">
+                            <div class="client-card__arrow">
+                                <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.956055 1L10.9561 11L20.9561 1" stroke="#2E364A" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <p class="client-card__name">Текст</p>
+                            <p class="client-card__profit d-flex align-items-center justify-content-end">
+                                <span class="text-danger d-flex align-items-center justify-content-end">
+                                    <span>0.88 %  </span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
+                                    </svg>
+                                </span>
+                            </p>
+                            <p class="client-card__actives d-flex align-items-center justify-content-end">$4,475,45</p>
+                            <p class="client-card__porfolio d-flex align-items-center justify-content-end">5</p>
+                            <div class="client-card__signals d-flex align-items-center justify-content-end">
+                                <span class="badge bg-danger">5</span>
+                            </div>
+                            <div class="client-card__status d-flex align-items-center justify-content-end">
+                                <span class="badge bg-danger">Не уведомлять</span>
+                            </div>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card client-card_stroke">
+                        <div class="card-body">
+                            <div class="client-card__arrow">
+                                <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.956055 1L10.9561 11L20.9561 1" stroke="#2E364A" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <p class="client-card__name">Текст</p>
+                            <p class="client-card__profit d-flex align-items-center justify-content-end">
+                                <span class="text-success d-flex align-items-center justify-content-end">
+                                    <span>1.88 % </span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9"></path>
+                                    </svg>
+                                </span>
+                            </p>
+                            <p class="client-card__actives d-flex align-items-center justify-content-end">$4,475,45</p>
+                            <p class="client-card__porfolio d-flex align-items-center justify-content-end">3</p>
+                            <div class="client-card__signals d-flex align-items-center justify-content-end">
+                                <span class="badge bg-danger">5</span>
+                            </div>
+                            <div class="client-card__status d-flex align-items-center justify-content-end">
+                                <span class="badge bg-success">Отслеживать</span>
+                            </div>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card client-card_stroke">
+                        <div class="card-body">
+                            <div class="client-card__arrow">
+                                <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.956055 1L10.9561 11L20.9561 1" stroke="#2E364A" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <p class="client-card__name">Текст</p>
+                            <p class="client-card__profit d-flex align-items-center justify-content-end">
+                                <span class="text-danger d-flex align-items-center justify-content-end">
+                                    <span>0.88 %  </span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
+                                    </svg>
+                                </span>
+                            </p>
+                            <p class="client-card__actives d-flex align-items-center justify-content-end">$4,475,45</p>
+                            <p class="client-card__porfolio d-flex align-items-center justify-content-end">5</p>
+                            <div class="client-card__signals d-flex align-items-center justify-content-end">
+                                <span class="badge bg-danger">5</span>
+                            </div>
+                            <div class="client-card__status d-flex align-items-center justify-content-end">
+                                <span class="badge bg-danger">Не уведомлять</span>
+                            </div>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card client-card_stroke">
+                        <div class="card-body">
+                            <div class="client-card__arrow">
+                                <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.956055 1L10.9561 11L20.9561 1" stroke="#2E364A" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <p class="client-card__name">Текст</p>
+                            <p class="client-card__profit d-flex align-items-center justify-content-end">
+                                <span class="text-success d-flex align-items-center justify-content-end">
+                                    <span>1.88 % </span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9"></path>
+                                    </svg>
+                                </span>
+                            </p>
+                            <p class="client-card__actives d-flex align-items-center justify-content-end">$4,475,45</p>
+                            <p class="client-card__porfolio d-flex align-items-center justify-content-end">3</p>
+                            <div class="client-card__signals d-flex align-items-center justify-content-end">
+                                <span class="badge bg-danger">5</span>
+                            </div>
+                            <div class="client-card__status d-flex align-items-center justify-content-end">
+                                <span class="badge bg-success">Отслеживать</span>
+                            </div>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card client-card_stroke">
+                        <div class="card-body">
+                            <div class="client-card__arrow">
+                                <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.956055 1L10.9561 11L20.9561 1" stroke="#2E364A" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <p class="client-card__name">Текст</p>
+                            <p class="client-card__profit d-flex align-items-center justify-content-end">
+                                <span class="text-danger d-flex align-items-center justify-content-end">
+                                    <span>0.88 %  </span>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
+                                    </svg>
+                                </span>
+                            </p>
+                            <p class="client-card__actives d-flex align-items-center justify-content-end">$4,475,45</p>
+                            <p class="client-card__porfolio d-flex align-items-center justify-content-end">5</p>
+                            <div class="client-card__signals d-flex align-items-center justify-content-end">
+                                <span class="badge bg-danger">5</span>
+                            </div>
+                            <div class="client-card__status d-flex align-items-center justify-content-end">
+                                <span class="badge bg-danger">Не уведомлять</span>
+                            </div>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

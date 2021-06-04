@@ -2098,7 +2098,8 @@ input[type="checkbox"] {
     margin-right: 8px;
 }
 
-.sorting-btn rect, .sorting-btn path {
+.sorting-btn rect,
+.sorting-btn path {
     transition: all 0.15s linear;
 }
 
@@ -2206,4 +2207,165 @@ input[type="checkbox"] {
 
 .client-card .text-danger svg {
     margin-left: 5px;
+}
+
+.navbar-table {
+    margin-top: 20px;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+
+.navbar-table tr td:first-child {
+    width: 70px;
+}
+
+.navbar-table tr td:nth-child(2) {
+    width: 99px;
+    text-align: center;
+}
+
+
+.navbar-table tr td:nth-child(3) {
+    width: 235px;
+    text-align: right;
+}
+
+.navbar-table tr td:nth-child(4) {
+    width: 125px;
+    text-align: right;
+}
+
+
+.navbar-table tr td:nth-child(5) {
+    width: 155px;
+    text-align: right;
+}
+
+.navbar-table tr td:nth-child(6) {
+    width: 130px;
+    text-align: right;
+}
+
+.navbar-table tr td:nth-child(7) {
+    width: 220px;
+    text-align: right;
+    padding-right: 60px;
+}
+
+
+.navbar-table tr td:last-child {
+    width: 96px;
+}
+
+.navbar-table {
+    position: relative;
+}
+
+
+.cards-table:after {
+    height: 62px;
+    content: '';
+    display: block;
+    width: 2px;
+    background: #F4F4F6;
+    position: absolute;
+    left: 44px;
+    top: 0;
+}
+
+.cards-table {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background: white;
+    top: 114.3px;
+    z-index: 9;
+    border-top: 2px solid #F4F4F6;
+    /*margin-left: 46px;*/
+}
+
+.client-cards_stroke, .cards-table {
+    display: none;
+}
+
+.client-card_stroke {
+    height: 80px;
+    box-shadow: none;
+    margin-bottom: 10px;
+}
+
+.client-card_stroke>*>* {
+    height: 100%;
+}
+
+.client-card_stroke .card-body {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.client-card__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 71px;
+    border-right: 1px solid #F4F4F6;
+}
+
+.client-card__name {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    width: 245px;
+}
+
+.client-card_stroke {
+    font-size: 14px;
+    line-height: 16px;
+
+}
+
+
+.client-card_stroke .badge {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 1px 11px;
+    font-weight: 400;
+}
+
+.client-card__profit {
+    width: 90px;
+}
+
+.client-card__profit svg {
+    margin-left: 5px;
+    margin-top: -2px;
+}
+
+.client-card__actives {
+    width: 126px;
+}
+
+.client-card__porfolio {
+    width: 156px;
+}
+
+.client-card__signals {
+    width: 131px;
+}
+
+.client-card__status {
+    width: 222px;
+}
+
+.client-card_stroke .client-card__settings {
+    padding-right: 37px;
+    flex-grow: 1;
+}
+
+.client-card__status .badge.bg-danger {
+    padding: 1px 5px;
 }
