@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=1300">
+    <title>Dashboard</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .content {
+            padding-top: 125px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start your project here-->
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg bg-white scrolling-navbar">
+            <div class="container-fluid">
+                <div class="navbar-top d-flex align-items-center justify-content-between w-100">
+                    <a href="/" class="navbar-brand waves-effect">Клиенты</a>
+                    <a href="#" class="bell waves-effect" data-mdb-toggle="modal" data-mdb-target="#notificationsModal">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge rounded-pill badge-notification">3</span>
+                    </a>
+                </div>
+                <div class="navbar-bottom d-flex align-items-center w-100">
+                    <a href="clients.html" class="back">Назад</a>
+                    <ul class="nav nav-tabs overview-tabs" id="tabsOverview" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link waves-effect" id="tabOverview" data-mdb-toggle="tab" href="#tabsOverviewContent" role="tab" aria-controls="tabsOverviewContent" aria-selected="true">Обзор</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link waves-effect active" id="allSignal" data-mdb-toggle="tab" href="#allSignalContent" role="tab" aria-controls="allSignalContent" aria-selected="false">Уведомления</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-primary export-txt ml-auto">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.8501 1L3.6001 3.8125L5.2876 3.8125L5.2876 7.75L6.4126 7.75L6.4126 3.8125L8.1001 3.8125L5.8501 1Z" fill="white" />
+                            <path d="M1.125 10.4837L10.125 10.4837L10.125 6.40039L11.25 6.40039L11.25 10.4837C11.25 11.1271 10.7454 11.6504 10.125 11.6504L1.125 11.6504C0.504563 11.6504 3.1815e-07 11.1271 2.74842e-07 10.4837L0 6.40039L1.125 6.40039L1.125 10.4837Z" fill="white" />
+                        </svg>
+                        <span>Экспорт в txt</span>
+                    </button>
+                    <!-- <button class="btn_off edit ml-auto">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5999 21.6H20.3999C20.7182 21.6 21.0234 21.7264 21.2484 21.9515C21.4735 22.1765 21.5999 22.4817 21.5999 22.8C21.5999 23.1183 21.4735 23.4235 21.2484 23.6485C21.0234 23.8736 20.7182 24 20.3999 24H3.5999C3.28164 24 2.97642 23.8736 2.75137 23.6485C2.52633 23.4235 2.3999 23.1183 2.3999 22.8C2.3999 22.4817 2.52633 22.1765 2.75137 21.9515C2.97642 21.7264 3.28164 21.6 3.5999 21.6ZM2.3999 15.6L14.3999 3.6L17.9999 7.2L5.9999 19.2H2.3999V15.6ZM15.5999 2.4L17.9999 0L21.5999 3.6L19.1987 6.0012L15.5999 2.4Z" fill="#0068FC" />
+                        </svg>
+                    </button>
+                    <button class="btn_off download-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.7 1.20019L7.19995 6.82519L10.575 6.82519L10.575 14.7002L12.825 14.7002L12.825 6.82519L16.2 6.82519L11.7 1.20019Z" fill="#0068FC" />
+                            <path d="M2.25 20.1667L20.25 20.1667L20.25 12L22.5 12L22.5 20.1667C22.5 21.4535 21.4909 22.5 20.25 22.5L2.25 22.5C1.00913 22.5 6.363e-07 21.4535 5.49685e-07 20.1667L0 12L2.25 12L2.25 20.1667Z" fill="#0068FC" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-primary history-transactions">
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 2.5H4.375V5.625H6.875V5H5V2.5Z" fill="white" />
+                            <path d="M10 4.375V1.875L9.3125 2.5625C8.5 1 6.875 0 5 0C2.25 0 0 2.25 0 5C0 7.75 2.25 10 5 10C6.5 10 7.875 9.3125 8.75 8.25L7.8125 7.4375C7.125 8.25 6.125 8.75 5 8.75C2.9375 8.75 1.25 7.0625 1.25 5C1.25 2.9375 2.9375 1.25 5 1.25C6.5 1.25 7.8125 2.1875 8.4375 3.4375L7.5 4.375H10Z" fill="white" />
+                        </svg>
+                        <span>История сделок</span>
+                    </button> -->
+                </div>
+            </div>
+        </nav>
+        <div class="sidebar-fixed position-fixed">
+            <a href="#" class="logo-wrapper waves-effect">
+                <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.4691 10.9203L14.9471 0H21L13.4338 15H7.50441L0 0H6.00662L10.4691 10.9203Z" fill="#32A7D4" />
+                </svg>
+            </a>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item waves-effect">
+                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1H16" stroke="black" />
+                        <path d="M0 6H16" stroke="black" />
+                        <path d="M0 11H16" stroke="black" />
+                    </svg>
+                </a>
+                <a href="index.html" class="list-group-item waves-effect now">
+                    <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 9.50004C15.4342 9.50042 15.369 9.4878 15.3081 9.46292C15.2471 9.43804 15.1917 9.40138 15.145 9.35503L8.00001 2.20503L0.855014 9.35503C0.759363 9.43695 0.636325 9.47975 0.510487 9.47489C0.384649 9.47003 0.265279 9.41786 0.176232 9.32882C0.0871848 9.23977 0.0350186 9.1204 0.030158 8.99456C0.0252975 8.86872 0.0681005 8.74569 0.150014 8.65003L7.65001 1.15004C7.74369 1.05691 7.87042 1.00464 8.00251 1.00464C8.13461 1.00464 8.26133 1.05691 8.35501 1.15004L15.855 8.65003C15.9238 8.72023 15.9704 8.80914 15.989 8.90566C16.0075 9.00219 15.9972 9.10204 15.9593 9.19273C15.9214 9.28343 15.8577 9.36095 15.776 9.41561C15.6943 9.47026 15.5983 9.49963 15.5 9.50004Z" fill="#2E364A" />
+                        <path d="M8 3.89502L2 9.91502V16C2 16.2652 2.10536 16.5196 2.29289 16.7071C2.48043 16.8947 2.73478 17 3 17H6.5V12H9.5V17H13C13.2652 17 13.5196 16.8947 13.7071 16.7071C13.8946 16.5196 14 16.2652 14 16V9.88002L8 3.89502Z" fill="#2E364A" />
+                    </svg>
+                </a>
+                <a href="create.html" class="list-group-item waves-effect">
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" width="12" height="15" rx="1" fill="#2E3139" />
+                        <circle cx="10.5" cy="12.2" r="4" fill="#2E3139" stroke="white" />
+                        <path d="M8 12.2H13M10.5 9.70001V14.7" stroke="white" />
+                    </svg>
+                </a>
+                <a href="#" class="list-group-item waves-effect">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0-973477)">
+                            <path d="M12 0H4C3.46957 0 2.96086 0.210714 2.58579 0.585786C2.21071 0.960859 2 1.46957 2 2V14C2 14.5304 2.21071 15.0391 2.58579 15.4142C2.96086 15.7893 3.46957 16 4 16H12C12.5304 16 13.0391 15.7893 13.4142 15.4142C13.7893 15.0391 14 14.5304 14 14V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0V0ZM11 7C11 7.79565 10.6839 8.55871 10.1213 9.12132C9.55871 9.68393 8.79565 10 8 10C7.20435 10 6.44129 9.68393 5.87868 9.12132C5.31607 8.55871 5 7.79565 5 7C5 6.20435 5.31607 5.44129 5.87868 4.87868C6.44129 4.31607 7.20435 4 8 4C8.79565 4 9.55871 4.31607 10.1213 4.87868C10.6839 5.44129 11 6.20435 11 7ZM8 11C10.623 11 12.146 11.826 13 12.755V14C13 14.2652 12.8946 14.5196 12.7071 14.7071C12.5196 14.8946 12.2652 15 12 15H4C3.73478 15 3.48043 14.8946 3.29289 14.7071C3.10536 14.5196 3 14.2652 3 14V12.755C3.854 11.825 5.377 11 8 11Z" fill="#2E364A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0-973477">
+                                <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="#" class="list-group-item waves-effect">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.405 1.05C8.992 -0.35 7.008 -0.35 6.595 1.05L6.495 1.39C6.43329 1.59959 6.32545 1.79272 6.17939 1.95521C6.03333 2.11771 5.85275 2.24544 5.6509 2.32906C5.44904 2.41268 5.23103 2.45006 5.01285 2.43846C4.79466 2.42685 4.58185 2.36656 4.39 2.262L4.08 2.092C2.797 1.394 1.394 2.797 2.093 4.079L2.262 4.39C2.708 5.21 2.285 6.231 1.39 6.495L1.05 6.595C-0.35 7.008 -0.35 8.992 1.05 9.405L1.39 9.505C1.59959 9.56671 1.79272 9.67455 1.95521 9.82061C2.11771 9.96667 2.24544 10.1472 2.32906 10.3491C2.41268 10.551 2.45006 10.769 2.43846 10.9872C2.42685 11.2053 2.36656 11.4182 2.262 11.61L2.092 11.92C1.394 13.203 2.797 14.606 4.079 13.907L4.39 13.738C4.58185 13.6334 4.79466 13.5731 5.01285 13.5615C5.23103 13.5499 5.44904 13.5873 5.6509 13.6709C5.85275 13.7546 6.03333 13.8823 6.17939 14.0448C6.32545 14.2073 6.43329 14.4004 6.495 14.61L6.595 14.95C7.008 16.35 8.992 16.35 9.405 14.95L9.505 14.61C9.56671 14.4004 9.67455 14.2073 9.82061 14.0448C9.96667 13.8823 10.1472 13.7546 10.3491 13.6709C10.551 13.5873 10.769 13.5499 10.9872 13.5615C11.2053 13.5731 11.4182 13.6334 11.61 13.738L11.92 13.908C13.203 14.606 14.606 13.203 13.907 11.921L13.738 11.61C13.6334 11.4182 13.5731 11.2053 13.5615 10.9872C13.5499 10.769 13.5873 10.551 13.6709 10.3491C13.7546 10.1472 13.8823 9.96667 14.0448 9.82061C14.2073 9.67455 14.4004 9.56671 14.61 9.505L14.95 9.405C16.35 8.992 16.35 7.008 14.95 6.595L14.61 6.495C14.4004 6.43329 14.2073 6.32545 14.0448 6.17939C13.8823 6.03333 13.7546 5.85275 13.6709 5.6509C13.5873 5.44904 13.5499 5.23103 13.5615 5.01285C13.5731 4.79466 13.6334 4.58185 13.738 4.39L13.908 4.08C14.606 2.797 13.203 1.394 11.921 2.093L11.61 2.262C11.4182 2.36656 11.2053 2.42685 10.9872 2.43846C10.769 2.45006 10.551 2.41268 10.3491 2.32906C10.1472 2.24544 9.96667 2.11771 9.82061 1.95521C9.67455 1.79272 9.56671 1.59959 9.505 1.39L9.405 1.05ZM8 10.93C7.22292 10.93 6.47766 10.6213 5.92818 10.0718C5.3787 9.52234 5.07 8.77708 5.07 8C5.07 7.22292 5.3787 6.47766 5.92818 5.92818C6.47766 5.3787 7.22292 5.07 8 5.07C8.77682 5.07 9.52182 5.37859 10.0711 5.92788C10.6204 6.47718 10.929 7.22218 10.929 7.999C10.929 8.77582 10.6204 9.52082 10.0711 10.0701C9.52182 10.6194 8.77682 10.928 8 10.928V10.93Z" fill="#2E364A" />
+                    </svg>
+                </a>
+                <a href="#" class="list-group-item waves-effect">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.3546 7.00006L11.6046 4.00006L11.6046 6.25006L6.35455 6.25006L6.35455 7.75006L11.6046 7.75006L11.6046 10.0001L15.3546 7.00006Z" fill="#2E364A" />
+                        <path d="M2.55556 1.5L2.55556 13.5L8 13.5L8 15L2.55556 15C1.69767 15 1 14.3273 1 13.5L1 1.5C1 0.67275 1.69767 1.48716e-07 2.55555 1.28472e-07L8 0L8 1.5L2.55556 1.5Z" fill="#2E364A" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="content">
+        <div class="container">
+            <div class="content-top d-flex align-items-center justify-content-between">
+                <ul class="breadcrumbs d-flex align-items-center">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link d-flex align-items-center" href="#">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.16684 5.27728C9.13028 5.27749 9.09404 5.27049 9.06019 5.25666C9.02635 5.24284 8.99557 5.22247 8.96961 5.19672L5.00017 1.2245L1.03073 5.19672C0.977587 5.24223 0.909232 5.26601 0.839322 5.26331C0.769412 5.26061 0.703096 5.23163 0.653625 5.18216C0.604154 5.13269 0.575173 5.06637 0.572473 4.99646C0.569772 4.92655 0.593552 4.8582 0.639059 4.80506L4.80573 0.638393C4.85777 0.586657 4.92817 0.557617 5.00156 0.557617C5.07494 0.557617 5.14535 0.586657 5.19739 0.638393L9.36406 4.80506C9.40228 4.84405 9.42817 4.89345 9.43847 4.94707C9.44878 5.0007 9.44305 5.05617 9.42201 5.10656C9.40096 5.15694 9.36554 5.20001 9.32015 5.23038C9.27477 5.26074 9.22144 5.27705 9.16684 5.27728Z" fill="#2E364A" />
+                                <path d="M4.99984 2.16406L1.6665 5.50851V8.88906C1.6665 9.0364 1.72504 9.17771 1.82922 9.2819C1.93341 9.38609 2.07472 9.44462 2.22206 9.44462H4.1665V6.66684H5.83317V9.44462H7.77761C7.92496 9.44462 8.06626 9.38609 8.17045 9.2819C8.27464 9.17771 8.33317 9.0364 8.33317 8.88906V5.48906L4.99984 2.16406Z" fill="#2E364A" />
+                            </svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item_slash">/</li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link d-flex align-items-center" href="#">
+                            Clients
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item_slash">/</li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link d-flex align-items-center" href="#">
+                            Laste Anderson
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item_slash">/</li>
+                </ul>
+                <p class="updated">Last updated: Thu Oct 03 2019 12:35:10 GMT-0700</p>
+            </div>
+            <div class="row fadeIn">
+                <div class="col-md-7">
+                    <div class="card signals">
+                        <div class="card-header">
+                            <div class="d-flex align-items-center">
+                                <p class="card-title">Сигналы</p>
+                                <div class="dropdown ml-auto">
+                                    <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                        Сортировать
+                                        <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L5.5 6L7.75 3.5L10 1" stroke="#2E364A" />
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item" href="#">1</a></li>
+                                        <li><a class="dropdown-item" href="#">2</a></li>
+                                        <li><a class="dropdown-item" href="#">3</a></li>
+                                    </ul>
+                                </div>
+                                <ul class="nav nav-tabs signals__tabs" id="tabSignals" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link waves-effect" id="newSignal" data-mdb-toggle="tab" href="#newSignalContent" role="tab" aria-controls="newSignalContent" aria-selected="true">Новый</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link waves-effect" id="readySignal" data-mdb-toggle="tab" href="#readySignalContent" role="tab" aria-controls="readySignalContent" aria-selected="false">Прочитаный</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link waves-effect active" id="allSignal" data-mdb-toggle="tab" href="#allSignalContent" role="tab" aria-controls="allSignalContent" aria-selected="false">Все</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="long-search">
+                                <input type="search" id="form1" class="form-control" placeholder="Выбрать" />
+                                <svg class="search-icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 14L11.0093 11.004L14 14ZM12.6666 7.00001C12.6666 8.5029 12.0696 9.94424 11.0069 11.0069C9.94421 12.0697 8.50287 12.6667 6.99998 12.6667C5.49709 12.6667 4.05575 12.0697 2.99304 11.0069C1.93034 9.94424 1.33331 8.5029 1.33331 7.00001C1.33331 5.49712 1.93034 4.05578 2.99304 2.99307C4.05575 1.93037 5.49709 1.33334 6.99998 1.33334C8.50287 1.33334 9.94421 1.93037 11.0069 2.99307C12.0696 4.05578 12.6666 5.49712 12.6666 7.00001V7.00001Z" stroke="#2E364A" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <p class="signals__date">October 03, 2019 </p>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content" id="ex1-content">
+                                <div class="tab-pane fade" id="newSignalContent" role="tabpanel" aria-labelledby="newSignalContent">
+                                    <div class="signal">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="badge bg-danger">
+                                                Новый
+                                            </div>
+                                            <p class="signal__date">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g opacity="0.3">
+                                                        <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
+                                                        <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
+                                                    </g>
+                                                </svg>
+                                                Today, July 12, 2019, 11:36 AM
+                                            </p>
+                                        </div>
+                                        <div class="signal__content">
+                                            <h3 class="signal__title">Distribution Request Processed</h3>
+                                            <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed </p>
+                                        </div>
+                                        <div class="signal__footer">
+                                            <div class="author">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
+                                                </svg>
+                                                Craig Gordon
+                                            </div>
+                                            <div class="d-flex signal__bottom align-items-center justify-content-between">
+                                                <div class="signal__note">
+                                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="7" height="8" rx="1" fill="#A5A8C3" />
+                                                    </svg>
+                                                    Portfolio: Craig Gordon Investment Portfolio
+                                                </div>
+                                                <p class="already-read ml-auto">Прочитано</p>
+                                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="signal">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="badge bg-danger">
+                                                Новый
+                                            </div>
+                                            <p class="signal__date">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g opacity="0.3">
+                                                        <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
+                                                        <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
+                                                    </g>
+                                                </svg>
+                                                Today, July 12, 2019, 11:36 AM
+                                            </p>
+                                        </div>
+                                        <div class="signal__content">
+                                            <h3 class="signal__title">Distribution Request Processed</h3>
+                                            <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed </p>
+                                        </div>
+                                        <div class="signal__footer">
+                                            <div class="author">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
+                                                </svg>
+                                                Craig Gordon
+                                            </div>
+                                            <div class="d-flex signal__bottom align-items-center justify-content-between">
+                                                <div class="signal__note">
+                                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="7" height="8" rx="1" fill="#A5A8C3" />
+                                                    </svg>
+                                                    Portfolio: Craig Gordon Investment Portfolio
+                                                </div>
+                                                <p class="already-read ml-auto">Прочитано</p>
+                                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="readySignalContent" role="tabpanel" aria-labelledby="readySignalContent">
+                                    <div class="signal">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="badge bg-gray">
+                                                Прочитанный
+                                            </div>
+                                            <p class="signal__date">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g opacity="0.3">
+                                                        <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
+                                                        <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
+                                                    </g>
+                                                </svg>
+                                                Today, July 12, 2019, 11:36 AM
+                                            </p>
+                                        </div>
+                                        <div class="signal__content">
+                                            <h3 class="signal__title">Saved Portfolio</h3>
+                                            <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed</p>
+                                        </div>
+                                        <div class="signal__footer">
+                                            <div class="author">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
+                                                </svg>
+                                                Craig Gordon
+                                            </div>
+                                            <div class="d-flex signal__bottom align-items-center justify-content-between">
+                                                <div class="signal__note">
+                                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="7" height="8" rx="1" fill="#A5A8C3" />
+                                                    </svg>
+                                                    Portfolio: Craig Gordon Investment Portfolio
+                                                </div>
+                                                <p class="already-read ml-auto">Прочитано</p>
+                                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade show active" id="allSignalContent" role="tabpanel" aria-labelledby="allSignalContent">
+                                    <div class="signal">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="badge bg-danger">
+                                                Новый
+                                            </div>
+                                            <p class="signal__date">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g opacity="0.3">
+                                                        <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
+                                                        <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
+                                                    </g>
+                                                </svg>
+                                                Today, July 12, 2019, 11:36 AM
+                                            </p>
+                                        </div>
+                                        <div class="signal__content">
+                                            <h3 class="signal__title">Distribution Request Processed</h3>
+                                            <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed </p>
+                                        </div>
+                                        <div class="signal__footer">
+                                            <div class="author">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
+                                                </svg>
+                                                Craig Gordon
+                                            </div>
+                                            <div class="d-flex signal__bottom align-items-center justify-content-between">
+                                                <div class="signal__note">
+                                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="7" height="8" rx="1" fill="#A5A8C3" />
+                                                    </svg>
+                                                    Portfolio: Craig Gordon Investment Portfolio
+                                                </div>
+                                                <p class="already-read ml-auto">Прочитано</p>
+                                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="signal">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="badge bg-gray">
+                                                Прочитанный
+                                            </div>
+                                            <p class="signal__date">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g opacity="0.3">
+                                                        <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
+                                                        <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
+                                                    </g>
+                                                </svg>
+                                                Today, July 12, 2019, 11:36 AM
+                                            </p>
+                                        </div>
+                                        <div class="signal__content">
+                                            <h3 class="signal__title">Saved Portfolio</h3>
+                                            <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed</p>
+                                        </div>
+                                        <div class="signal__footer">
+                                            <div class="author">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
+                                                </svg>
+                                                Craig Gordon
+                                            </div>
+                                            <div class="d-flex signal__bottom align-items-center justify-content-between">
+                                                <div class="signal__note">
+                                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="7" height="8" rx="1" fill="#A5A8C3" />
+                                                    </svg>
+                                                    Portfolio: Craig Gordon Investment Portfolio
+                                                </div>
+                                                <p class="already-read ml-auto">Прочитано</p>
+                                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="signal">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="badge bg-danger">
+                                                Новый
+                                            </div>
+                                            <p class="signal__date">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g opacity="0.3">
+                                                        <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
+                                                        <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
+                                                    </g>
+                                                </svg>
+                                                Today, July 12, 2019, 11:36 AM
+                                            </p>
+                                        </div>
+                                        <div class="signal__content">
+                                            <h3 class="signal__title">Distribution Request Processed</h3>
+                                            <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed </p>
+                                        </div>
+                                        <div class="signal__footer">
+                                            <div class="author">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
+                                                </svg>
+                                                Craig Gordon
+                                            </div>
+                                            <div class="d-flex signal__bottom align-items-center justify-content-between">
+                                                <div class="signal__note">
+                                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="7" height="8" rx="1" fill="#A5A8C3" />
+                                                    </svg>
+                                                    Portfolio: Craig Gordon Investment Portfolio
+                                                </div>
+                                                <p class="already-read ml-auto">Прочитано</p>
+                                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card notify">
+                        <div class="card-header">
+                            <div class="d-flex align-items-center">
+                                <p class="card-title">Уведомления</p>
+                                <div class="dropdown ml-auto">
+                                    <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                        Сортировать
+                                        <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L5.5 6L7.75 3.5L10 1" stroke="#2E364A" />
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item" href="#">1</a></li>
+                                        <li><a class="dropdown-item" href="#">2</a></li>
+                                        <li><a class="dropdown-item" href="#">3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="long-search">
+                                <input type="search" id="form1" class="form-control" placeholder="Выбрать" />
+                                <svg class="search-icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 14L11.0093 11.004L14 14ZM12.6666 7.00001C12.6666 8.5029 12.0696 9.94424 11.0069 11.0069C9.94421 12.0697 8.50287 12.6667 6.99998 12.6667C5.49709 12.6667 4.05575 12.0697 2.99304 11.0069C1.93034 9.94424 1.33331 8.5029 1.33331 7.00001C1.33331 5.49712 1.93034 4.05578 2.99304 2.99307C4.05575 1.93037 5.49709 1.33334 6.99998 1.33334C8.50287 1.33334 9.94421 1.93037 11.0069 2.99307C12.0696 4.05578 12.6666 5.49712 12.6666 7.00001V7.00001Z" stroke="#2E364A" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <p class="signals__date">October 03, 2019 </p>
+                        </div>
+                        <div class="card-body">
+                            <div class="notification">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="notification__title">
+                                        Major Sentiment Change
+                                    </p>
+                                    <p class="notification__date">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g opacity="0.3">
+                                                <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
+                                                <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
+                                            </g>
+                                        </svg>
+                                        Today, July 12, 2019, 11:36 AM
+                                    </p>
+                                </div>
+                                <div class="notification__content">
+                                    <p class="notification_text">
+                                        <span class="text-success">0.88 %</span> to $300,34 within 13 days
+                                    </p>
+                                </div>
+                                <div class="notification__footer">
+                                    <div class="author">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
+                                        </svg>
+                                        Craig Gordon
+                                    </div>
+                                    <div class="notification__note">
+                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="7" height="8" rx="1" fill="#A5A8C3" />
+                                        </svg>
+                                        Portfolio: Craig Gordon Investment Portfolio
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="notification__title">
+                                        Dividends paid
+                                    </p>
+                                    <p class="notification__date">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g opacity="0.3">
+                                                <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
+                                                <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
+                                            </g>
+                                        </svg>
+                                        Today, July 12, 2019, 11:36 AM
+                                    </p>
+                                </div>
+                                <div class="notification__content d-flex align-items-end">
+                                    <span class="badge bg-light">PGE, Pacitic Gas Electric Co.</span>
+                                    <p class="notification_text">Dividends was paid in amount: $ 170,50</p>
+                                </div>
+                                <div class="notification__footer">
+                                    <div class="author">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
+                                        </svg>
+                                        Craig Gordon
+                                    </div>
+                                    <div class="notification__note">
+                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="7" height="8" rx="1" fill="#A5A8C3" />
+                                        </svg>
+                                        Portfolio: Craig Gordon Investment Portfolio
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="notification__title">
+                                        Major Sentiment Change
+                                    </p>
+                                    <p class="notification__date">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g opacity="0.3">
+                                                <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
+                                                <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
+                                            </g>
+                                        </svg>
+                                        Today, July 12, 2019, 11:36 AM
+                                    </p>
+                                </div>
+                                <div class="notification__content">
+                                    <p class="notification_text">
+                                        <span class="text-success">0.88 %</span> to $300,34 within 13 days
+                                    </p>
+                                </div>
+                                <div class="notification__footer">
+                                    <div class="author">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
+                                        </svg>
+                                        Craig Gordon
+                                    </div>
+                                    <div class="notification__note">
+                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="7" height="8" rx="1" fill="#A5A8C3" />
+                                        </svg>
+                                        Portfolio: Craig Gordon Investment Portfolio
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="notification__title">
+                                        Dividends paid
+                                    </p>
+                                    <p class="notification__date">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g opacity="0.3">
+                                                <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
+                                                <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
+                                            </g>
+                                        </svg>
+                                        Today, July 12, 2019, 11:36 AM
+                                    </p>
+                                </div>
+                                <div class="notification__content d-flex align-items-end">
+                                    <span class="badge bg-light">PGE, Pacitic Gas Electric Co.</span>
+                                    <p class="notification_text">Dividends was paid in amount: $ 170,50</p>
+                                </div>
+                                <div class="notification__footer">
+                                    <div class="author">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
+                                        </svg>
+                                        Craig Gordon
+                                    </div>
+                                    <div class="notification__note">
+                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="7" height="8" rx="1" fill="#A5A8C3" />
+                                        </svg>
+                                        Portfolio: Craig Gordon Investment Portfolio
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="notification__title">
+                                        Major Sentiment Change
+                                    </p>
+                                    <p class="notification__date">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g opacity="0.3">
+                                                <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64" />
+                                                <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64" />
+                                            </g>
+                                        </svg>
+                                        Today, July 12, 2019, 11:36 AM
+                                    </p>
+                                </div>
+                                <div class="notification__content">
+                                    <p class="notification_text">
+                                        <span class="text-success">0.88 %</span> to $300,34 within 13 days
+                                    </p>
+                                </div>
+                                <div class="notification__footer">
+                                    <div class="author">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
+                                        </svg>
+                                        Craig Gordon
+                                    </div>
+                                    <div class="notification__note">
+                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="7" height="8" rx="1" fill="#A5A8C3" />
+                                        </svg>
+                                        Portfolio: Craig Gordon Investment Portfolio
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Modals -->
+    <div class="modal fade" id="notificationsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-this" data-mdb-dismiss="modal" aria-label="Close">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM16.2929 17.7071C16.6834 18.0976 17.3166 18.0976 17.7071 17.7071C18.0976 17.3166 18.0976 16.6834 17.7071 16.2929L16.2929 17.7071ZM17.7071 1.70711C18.0976 1.31658 18.0976 0.683417 17.7071 0.292893C17.3166 -0.0976311 16.6834 -0.0976311 16.2929 0.292893L17.7071 1.70711ZM0.292893 16.2929C-0.0976311 16.6834 -0.0976311 17.3166 0.292893 17.7071C0.683417 18.0976 1.31658 18.0976 1.70711 17.7071L0.292893 16.2929ZM0.292893 1.70711L16.2929 17.7071L17.7071 16.2929L1.70711 0.292893L0.292893 1.70711ZM16.2929 0.292893L0.292893 16.2929L1.70711 17.7071L17.7071 1.70711L16.2929 0.292893Z" fill="#2E364A" />
+                    </svg>
+                </div>
+                <div class="modal-header">
+                    <div class="d-flex align-items-center">
+                        <h3 class="card-title">Уведомления</h3>
+                        <div class="dropdown ml-auto modal__dropdown">
+                            <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                Сортировать
+                                <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5.5 6L7.75 3.5L10 1" stroke="#2E364A" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs modal__tabs" id="ex1" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link waves-effect" id="ex1-tab-1" data-mdb-toggle="tab" href="#ex1-tabs-1" role="tab" aria-controls="ex1-tabs-1" aria-selected="true">Новый</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link waves-effect active" id="ex1-tab-3" data-mdb-toggle="tab" href="#ex1-tabs-3" role="tab" aria-controls="ex1-tabs-3" aria-selected="false">Все</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link waves-effect" id="ex1-tab-2" data-mdb-toggle="tab" href="#ex1-tabs-2" role="tab" aria-controls="ex1-tabs-2" aria-selected="false">Прочитаный</a>
+                        </li>
+                    </ul>
+                    <div class="long-search">
+                        <input type="search" id="form1" class="form-control" placeholder="Выбрать">
+                        <svg class="search-icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 14L11.0093 11.004L14 14ZM12.6666 7.00001C12.6666 8.5029 12.0696 9.94424 11.0069 11.0069C9.94421 12.0697 8.50287 12.6667 6.99998 12.6667C5.49709 12.6667 4.05575 12.0697 2.99304 11.0069C1.93034 9.94424 1.33331 8.5029 1.33331 7.00001C1.33331 5.49712 1.93034 4.05578 2.99304 2.99307C4.05575 1.93037 5.49709 1.33334 6.99998 1.33334C8.50287 1.33334 9.94421 1.93037 11.0069 2.99307C12.0696 4.05578 12.6666 5.49712 12.6666 7.00001V7.00001Z" stroke="#2E364A" stroke-width="2" stroke-linecap="round"></path>
+                        </svg>
+                    </div>
+                    <p class="signals__date modals-notify__date">October 03, 2019 </p>
+                </div>
+                <div class="modal-body">
+                    <div class="signal">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="badge bg-danger">
+                                Новый
+                            </div>
+                            <p class="signal__date">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.3">
+                                        <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64"></path>
+                                        <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64"></path>
+                                    </g>
+                                </svg>
+                                Today, July 12, 2019, 11:36 AM
+                            </p>
+                        </div>
+                        <div class="signal__content">
+                            <h3 class="signal__title">Distribution Request Processed</h3>
+                            <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed </p>
+                        </div>
+                        <div class="signal__footer">
+                            <div class="author">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3"></path>
+                                </svg>
+                                Craig Gordon
+                            </div>
+                            <div class="d-flex signal__bottom align-items-center justify-content-between">
+                                <div class="signal__note">
+                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="7" height="8" rx="1" fill="#A5A8C3"></rect>
+                                    </svg>
+                                    Portfolio: Craig Gordon Investment Portfolio
+                                </div>
+                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="signal">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="badge bg-danger">
+                                Новый
+                            </div>
+                            <p class="signal__date">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.3">
+                                        <path d="M5 0.625C2.58398 0.625 0.625 2.58398 0.625 5C0.625 7.41602 2.58398 9.375 5 9.375C7.41602 9.375 9.375 7.41602 9.375 5C9.375 2.58398 7.41602 0.625 5 0.625ZM5 8.63281C2.99414 8.63281 1.36719 7.00586 1.36719 5C1.36719 2.99414 2.99414 1.36719 5 1.36719C7.00586 1.36719 8.63281 2.99414 8.63281 5C8.63281 7.00586 7.00586 8.63281 5 8.63281Z" fill="#2D3C64"></path>
+                                        <path d="M6.70605 6.23633L5.31348 5.22949V2.8125C5.31348 2.76953 5.27832 2.73438 5.23535 2.73438H4.76563C4.72266 2.73438 4.6875 2.76953 4.6875 2.8125V5.50195C4.6875 5.52734 4.69922 5.55078 4.71973 5.56543L6.33496 6.74317C6.37012 6.76856 6.41895 6.76074 6.44434 6.72656L6.72363 6.3457C6.74902 6.30957 6.74121 6.26074 6.70605 6.23633Z" fill="#2D3C64"></path>
+                                    </g>
+                                </svg>
+                                Today, July 12, 2019, 11:36 AM
+                            </p>
+                        </div>
+                        <div class="signal__content">
+                            <h3 class="signal__title">Distribution Request Processed</h3>
+                            <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed </p>
+                        </div>
+                        <div class="signal__footer">
+                            <div class="author">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3"></path>
+                                </svg>
+                                Craig Gordon
+                            </div>
+                            <div class="d-flex signal__bottom align-items-center justify-content-between">
+                                <div class="signal__note">
+                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="7" height="8" rx="1" fill="#A5A8C3"></rect>
+                                    </svg>
+                                    Portfolio: Craig Gordon Investment Portfolio
+                                </div>
+                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End your project here-->
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.0/chart.min.js" integrity="sha512-yadYcDSJyQExcKhjKSQOkBKy2BLDoW6WnnGXCAkCoRlpHGpYuVuBqGObf3g/TdB86sSbss1AOP4YlGSb6EKQPg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Custom scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+    new WOW().init()
+    </script>
+    <script>
+    // let ctx = document.getElementById('assetsChart').getContext('2d');
+    // let myChart = new Chart(ctx, {
+    //     type: "line",
+    //     fill: true,
+    //     data: {
+    //         labels: [" ", " ", " ", " ", " ", " ", " "],
+    //         datasets: [{
+    //             label: 'Chart',
+    //             data: [12, 6, 12, 7, 16, 4, 12],
+    //             backgroundColor: [
+    //                 "#3285D2",
+    //                 "#3285D2",
+    //                 "#3285D2",
+    //                 "#3285D2",
+    //                 "#3285D2",
+    //                 "#3285D2"
+    //             ],
+    //             borderColor: [
+    //                 "#3285D2",
+    //                 "#3285D2",
+    //                 "#3285D2",
+    //                 "#3285D2",
+    //                 "#3285D2",
+    //                 "#3285D2"
+    //             ],
+    //             borderWidth: 2
+    //         }]
+    //     },
+    //     options: {
+    //         scales: {
+    //             y: {
+    //                 beginAtZero: true
+    //             }
+    //         }
+    //     }
+    // });
+    </script>
+</body>
+
+</html>

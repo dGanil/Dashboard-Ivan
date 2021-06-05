@@ -203,6 +203,10 @@ ul {
     border-radius: 3px 3px 0 0 !important;
 }
 
+.badge {
+    font-weight: 400;
+}
+
 .clients .card-header {
     padding: 21px 15px;
 }
@@ -518,6 +522,7 @@ ul {
 
 .signals .card-body {
     padding-top: 26px;
+    padding-bottom: 0;
 }
 
 .signal__content {
@@ -529,6 +534,32 @@ ul {
     font-size: 20px;
     line-height: 23px;
     margin-bottom: 10px;
+}
+
+.signal {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.signal:after {
+    content: '';
+    display: block;
+    width: calc(100% + 30px);
+    height: 2px;
+    background: #F4F4F6;
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+}
+
+.signal:last-child {
+    margin: 0;
+}
+
+.signal:last-child:after,
+.modal .signal:after {
+    display: none;
 }
 
 .signal__text {
@@ -730,6 +761,8 @@ ul {
     padding-bottom: 30px;
     padding-right: 15px;
     padding-left: 15px;
+    margin: 0;
+    border: 0;
 }
 
 .modal .signal:first-child {
@@ -2486,4 +2519,81 @@ input[type="checkbox"] {
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 150%;
+}
+
+.badge.bg-gray {
+    background: #DDE1ED;
+    color: rgba(46, 54, 74, 0.5);
+    padding: 2px;
+}
+
+
+.notification__content .badge.bg-light {
+    margin-right: 10px;
+}
+
+.back {
+    font-weight: 500;
+    color: #0068FC;
+    opacity: 0.8;
+}
+
+.download-btn {
+    margin-left: 30px;
+    margin-right: 70px;
+}
+
+.history-transactions svg {
+    margin-right: 12px;
+}
+
+.overview-tabs {
+    margin-left: 111px;
+}
+
+.overview-tabs .nav-link {
+    padding: 6px 16px;
+    border: 3px solid #F1F3FB;
+    line-height: 16px;
+    color: #2E364A;
+}
+
+.overview-tabs .nav-item:first-child .nav-link {
+    padding: 6px 35px;
+}
+
+.overview-tabs .nav-link.active {
+    border: 3px solid #F1F3FB;
+    color: #0068FC;
+}
+
+.export-txt {
+    padding: 10px 33px;
+}
+
+.export-txt svg {
+    margin-right: 7px;
+}
+
+.breadcrumbs__link, .breadcrumbs__item {
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(46, 54, 74, 0.3);
+}
+
+.breadcrumbs__link svg {
+    margin-top: -2px;
+    margin-right: 5px;
+}
+
+.breadcrumbs__item_slash {
+    margin: 0 3px;
+}
+
+.content-top {
+    margin-bottom: 30px;
+}
+
+.content-top .updated {
+    margin-bottom: 0;
 }
