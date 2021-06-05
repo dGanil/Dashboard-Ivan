@@ -2411,3 +2411,79 @@ input[type="checkbox"] {
 .flters-list__item:last-child {
     display: none;
 }
+
+/* --Login block-- */
+
+.login-bg-gray {
+    width: 100%;
+    height: 100vh;
+    background: #F8F8F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-block {
+    width: 366px;
+    text-align: center;
+
+}
+
+.logo-link {
+    margin-bottom: 40px;
+    display: block;
+}
+
+.login-box {
+    background: white;
+    box-shadow: -4px -4px 10px rgba(46, 54, 74, 0.07), 4px 4px 10px rgba(46, 54, 74, 0.07);
+    border-radius: 3px;
+    padding: 40px;
+    text-align: left;
+}
+
+.login-box label {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 7px;
+}
+
+.login-box .field-row {
+    margin-bottom: 20px;
+}
+
+.remember {
+    margin-top: 20px;
+}
+
+
+.remember a {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.have-account {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #9B9EA5;
+}
+
+.have-account a {
+    color: #0068FC;
+    margin-left: 4px;
+}
+
+.login-box__title {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 28px;
+}
+
+.login-box__text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 150%;
+}
