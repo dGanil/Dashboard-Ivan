@@ -623,14 +623,40 @@ $('.sorting-btn').bind('click', function() {
 $('.filters__dropdown-item').bind('click', function() {
     $('.navbar-bottom').addClass('flex-column')
     $('.navbar-bottom').removeClass('align-items-center')
+    $('.navbar__card-settings').removeClass('ml-auto')
+    $('.navbar__card-settings').css('margin-top', '7px')
+    $('.filters-dropdown').addClass('ml-auto')
+    $('.filters-main').css('display', 'flex')
+    // $('.flters-list__item_last').clone().appendTo('.filters-list').text($(this).text())
     let top = $('.navbar').height()
-    $('.cards-table').css('top', top + 30 + 1)
+    $('.cards-table').css('top', top + 30)
     if (cardToggler == 1) {
         $('.content').css('padding-top', top + 30 + 45)
     } else if (cardToggler == 0) {
-         $('.content').css('padding-top', top + 30 + 25 + 63)
+        $('.content').css('padding-top', top + 30 + 25 + 63)
     }
- 
+
+})
+
+
+$('.flters-list__item svg').bind('click', function() {
+    $(this).parents('.flters-list__item').remove()
+    if ($('.flters-list__item').length == 0) {
+        $('.navbar-bottom').removeClass('flex-column')
+        $('.navbar-bottom').addClass('align-items-center')
+        $('.navbar__card-settings').addClass('ml-auto')
+        $('.navbar__card-settings').css('margin-top', '0')
+        $('.filters-dropdown').removeClass('ml-auto')
+        $('.filters-main').fadeOut(1)
+        let top = $('.navbar').height()
+        if (cardToggler == 1) {
+            $('.content').css('padding-top', top + 30 + 45)
+        } else if (cardToggler == 0) {
+            $('.content').css('padding-top', top + 30 + 25 + 63)
+        }
+
+        $('.cards-table').css('top', top + 30)
+    }
 })
 
 let cardToggler = 1
@@ -641,7 +667,7 @@ $('.sorting-btn_2').bind('click', function() {
     $('.client-cards_stroke').fadeIn(1)
     $('.cards-table').fadeIn(1)
 
-    let top = $('.navbar').height() + 30 + 1
+    let top = $('.navbar').height() + 30
     $('.cards-table').css('top', top)
 
 
@@ -655,8 +681,26 @@ $('.sorting-btn_1').bind('click', function() {
     $('.updated').fadeIn(1)
     $('.client-cards_stroke').fadeOut(1)
     $('.cards-table').fadeOut(1)
-    let top = $('.navbar').height() + 30 + 45
+    let top = $('.navbar').height() + 32 + 45
     $('.content').css('padding-top', top)
 
     cardToggler = 1
+})
+
+$('.filters-main__btn').bind('click', function() {
+    $('.navbar-bottom').removeClass('flex-column')
+    $('.navbar-bottom').addClass('align-items-center')
+    $('.navbar__card-settings').addClass('ml-auto')
+    $('.navbar__card-settings').css('margin-top', '0')
+    $('.filters-dropdown').removeClass('ml-auto')
+    $('.filters-main').fadeOut(1)
+    let top = $('.navbar').height()
+    if (cardToggler == 1) {
+        $('.content').css('padding-top', top + 30 + 45)
+    } else if (cardToggler == 0) {
+        $('.content').css('padding-top', top + 30 + 25 + 63)
+    }
+
+    $('.cards-table').css('top', top + 30)
+    $('.flters-list__item').remove()
 })

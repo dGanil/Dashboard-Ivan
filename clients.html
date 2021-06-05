@@ -47,7 +47,25 @@
                         </button>
                     </div>
                     <div class="navbar__card-settings ml-auto d-flex align-items-center">
-                        <div class="dropdown">
+                        <div class="filters-main">
+                            <p class="filters-main__text">Фильтровать:</p>
+                            <ul class="filters-list d-flex align-items-center">
+                                <li class="flters-list__item">
+                                    Текст
+                                    <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L6 6M6 1L1 6" stroke="black" />
+                                    </svg>
+                                </li>
+                                <li class="flters-list__item flters-list__item_last">
+                                    Текст
+                                    <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L6 6M6 1L1 6" stroke="black" />
+                                    </svg>
+                                </li>
+                            </ul>
+                            <button class="btn_off filters-main__btn">Очистить все</button>
+                        </div>
+                        <div class="dropdown filters-dropdown">
                             <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownFilters" data-mdb-toggle="dropdown" aria-expanded="false">
                                 Фильтры
                                 <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -228,13 +246,19 @@
                                 <p class="card-title">Lester Anderson-Locler</p>
                                 <span class="badge bg-success">Отслеживать</span>
                             </div>
-                            <button class="client-card__settings btn_off">
-                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
-                                </svg>
-                            </button>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-body d-flex align-items-center justify-content-between">
                             <div class="card-client__cost">
@@ -266,13 +290,19 @@
                                 <p class="card-title">Lester Anderson-Locler</p>
                                 <span class="badge bg-danger">Не уведомлять</span>
                             </div>
-                            <button class="client-card__settings btn_off">
-                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
-                                </svg>
-                            </button>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-body d-flex align-items-center justify-content-between">
                             <div class="card-client__cost">
@@ -305,13 +335,19 @@
                                 <p class="card-title">Lester Anderson-Locler</p>
                                 <span class="badge bg-success">Отслеживать</span>
                             </div>
-                            <button class="client-card__settings btn_off">
-                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
-                                </svg>
-                            </button>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-body d-flex align-items-center justify-content-between">
                             <div class="card-client__cost">
@@ -345,13 +381,19 @@
                                 <p class="card-title">Lester Anderson-Locler</p>
                                 <span class="badge bg-danger">Не уведомлять</span>
                             </div>
-                            <button class="client-card__settings btn_off">
-                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
-                                </svg>
-                            </button>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-body d-flex align-items-center justify-content-between">
                             <div class="card-client__cost">
@@ -384,13 +426,19 @@
                                 <p class="card-title">Lester Anderson-Locler</p>
                                 <span class="badge bg-success">Отслеживать</span>
                             </div>
-                            <button class="client-card__settings btn_off">
-                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
-                                </svg>
-                            </button>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-body d-flex align-items-center justify-content-between">
                             <div class="card-client__cost">
@@ -422,13 +470,19 @@
                                 <p class="card-title">Lester Anderson-Locler</p>
                                 <span class="badge bg-danger">Не уведомлять</span>
                             </div>
-                            <button class="client-card__settings btn_off">
-                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
-                                </svg>
-                            </button>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-body d-flex align-items-center justify-content-between">
                             <div class="card-client__cost">
@@ -463,13 +517,19 @@
                                 <p class="card-title">Lester Anderson-Locler</p>
                                 <span class="badge bg-success">Отслеживать</span>
                             </div>
-                            <button class="client-card__settings btn_off">
-                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
-                                </svg>
-                            </button>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-body d-flex align-items-center justify-content-between">
                             <div class="card-client__cost">
@@ -501,13 +561,19 @@
                                 <p class="card-title">Lester Anderson-Locler</p>
                                 <span class="badge bg-danger">Не уведомлять</span>
                             </div>
-                            <button class="client-card__settings btn_off">
-                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
-                                </svg>
-                            </button>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-body d-flex align-items-center justify-content-between">
                             <div class="card-client__cost">
@@ -540,13 +606,19 @@
                                 <p class="card-title">Lester Anderson-Locler</p>
                                 <span class="badge bg-success">Отслеживать</span>
                             </div>
-                            <button class="client-card__settings btn_off">
-                                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4.5" cy="2.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="9.5" r="2.5" fill="#2E364A" />
-                                    <circle cx="4.5" cy="16.5" r="2.5" fill="#2E364A" />
-                                </svg>
-                            </button>
+                            <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                        <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                    <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-body d-flex align-items-center justify-content-between">
                             <div class="card-client__cost">
@@ -625,7 +697,7 @@
                             <p class="client-card__name">Текст</p>
                             <p class="client-card__profit d-flex align-items-center justify-content-end">
                                 <span class="text-danger d-flex align-items-center justify-content-end">
-                                    <span>0.88 %  </span>
+                                    <span>0.88 % </span>
                                     <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
                                     </svg>
@@ -703,7 +775,7 @@
                             <p class="client-card__name">Текст</p>
                             <p class="client-card__profit d-flex align-items-center justify-content-end">
                                 <span class="text-danger d-flex align-items-center justify-content-end">
-                                    <span>0.88 %  </span>
+                                    <span>0.88 % </span>
                                     <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
                                     </svg>
@@ -781,7 +853,7 @@
                             <p class="client-card__name">Текст</p>
                             <p class="client-card__profit d-flex align-items-center justify-content-end">
                                 <span class="text-danger d-flex align-items-center justify-content-end">
-                                    <span>0.88 %  </span>
+                                    <span>0.88 % </span>
                                     <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
                                     </svg>
@@ -859,7 +931,7 @@
                             <p class="client-card__name">Текст</p>
                             <p class="client-card__profit d-flex align-items-center justify-content-end">
                                 <span class="text-danger d-flex align-items-center justify-content-end">
-                                    <span>0.88 %  </span>
+                                    <span>0.88 % </span>
                                     <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3 -3.93402e-07L5 -2.18557e-07L5 7L7.5 7L4 12L0.5 7L3 7L3 -3.93402e-07Z" fill="#D13849" />
                                     </svg>
