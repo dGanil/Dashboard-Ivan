@@ -2879,7 +2879,8 @@ input[type="checkbox"] {
     font-weight: 500;
 }
 
-.target-cost-card_2, .odds_2 {
+.target-cost-card_2,
+.odds_2 {
     margin-top: 20px;
 }
 
@@ -2889,4 +2890,78 @@ input[type="checkbox"] {
 
 .profitability-rating_2 {
     margin-left: 40px;
+}
+
+.dropdown_blue {
+    color: #2D3C64;
+}
+
+.monte-carlo {
+    border: 1.5px solid #F0F0F0;
+    border-radius: 0px 3px 3px 0px;
+    padding: 7px 24px;
+    font-size: 12px;
+    line-height: 14px;
+    margin-left: 26px;
+}
+
+.profit-graph .card-header {
+    padding: 20px 15px;
+    border-bottom: 3px solid rgba(46, 54, 74, 0.07)
+}
+
+.profit-graph .card-body {
+    padding: 40px 14px 12px 44px;
+}
+
+.profit-graph__functions {
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+
+.profit-graph__time-btn:first-child {
+    border-radius: 2px 0px 0px 2px;
+    border-left: 1px solid #E7ECF2;
+}
+
+
+.profit-graph__time-btn:last-child {
+    border-radius: 0 2px 2px 0;
+}
+
+.profit-graph__time-btn {
+    font-size: 10px;
+    line-height: 12px;
+    border-top: 1px solid #E7ECF2;
+    border-bottom: 1px solid #E7ECF2;
+    border-right: 1px solid #E7ECF2;
+    padding: 4px 9px;
+}
+
+.profit-graph__time-btn.active {
+    font-weight: 500;
+    background: #F8F9FE;
+}
+
+
+.profit-graph__date {
+    position: relative;
+}
+
+
+.profit-graph__date label {
+    position: absolute;
+    left: 9px;
+}
+
+.profit-graph__date .field {
+    height: 22px !important;
+    width: 160px;
+    padding: 0 10px 0 24px !important;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.card_mt {
+    margin-top: 20px;
 }

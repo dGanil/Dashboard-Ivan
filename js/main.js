@@ -699,3 +699,8 @@ $('.filters-main__btn').bind('click', function() {
     $('.cards-table').css('top', top + 30)
     $('.flters-list__item').remove()
 })
+
+$('.profit-graph__time-btn').bind('click', function() {
+    $('.profit-graph__time-btn').removeClass('active')
+    $(this).addClass('active')
+})
