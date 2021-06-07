@@ -163,7 +163,10 @@
                         <div class="card overview-client">
                             <div class="card-body d-flex align-items-center">
                                 <div class="avatar">ИИ</div>
-                                <p class="fio">Иванов Иван</p>
+                                <p class="fio">
+                                    Иванов Иван
+                                    <span class="badge rounded-pill badge-notification">1</span>
+                                </p>
                                 <div class="ml-auto dropdown">
                                     <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
                                         <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -303,26 +306,31 @@
                                                 </td>
                                                 <td>
                                                     <span>Доходность</span>
-                                                    <div class="portfolios-table__unit">%</div>
+                                                    <!-- <div class="portfolios-table__unit">%</div> -->
                                                 </td>
                                                 <td>
                                                     <span>Риск</span>
-                                                    <div class="portfolios-table__unit">%</div>
+                                                    <!-- <div class="portfolios-table__unit">%</div> -->
                                                 </td>
                                                 <td>
                                                     <span>YTD</span>
-                                                    <div class="portfolios-table__unit">$</div>
-                                                </td>
-                                                <td>
-                                                    <span>ITD</span>
-                                                    <div class="portfolios-table__unit">%</div>
+                                                    <!-- <div class="portfolios-table__unit">$</div> -->
                                                 </td>
                                                 <td>
                                                     <span>Активы</span>
-                                                    <div class="portfolios-table__unit">$</div>
+                                                    <!-- <div class="portfolios-table__unit">$</div> -->
                                                 </td>
                                                 <td>
                                                     Сигналы
+                                                </td>
+                                                <td>
+                                                    Статус
+                                                    <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g opacity="0.2">
+                                                            <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A"></path>
+                                                            <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A"></path>
+                                                        </g>
+                                                    </svg>
                                                 </td>
                                                 <td></td>
                                             </tr>
@@ -340,15 +348,129 @@
                                                 </td>
                                                 <td>10%</td>
                                                 <td>$150</td>
-                                                <td>10%</td>
                                                 <td>$1 542</td>
                                                 <td>
                                                     <span class="badge bg-danger">5</span>
                                                 </td>
                                                 <td>
-                                                    <svg width="139" height="28" viewBox="0 0 139 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M0 17.5H39L45.5 26L63.5 17.5H84L97.5 5L112.5 9L123 5V1H138.5" stroke="#2E364A" stroke-width="2" />
+                                                    <span class="badge bg-success">Отслеживать</span>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                                        <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                                            <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                                                <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                                                <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                                            </svg>
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                                            <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row fadeIn row_mt">
+                        <div class="col-md-12">
+                            <div class="card portfolios-table-card">
+                                <div class="card-header d-flex align-items-center">
+                                    <p class="card-title card-title_sm">Черновики портфелей</p>
+                                    <div class="short-search ml-auto">
+                                        <button class="clients__search-btn">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14 14L11.0093 11.004L14 14ZM12.6667 7C12.6667 8.50289 12.0696 9.94423 11.0069 11.0069C9.94424 12.0696 8.5029 12.6667 7 12.6667C5.49711 12.6667 4.05577 12.0696 2.99306 11.0069C1.93036 9.94423 1.33334 8.50289 1.33334 7C1.33334 5.4971 1.93036 4.05576 2.99306 2.99306C4.05577 1.93035 5.49711 1.33333 7 1.33333C8.5029 1.33333 9.94424 1.93035 11.0069 2.99306C12.0696 4.05576 12.6667 5.4971 12.6667 7V7Z" stroke="#2E364A" stroke-width="2" stroke-linecap="round"></path>
+                                            </svg>
+                                        </button>
+                                        <input type="text" class="search__field" placeholder="Поиск">
+                                    </div>
+                                    <button class="btn_off add-porfolio-btn">
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="2" width="12" height="15" rx="1" fill="#0068FC" />
+                                            <circle cx="10.5" cy="12.2002" r="4" fill="#0068FC" stroke="white" />
+                                            <path d="M8 12.2002H13M10.5 9.7002V14.7002" stroke="white" />
+                                        </svg>
+                                        Добавить портфель
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table portfolios-table">
+                                        <thead>
+                                            <tr>
+                                                <td>
+                                                    Название портфеля
+                                                </td>
+                                                <td>
+                                                    <span>Доходность</span>
+                                                    <!-- <div class="portfolios-table__unit">%</div> -->
+                                                </td>
+                                                <td>
+                                                    <span>Риск</span>
+                                                    <!-- <div class="portfolios-table__unit">%</div> -->
+                                                </td>
+                                                <td>
+                                                    <span>YTD</span>
+                                                    <!-- <div class="portfolios-table__unit">$</div> -->
+                                                </td>
+                                                <td>
+                                                    <span>Активы</span>
+                                                    <!-- <div class="portfolios-table__unit">$</div> -->
+                                                </td>
+                                                <td>
+                                                    Сигналы
+                                                </td>
+                                                <td>
+                                                    Статус
+                                                    <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g opacity="0.2">
+                                                            <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="#2E364A"></path>
+                                                            <path d="M3 9L0.401924 5.25L5.59808 5.25L3 9Z" fill="#2E364A"></path>
+                                                        </g>
                                                     </svg>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Портфель 1</td>
+                                                <td>
+                                                    <span class="text-success d-flex align-items-center client-rating__item">
+                                                        <span class="ml-auto">1.88 % </span>
+                                                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M5 12H3V5H0.5L4 0L7.5 5H5V12Z" fill="#11CDA9"></path>
+                                                        </svg>
+                                                    </span>
+                                                </td>
+                                                <td>10%</td>
+                                                <td>$150</td>
+                                                <td>$1 542</td>
+                                                <td>
+                                                    <span class="badge bg-danger">5</span>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-success">Отслеживать</span>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown client-card__settings d-flex align-items-center justify-content-end">
+                                                        <button class="signals__sort-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                                            <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="4.58228" cy="2.5" r="2.5" fill="#2E364A" />
+                                                                <circle cx="4.58228" cy="9.5" r="2.5" fill="#2E364A" />
+                                                                <circle cx="4.58228" cy="16.5" r="2.5" fill="#2E364A" />
+                                                            </svg>
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                                            <li><a class="dropdown-item" href="#">Удалить</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </tbody>

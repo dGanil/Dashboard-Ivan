@@ -5,7 +5,7 @@ $('.clients__search-btn').bind('click', function() {
     if (searchClose == true) {
         $(this).parents('.short-search').find('.search__field').fadeIn(500)
 
-        $(".short-search").animate({
+        $(this).parents('.short-search').animate({
             width: 177
         }, 500);
 
@@ -13,7 +13,7 @@ $('.clients__search-btn').bind('click', function() {
     } else if (searchClose == false) {
         $(this).parents('.short-search').find('.search__field').fadeOut(500)
 
-        $(".short-search").animate({
+        $(this).parents('.short-search').animate({
             width: 16
         }, 500);
 
@@ -130,11 +130,6 @@ $('#next2').bind('click', function() {
         }
     }
 })
-
-// $('input[name="typePortfolio"]').bind('change', function() {
-//     $('#next2').removeClass('active')
-// })
-
 
 
 $('#typeProfile').bind('change', function() {

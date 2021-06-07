@@ -711,8 +711,25 @@ ul {
 }
 
 .card .dropdown-menu {
-    width: 100px;
+    width: 150px;
     min-width: 0;
+    padding: 15px 0;
+    border-radius: 3px;
+    box-shadow: 0px 2px 10px rgba(46, 54, 74, 0.07);
+    border: 2px solid #F4F4F6;
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #2E364A;
+}
+
+
+
+.dropdown-menu .dropdown-item:hover {
+    background: #F8F9FE;
 }
 
 /* --Modals-- */
@@ -1724,8 +1741,8 @@ input[type="checkbox"] {
     font-size: 30px;
     line-height: 35px;
     text-align: right;
-
-    color: #000000;
+    color: #2E364A;
+    /*color: #000000;*/
 }
 
 
@@ -2582,6 +2599,10 @@ input[type="checkbox"] {
     color: rgba(46, 54, 74, 0.3);
 }
 
+.breadcrumbs__link.active {
+    color: rgba(46, 54, 74, 0.8);
+}
+
 .breadcrumbs__link svg {
     margin-top: -2px;
     margin-right: 5px;
@@ -2747,9 +2768,8 @@ input[type="checkbox"] {
 
 .portfolios-table tbody td:last-child {
     padding-right: 15px;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    text-align: center;
+    text-align: left;
+    padding-left: 60px;
 }
 
 .portfolios-table tbody td:nth-child(2) {
@@ -2789,8 +2809,9 @@ input[type="checkbox"] {
 }
 
 .portfolios-table thead td:nth-child(7) {
-    width: 135px;
-    text-align: right;
+    width: 200px;
+    text-align: left;
+    padding-left: 60px;
 }
 
 .portfolios-table__unit {
@@ -2806,4 +2827,66 @@ input[type="checkbox"] {
     font-size: 14px;
     line-height: 16px;
     padding: 0.5px 11px;
+}
+
+.fio {
+    position: relative;
+}
+
+.fio .badge {
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -5px;
+    right: -20px;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+
+.portfolio-info-card .badge {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.portfolio-info-card__home {
+    margin-left: 17px;
+    font-size: 10px;
+    line-height: 10px;
+    color: rgba(46, 54, 74, 0.3);
+}
+
+.portfolio-info-card__home svg {
+    margin-right: 5px;
+}
+
+.portfolio-info-card__details {
+    margin-top: 15px;
+}
+
+.target-cost-card .card-header {
+    padding: 15px 15px 20px 15px;
+    border-bottom: 2px solid #F4F4F6;
+}
+
+.target-cost-card_2 .profitability-rating__top {
+    font-weight: 500;
+}
+
+.target-cost-card_2, .odds_2 {
+    margin-top: 20px;
+}
+
+.target-cost-card__header-bottom {
+    margin-top: 10px;
+}
+
+.profitability-rating_2 {
+    margin-left: 40px;
 }
