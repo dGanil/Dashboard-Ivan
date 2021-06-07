@@ -2783,6 +2783,11 @@ input[type="checkbox"] {
     margin-top: -2px;
 }
 
+.portfolios-table tbody td:nth-child(7){
+    text-align: left;
+    padding-left: 60px;
+}
+
 .portfolios-table thead td:nth-child(2) {
     width: 75px;
     text-align: right;
