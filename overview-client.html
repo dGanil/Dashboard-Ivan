@@ -656,6 +656,40 @@
         }
 
     });
+
+    var ctxD2 = document.getElementById('distributionGraph2').getContext('2d');
+    var chart = new Chart(ctxD2, {
+
+
+        // The type of chart we want to create
+        type: 'doughnut',
+        // The data for our dataset
+        data: {
+            labels: ["Iværksætter", "Forandringsagent", "Beslutningstager", "Brugerorienteret leder"],
+            datasets: [{
+                label: "Din ledelsesstil",
+                backgroundColor: [
+                    "#0633BE", "#3868CE", "#4697FE", "#02BFFB"
+                ],
+                borderWidth: ['1', '1', '1', '1'],
+                data: [3.5, 40.01, 29.99, 26.5],
+            }]
+        },
+        options: {
+            cutoutPercentage: 70,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                mode: false,
+                callbacks: {
+                    title: function() {},
+                    label: function() {}
+                }
+            }
+        }
+
+    });
     </script>
 </body>
 
