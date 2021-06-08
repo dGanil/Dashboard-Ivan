@@ -2783,7 +2783,7 @@ input[type="checkbox"] {
     margin-top: -2px;
 }
 
-.portfolios-table tbody td:nth-child(7){
+.portfolios-table tbody td:nth-child(7) {
     text-align: left;
     padding-left: 60px;
 }
@@ -2969,4 +2969,231 @@ input[type="checkbox"] {
 
 .card_mt {
     margin-top: 20px;
+}
+
+.last-visit {
+    text-align: right;
+    margin-bottom: 28px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(46, 54, 74, 0.3);
+}
+
+
+.last-visit span {
+    color: rgba(46, 54, 74, 0.8);
+}
+
+/* --Settings-- */
+
+.settings-top .card-body {
+    padding: 22px 30px;
+    padding-bottom: 13px;
+    padding-right: 127px;
+}
+
+.settings-top__info {
+    margin-left: 25px;
+}
+
+.settings-top__name {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 12px;
+}
+
+.settings-top__email {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.settings-top__company {
+    margin-top: 3px;
+}
+
+.settings-top .huge-text {
+    font-weight: 400;
+}
+
+.settings-top__caption {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 10px;
+}
+
+.settings-top__pay {
+    margin-left: 139px;
+}
+
+.middle-text {
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.settings-top__pay .middle-text {
+    margin-bottom: 13px;
+}
+
+.settings-top__pay .settings-top__caption {
+    margin-top: 0;
+}
+
+.settings-main__wrap {
+    width: 455px;
+}
+
+.settings-main .card-header {
+    padding: 20px 39px 20px 20px;
+    border-bottom: 2px solid #F4F4F6;
+}
+
+.settings-main .card-body {
+    padding: 30px 39px 50px 20px;
+}
+
+.settings-main .card-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.settings-main__secondary {
+    width: 438px;
+}
+
+.add-card {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    opacity: 0.8;
+}
+
+input:disabled {
+    background: transparent;
+    color: rgba(46, 54, 74, 0.5);
+}
+
+.settings-main .field-row {
+    margin-bottom: 20px;
+}
+
+.settings-main__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.save-settings {
+    width: 125px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.debit-card {
+    border-radius: 3px;
+    background: #F8F9FE;
+    border: 2px solid #F4F4F6;
+    padding: 20px 20px 25px 20px;
+}
+
+.debit-card__name {
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+.debit-card {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    margin-bottom: 28px;
+}
+
+.debit-card__name:before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 3px solid #FFFFFF;
+    background: #2E364A;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.debit-card__btn {
+    color: #000000;
+    opacity: 0.6;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.debit-card__btn_2 {
+    margin-left: 15px;
+}
+
+.debit-card__body {
+    margin-top: 43px;
+    margin-left: 28px;
+}
+
+.debit-card__field {
+    width: 93px !important;
+    height: 52px !important;
+    border-radius: 3px;
+    background: #FFFFFF;
+    border: 2px solid #F4F4F6;
+    margin-right: 20px;
+}
+
+.holder-card {
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+
+.number-card {
+    opacity: 0.6;
+}
+
+.debit-card__footer {
+    margin-top: 46px;
+}
+
+.debit-card__adress {
+    opacity: 0.6;
+}
+
+.debit-card__adress:last-child {
+    margin-left: 100px;
+}
+
+.radio-money input {
+    display: none;
+}
+
+.radio-money label {
+    width: 25%;
+    height: 59px;
+    border-top: 2px solid #F4F4F6;
+    border-bottom: 2px solid #F4F4F6;
+    border-right: 2px solid #F4F4F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-money label:first-of-type {
+    border-radius: 2px 0 0 2px;
+    border-left: 2px solid #F4F4F6;
+}
+
+
+.radio-money label:last-of-type {
+    border-radius: 0 2px 2px 0;
 }
