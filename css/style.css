@@ -3177,7 +3177,12 @@ input:disabled {
     display: none;
 }
 
+.radio-money input:checked + label {
+    border-color: #3285D2;
+}
+
 .radio-money label {
+    transition: all 0.2s linear;
     width: 25%;
     height: 59px;
     border-top: 2px solid #F4F4F6;
