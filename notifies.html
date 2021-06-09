@@ -1129,12 +1129,113 @@
     //     chart.draw();
     // });
 
-    $('.dropdown-add-graph .dropdown-item').bind('click', function() {
+    // $('.dropdown-add-graph .dropdown-item').bind('click', function() {
+    //     // The data used in this sample can be obtained from the CDN
+    //     // https://cdn.anychart.com/samples/stock-general-features/displaying-data-in-millisecond/data.csv
+
+    //     $('#chart-monte').empty()
+    //     // $('#chart-monte-2').fadeIn()
+    //     anychart.data.loadCsvFile(
+    //         'https://cdn.anychart.com/samples/stock-general-features/displaying-data-in-millisecond/data.csv',
+    //         function(data) {
+    //             // create data table on loaded data
+    //             var dataTable = anychart.data.table();
+    //             dataTable.addData(data);
+
+    //             var rangeSelector = anychart.ui.rangeSelector();
+    //             var rangePicker = anychart.ui.rangePicker();
+
+
+    //             var chart = anychart.stock();
+
+    //             chart.padding(10, 45, 10, 10);
+    //             var plot = chart.plot();
+    //             var tooltip = chart.tooltip();
+
+    //             var currentPlot = chart.plot();
+
+    //             var scroller = chart.scroller();
+    //             var currentPlot = chart.scroller();
+    //             var thumbsSettings = scroller.thumbs();
+
+    //             var currentScroller = chart.scroller();
+    //             rangePicker.format('dd.MM.yyyy');
+    //             plot.line(dataTable.mapAs({ value: 1 })).name('Sapphire');
+    //             plot.line(dataTable.mapAs({ value: 3 })).name('Topaz');
+    //             plot.line(dataTable.mapAs({ value: 3 })).name('Topaz');
+    //             var mapping = dataTable.mapAs({ value: 1 });
+    //             var mapping2 = dataTable.mapAs({ value: 3 });
+    //             var mapping3 = dataTable.mapAs({ value: 3 });
+    //             var series_1 = plot.area(mapping);
+    //             var series_2 = plot.area(mapping2);
+
+
+    //             // currentPlot.area(mapping);
+    //             currentScroller.line(mapping);
+    //             currentScroller.line(mapping2);
+    //             currentScroller.line(mapping3);
+    //             chart.plot().legend(false)
+    //             chart.plot().yAxis().orientation("right");
+    //             series_2.fill(false);
+    //             series_1.stroke('blue');
+    //             series_2.stroke('red')
+    //             series_1.fill(['#E3F2FF', '#CDE5FC'], 1, 0.5, null, 1, 0.9, 0.31);
+    //             tooltip.background({ corners: 2 });
+    //             tooltip.fontColor('#ffffff');
+    //             tooltip.fontWeight(500);
+    //             tooltip.fontSize(10);
+    //             thumbsSettings.enabled(false)
+    //             rangePicker.fromLabelText('от');
+    //             rangePicker.toLabelText('до');
+
+    //             rangeSelector.ranges([{
+    //                 'type': "Unit",
+    //                 'unit': "Day",
+    //                 'count': 30,
+    //                 'anchor': "first-date",
+    //                 'text': "1 Month"
+    //             }, {
+    //                 'type': "Unit",
+    //                 'unit': "quarter",
+    //                 'count': 1,
+    //                 'anchor': "first-date",
+    //                 'text': "3 Month"
+    //             }, {
+    //                 'type': "Unit",
+    //                 'unit': "quarter",
+    //                 'count': 2,
+    //                 'anchor': "first-date",
+    //                 'text': "6 Month"
+    //             }, {
+    //                 'type': 'ytd',
+    //                 'text': 'YTD'
+    //             }, {
+    //                 'type': "Unit",
+    //                 'unit': "year",
+    //                 'count': 1,
+    //                 'anchor': "first-date",
+    //                 'text': "1 year"
+    //             }, {
+    //                 'type': 'max',
+    //                 'text': 'All Time'
+    //             }]);
+    //             tooltip.format(function() {
+    //                 return 'Доходность ' + this.value
+    //             });
+
+                
+    //             chart.title();
+    //             rangePicker.render(chart);
+    //             rangeSelector.render(chart);
+    //             chart.container("chart-monte");
+    //             chart.draw();
+
+    //         });
+    // })
+
+    anychart.onDocumentReady(function() {
         // The data used in this sample can be obtained from the CDN
         // https://cdn.anychart.com/samples/stock-general-features/displaying-data-in-millisecond/data.csv
-
-        $('#chart-monte').empty()
-        // $('#chart-monte-2').fadeIn()
         anychart.data.loadCsvFile(
             'https://cdn.anychart.com/samples/stock-general-features/displaying-data-in-millisecond/data.csv',
             function(data) {
@@ -1231,91 +1332,6 @@
                 chart.draw();
 
             });
-    })
-
-    anychart.onDocumentReady(function() {
-        var dataTable = anychart.data.table();
-        // data comes from the function in https://cdn.anychart.com/csv-data/dji-daily-short.js
-        dataTable.addData(get_dji_daily_short_data());
-
-        var mapping = dataTable.mapAs({ value: 1 });
-
-
-
-        var rangeSelector = anychart.ui.rangeSelector();
-        var rangePicker = anychart.ui.rangePicker();
-
-        var chart = anychart.stock();
-        var series_1 = chart.plot(0).area(mapping);
-        chart.padding(10, 45, 10, 10);
-        var plot = chart.plot();
-        var tooltip = chart.tooltip();
-
-        var currentPlot = chart.plot();
-        currentPlot.area(mapping);
-        var scroller = chart.scroller();
-        var currentPlot = chart.scroller();
-        var thumbsSettings = scroller.thumbs();
-
-        var currentScroller = chart.scroller();
-        rangePicker.format('dd.MM.yyyy');
-        // chart.plot().yMinorGrid().stroke('#F44336');
-        currentScroller.line(mapping);
-        chart.plot().legend(false)
-        chart.plot().yAxis().orientation("right");
-        series_1.fill(false);
-        tooltip.background({ corners: 2 });
-        tooltip.fontColor('#ffffff');
-        tooltip.fontWeight(500);
-        tooltip.fontSize(10);
-        thumbsSettings.enabled(false)
-        rangePicker.fromLabelText('от');
-        rangePicker.toLabelText('до');
-
-        rangeSelector.ranges([{
-            'type': "Unit",
-            'unit': "Day",
-            'count': 30,
-            'anchor': "first-date",
-            'text': "1 Month"
-        }, {
-            'type': "Unit",
-            'unit': "quarter",
-            'count': 1,
-            'anchor': "first-date",
-            'text': "3 Month"
-        }, {
-            'type': "Unit",
-            'unit': "quarter",
-            'count': 2,
-            'anchor': "first-date",
-            'text': "6 Month"
-        }, {
-            'type': 'ytd',
-            'text': 'YTD'
-        }, {
-            'type': "Unit",
-            'unit': "year",
-            'count': 1,
-            'anchor': "first-date",
-            'text': "1 year"
-        }, {
-            'type': 'max',
-            'text': 'All Time'
-        }]);
-        tooltip.format(function() {
-            return 'Доходность ' + this.value
-        });
-        // series_1.color('#c5e1a5');
-        series_1.highStroke('#ffffff', 2, '5 2', 'round');
-        series_1.stroke({ color: '#3285D2', thickness: 2 });
-        // yGrid.stroke('#F44336');
-        chart.title();
-        chart.container("chart-monte");
-        chart.draw();
-
-        rangePicker.render(chart);
-        rangeSelector.render(chart);
     });
     </script>
 </body>
