@@ -3245,11 +3245,11 @@ path[data-ac-wrapper-id="89"] {
     font-family: "Roboto" !important;
     font-size: 10px;
 }
-
+/*
 path[data-ac-wrapper-id="59"],
 path[data-ac-wrapper-id="60"] {
     display: none;
-}
+}*/
 
 .anychart-range-selector .anychart-input-label {
     display: none !important;
