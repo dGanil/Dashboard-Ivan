@@ -3284,3 +3284,7 @@ path[data-ac-wrapper-id="60"] {
     line-height: 12px;
     font-weight: 600 !important;
 }
+
+.scrollbar-inner {
+    padding-right: 15px !important;
+}
