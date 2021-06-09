@@ -2919,7 +2919,8 @@ input[type="checkbox"] {
 }
 
 .profit-graph .card-body {
-    padding: 40px 14px 12px 44px;
+    /*padding: 40px 14px 12px 44px;*/
+    /*padding: 0;*/
 }
 
 .profit-graph__functions {
@@ -3287,4 +3288,12 @@ path[data-ac-wrapper-id="60"] {
 
 .scrollbar-inner {
     padding-right: 15px !important;
+}
+
+.bb-chart text {
+    display: none !important;
+}
+
+#chart-monte-2 {
+    display: none;
 }
