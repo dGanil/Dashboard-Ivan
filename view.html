@@ -335,10 +335,10 @@
                             <p class="card-title">Прогнозируемые показатели</p>
                             <ul class="nav nav-tabs" id="forecastTabs" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link waves-effect" id="tabBacktest" data-mdb-toggle="tab" href="#tabBacktestContent" role="tab" aria-controls="tabBacktestContent" aria-selected="true">Бэктест</a>
+                                    <a class="nav-link waves-effect tabBacktest-1" id="tabBacktest" data-mdb-toggle="tab" href="#tabBacktestContent" role="tab" aria-controls="tabBacktestContent" aria-selected="true">Бэктест</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link waves-effect active" id="tabSimulation" data-mdb-toggle="tab" href="#tabSimulationContent" role="tab" aria-controls="tabSimulationContent" aria-selected="false">Симуляция Монте-Карло</a>
+                                    <a class="nav-link waves-effect active tabSimulation-1" id="tabSimulation" data-mdb-toggle="tab" href="#tabSimulationContent" role="tab" aria-controls="tabSimulationContent" aria-selected="false">Симуляция Монте-Карло</a>
                                 </li>
                             </ul>
                         </div>
@@ -796,8 +796,8 @@
         var plot = chart.plot();
         var tooltip = chart.tooltip();
 
-        var currentPlot = chart.plot();
-        currentPlot.area(mapping);
+        // var currentPlot = chart.plot();
+        // currentPlot.area(mapping);
         var scroller = chart.scroller();
         var currentPlot = chart.scroller();
         var thumbsSettings = scroller.thumbs();
@@ -853,7 +853,7 @@
         });
         // series_1.color('#c5e1a5');
         series_1.highStroke('#ffffff', 2, '5 2', 'round');
-        series_1.stroke({ color: '#3285D2', thickness: 2});
+        series_1.stroke({ color: '#3285D2', thickness: 2 });
         // yGrid.stroke('#F44336');
         chart.title();
         chart.container("chart-monte");
@@ -863,9 +863,203 @@
         rangeSelector.render(chart);
     });
 
-    // anychart.onDocumentReady(function() {
-    //     // The data used in this sample can be obtained from the CDN
-    //     // https://cdn.anychart.com/samples/stock-general-features/displaying-data-in-millisecond/data.csv
+    anychart.onDocumentReady(function() {
+        // The data used in this sample can be obtained from the CDN
+        // https://cdn.anychart.com/samples/stock-general-features/displaying-data-in-millisecond/data.csv
+        anychart.data.loadCsvFile(
+            'https://cdn.anychart.com/samples/stock-general-features/displaying-data-in-millisecond/data.csv',
+            function(data) {
+                // create data table on loaded data
+                var dataTable2 = anychart.data.table();
+                dataTable2.addData(data);
+
+                // create stock chart
+                var chart2 = anychart.stock();
+
+                // set chart title
+                chart2.title(false);
+
+                chart2.plot().legend(false)
+
+                // create plot on the chart
+                var plot2 = chart2.plot(0);
+
+                // create plot series with mapped data
+                plot2.line(dataTable2.mapAs({ value: 1 })).name('Sapphire');
+                plot2.line(dataTable2.mapAs({ value: 2 })).name('Cobalt');
+                plot2.line(dataTable2.mapAs({ value: 3 })).name('Topaz');
+
+                chart2.padding(10, 45, 10, 10);
+
+                // create scroller series with mapped data
+                chart2.scroller().line(dataTable2.mapAs({ value: 1 }));
+                chart2.scroller().line(dataTable2.mapAs({ value: 2 }));
+                chart2.scroller().line(dataTable2.mapAs({ value: 3 }));
+
+                // set container id for the chart
+                chart2.container('chart-monte-2');
+                // initiate chart drawing
+                chart2.draw();
+
+                // tooltip
+
+
+
+                var tooltip = chart2.tooltip();
+
+
+                tooltip.background({ corners: 2 });
+                tooltip.fontColor('#ffffff');
+                tooltip.fontWeight(500);
+                tooltip.fontSize(10);
+
+                tooltip.format(function() {
+                    return 'Показатель ' + this.value
+                });
+
+                chart2.plot().yAxis().orientation("right");
+
+                // create range picker
+                var rangePicker2 = anychart.ui.rangePicker();
+                rangePicker2.fromLabelText('от');
+                rangePicker2.toLabelText('до');
+                rangePicker2.format('dd.MM.yyyy');
+                // init range picker
+                rangePicker2.render(chart2);
+
+                var scroller = chart2.scroller();
+                var thumbsSettings = scroller.thumbs();
+                thumbsSettings.enabled(false)
+
+                // create range selector
+                var rangeSelector2 = anychart.ui.rangeSelector();
+                rangeSelector2.ranges([{
+                    'type': "Unit",
+                    'unit': "Day",
+                    'count': 30,
+                    'anchor': "first-date",
+                    'text': "1 Month"
+                }, {
+                    'type': "Unit",
+                    'unit': "quarter",
+                    'count': 1,
+                    'anchor': "first-date",
+                    'text': "3 Month"
+                }, {
+                    'type': "Unit",
+                    'unit': "quarter",
+                    'count': 2,
+                    'anchor': "first-date",
+                    'text': "6 Month"
+                }, {
+                    'type': 'ytd',
+                    'text': 'YTD'
+                }, {
+                    'type': "Unit",
+                    'unit': "year",
+                    'count': 1,
+                    'anchor': "first-date",
+                    'text': "1 year"
+                }, {
+                    'type': 'max',
+                    'text': 'All Time'
+                }]);
+                // init range selector
+                rangeSelector2.render(chart2);
+            }
+        );
+    });
+
+    // $('.tabBacktest-1').bind('click', function() {
+    //     $('#chart-monte').empty()
+    //      // $('#chart-monte-2').empty()
+    //     var dataTable = anychart.data.table();
+    //     // data comes from the function in https://cdn.anychart.com/csv-data/dji-daily-short.js
+    //     dataTable.addData(get_dji_daily_short_data());
+
+    //     var mapping = dataTable.mapAs({ value: 1 });
+
+
+
+    //     var rangeSelector = anychart.ui.rangeSelector();
+    //     var rangePicker = anychart.ui.rangePicker();
+
+    //     var chart = anychart.stock();
+    //     var series_1 = chart.plot(0).area(mapping);
+    //     chart.padding(10, 45, 10, 10);
+    //     var plot = chart.plot();
+    //     var tooltip = chart.tooltip();
+
+    //     var currentPlot = chart.plot();
+    //     // currentPlot.area(mapping);
+    //     var scroller = chart.scroller();
+    //     var currentPlot = chart.scroller();
+    //     var thumbsSettings = scroller.thumbs();
+
+    //     var currentScroller = chart.scroller();
+    //     rangePicker.format('dd.MM.yyyy');
+    //     // chart.plot().yMinorGrid().stroke('#F44336');
+    //     currentScroller.line(mapping);
+    //     chart.plot().legend(false)
+    //     chart.plot().yAxis().orientation("right");
+    //     // series_1.fill(['#E3F2FF', '#CDE5FC'], 0.4, 0.5, null, 1, 0.9, 0.31);
+    //     tooltip.background({ corners: 2 });
+    //     tooltip.fontColor('#ffffff');
+    //     tooltip.fontWeight(500);
+    //     tooltip.fontSize(10);
+    //     thumbsSettings.enabled(false)
+    //     rangePicker.fromLabelText('от');
+    //     rangePicker.toLabelText('до');
+
+    //     rangeSelector.ranges([{
+    //         'type': "Unit",
+    //         'unit': "Day",
+    //         'count': 30,
+    //         'anchor': "first-date",
+    //         'text': "1 Month"
+    //     }, {
+    //         'type': "Unit",
+    //         'unit': "quarter",
+    //         'count': 1,
+    //         'anchor': "first-date",
+    //         'text': "3 Month"
+    //     }, {
+    //         'type': "Unit",
+    //         'unit': "quarter",
+    //         'count': 2,
+    //         'anchor': "first-date",
+    //         'text': "6 Month"
+    //     }, {
+    //         'type': 'ytd',
+    //         'text': 'YTD'
+    //     }, {
+    //         'type': "Unit",
+    //         'unit': "year",
+    //         'count': 1,
+    //         'anchor': "first-date",
+    //         'text': "1 year"
+    //     }, {
+    //         'type': 'max',
+    //         'text': 'All Time'
+    //     }]);
+    //     tooltip.format(function() {
+    //         return 'Бэктест ' + this.value
+    //     });
+    //     // series_1.color('#c5e1a5');
+    //     series_1.highStroke('#ffffff', 2, '5 2', 'round');
+    //     series_1.stroke({ color: '#3285D2', thickness: 2 });
+    //     // yGrid.stroke('#F44336');
+    //     chart.title();
+    //     chart.container("chart-monte");
+    //     chart.draw();
+
+    //     rangePicker.render(chart);
+    //     rangeSelector.render(chart);
+    // })
+
+    // $('.tabSimulation-1').bind('click', function() {
+    //     $('#chart-monte-2').empty()
+    //     // $('#chart-monte').empty()
     //     anychart.data.loadCsvFile(
     //         'https://cdn.anychart.com/samples/stock-general-features/displaying-data-in-millisecond/data.csv',
     //         function(data) {
@@ -914,7 +1108,7 @@
     //             rangeSelector2.render(chart2);
     //         }
     //     );
-    // });
+    // })
 
 
     $('.scrollbar-inner').scrollbar();
