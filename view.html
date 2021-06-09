@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="css/billboard.css">
     <!-- Include jQuery -->
     <script type="text/javascript" src=" https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.anychart.com/releases/8.10.0/css/anychart-ui.min.css" />
     <style>
         .content {
             padding-top: 147px;
@@ -382,12 +384,10 @@
                                     </svg>
                                 </div>
                                 <div class="tab-pane fade show active" id="tabSimulationContent" role="tabpanel" aria-labelledby="tabSimulationContent">
-                                    <div id="chart-container">
-                                        FusionCharts will render here
-                                    </div>
+                                    <div id="chart-monte" style="width: 100%; height: 333px;"></div>
                                 </div>
                             </div>
-                            <div class="graph-settings d-flex align-items-center">
+                            <!-- <div class="graph-settings d-flex align-items-center">
                                 <div class="zoom d-flex align-items-center">
                                     <p>Zoom</p>
                                     <button class="zoom__btn">1m</button>
@@ -403,7 +403,7 @@
                                     <span>до</span>
                                     <input type="text" class="field" value="Oct 3, 2044">
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -730,6 +730,12 @@
     <script src="js/wow.min.js"></script>
     <script src="js/billboard.pkgd.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-stock.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js"></script>
+    <script src="js/dji-daily-short.js"></script>
     <script>
     new WOW().init()
     </script>
@@ -806,6 +812,91 @@
         bindto: "#donutChart2"
     });
 
+    anychart.onDocumentReady(function() {
+        var dataTable = anychart.data.table();
+        // data comes from the function in https://cdn.anychart.com/csv-data/dji-daily-short.js
+        dataTable.addData(get_dji_daily_short_data());
+
+        var mapping = dataTable.mapAs({ value: 1 });
+
+
+
+        var rangeSelector = anychart.ui.rangeSelector();
+        var rangePicker = anychart.ui.rangePicker();
+
+        var chart = anychart.stock();
+        var series_1 = chart.plot(0).area(mapping);
+        chart.padding(10, 45, 10, 10);
+        var plot = chart.plot();
+        var tooltip = chart.tooltip();
+
+        var currentPlot = chart.plot();
+        currentPlot.area(mapping);
+        var scroller = chart.scroller();
+        var currentPlot = chart.scroller();
+        var thumbsSettings = scroller.thumbs();
+
+        var currentScroller = chart.scroller();
+        rangePicker.format('dd.MM.yyyy');
+        // chart.plot().yMinorGrid().stroke('#F44336');
+        currentScroller.line(mapping);
+        chart.plot().legend(false)
+        chart.plot().yAxis().orientation("right");
+        series_1.fill(['#E3F2FF', '#CDE5FC'], 1, 0.5, null, 1, 0.9, 0.31);
+        tooltip.background({ corners: 2 });
+        tooltip.fontColor('#ffffff');
+        tooltip.fontWeight(500);
+        tooltip.fontSize(10);
+        thumbsSettings.enabled(false)
+        rangePicker.fromLabelText('от');
+        rangePicker.toLabelText('до');
+
+        rangeSelector.ranges([{
+            'type': "Unit",
+            'unit': "Day",
+            'count': 30,
+            'anchor': "first-date",
+            'text': "1 Month"
+        }, {
+            'type': "Unit",
+            'unit': "quarter",
+            'count': 1,
+            'anchor': "first-date",
+            'text': "3 Month"
+        }, {
+            'type': "Unit",
+            'unit': "quarter",
+            'count': 2,
+            'anchor': "first-date",
+            'text': "6 Month"
+        }, {
+            'type': 'ytd',
+            'text': 'YTD'
+        }, {
+            'type': "Unit",
+            'unit': "year",
+            'count': 1,
+            'anchor': "first-date",
+            'text': "1 year"
+        }, {
+            'type': 'max',
+            'text': 'All Time'
+        }]);
+
+        tooltip.format(function() {
+            return 'Бэктест ' + this.value
+        });
+        // series_1.color('#c5e1a5');
+        series_1.highStroke('#ffffff', 2, '5 2', 'round');
+        series_1.stroke({ color: '#3285D2', thickness: 2, dash: '6 6' });
+        // yGrid.stroke('#F44336');
+        chart.title();
+        chart.container("chart-monte");
+        chart.draw();
+
+        rangePicker.render(chart);
+        rangeSelector.render(chart);
+    });
     </script>
 </body>
 

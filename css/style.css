@@ -1931,7 +1931,8 @@ input[type="checkbox"] {
 }
 
 .forecast .card-body {
-    padding: 0 19px 21px 45px;
+    padding: 0 19px 21px 19px;
+    /*padding: 0;*/
 }
 
 .row_mt {
@@ -3179,7 +3180,7 @@ input:disabled {
     display: none;
 }
 
-.radio-money input:checked + label {
+.radio-money input:checked+label {
     border-color: #3285D2;
 }
 
@@ -3205,6 +3206,81 @@ input:disabled {
     border-radius: 0 2px 2px 0;
 }
 
-.raphael-group-58-axis-left {
+.anychart-credits,
+.anychart-plot-controls {
     display: none !important;
+}
+
+.anychart-range-picker.anychart-range-picker-inside,
+.anychart-range-selector.anychart-range-selector-inside {
+    bottom: 0 !important;
+}
+
+.anychart-range-picker.anychart-range-picker-inside {
+    right: 38px !important;
+    left: auto !important;
+    z-index: 10;
+}
+
+.anychart-range-selector.anychart-range-selector-inside {
+    left: 10px !important;
+    right: 0 !important;
+}
+
+.anychart-range-selector .anychart-button {
+    background: transparent;
+}
+
+path[data-ac-wrapper-id="90"] {
+    fill: none;
+}
+
+path[data-ac-wrapper-id="89"] {
+    stroke: none;
+}
+
+#chart-monte text,
+.anychart-range-selector {
+    font-family: "Roboto" !important;
+    font-size: 10px;
+}
+
+path[data-ac-wrapper-id="59"],
+path[data-ac-wrapper-id="60"] {
+    display: none;
+}
+
+.anychart-range-selector .anychart-input-label {
+    display: none !important;
+}
+
+.anychart-range-selector .anychart-button {
+    padding: 0 9px !important;
+    border-color: #e7ecf2 !important;
+    font-weight: 400;
+}
+
+.anychart-button-standard.anychart-button-checked {
+    font-weight: 500 !important;
+    background: #F8F9FE !important;
+    box-shadow: none !important
+}
+
+.anychart-label-input {
+    text-align: center;
+    width: 80px !important;
+    font-weight: 600 !important;
+    border: 1px solid #F0F1F2 !important;
+    color: #2E364A !important;
+}
+
+.anychart-label-input:focus {
+    border-color: #0068FC !important;
+}
+
+.anychart-range-picker .anychart-input-label {
+    color: #2E364A !important;
+    font-size: 10px !important;
+    line-height: 12px;
+    font-weight: 600 !important;
 }
