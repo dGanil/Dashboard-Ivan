@@ -74,7 +74,20 @@ $('#next1').bind('click', function() {
 })
 
 $('input[name="clientInfo"]').bind('change', function() {
-    $('#next1').removeClass('active')
+    // $('#next1').removeClass('active')
+    if ($('#existingClient').prop('checked')) {
+        if (!$('#clientSelect').val() == "") {
+            $('#next1').addClass('active')
+        } else if ($('#clientSelect').val() == "") {
+            $('#next1').removeClass('active')
+        }
+    } else if ($('#newClient').prop('checked')) {
+        if (!$('#nameClient').val() == "") {
+            $('#next1').addClass('active') 
+        } else if ($('#nameClient').val() == "") {
+            $('#next1').removeClass('active')
+        }
+    }
 })
 
 
@@ -788,7 +801,7 @@ $('.already-read').bind('click', function() {
     $(this).parents('.signal').find('.badge.bg-danger').addClass('bg-gray')
     $(this).parents('.signal').find('.badge.bg-danger').text('Прочитанный')
     $(this).parents('.signal').find('.badge.bg-danger').removeClass('bg-danger')
-    
+
 })
 
 $('.pay-offer').bind('click', function() {
