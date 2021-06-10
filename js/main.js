@@ -679,7 +679,6 @@ $('.filters__dropdown-item').bind('click', function() {
     $('.navbar__card-settings').css('margin-top', '7px')
     $('.filters-dropdown').addClass('ml-auto')
     $('.filters-main').css('display', 'flex')
-    // $('.flters-list__item_last').clone().appendTo('.filters-list').text($(this).text())
     let top = $('.navbar').height()
     $('.cards-table').css('top', top + 30)
     if (cardToggler == 1) {

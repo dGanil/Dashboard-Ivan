@@ -50,18 +50,6 @@
                         <div class="filters-main">
                             <p class="filters-main__text">Фильтровать:</p>
                             <ul class="filters-list d-flex align-items-center">
-                                <li class="flters-list__item">
-                                    Текст
-                                    <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1L6 6M6 1L1 6" stroke="black" />
-                                    </svg>
-                                </li>
-                                <li class="flters-list__item flters-list__item_last">
-                                    Текст
-                                    <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1L6 6M6 1L1 6" stroke="black" />
-                                    </svg>
-                                </li>
                             </ul>
                             <button class="btn_off filters-main__btn">Очистить все</button>
                         </div>
@@ -1215,42 +1203,36 @@
     new WOW().init()
     </script>
     <script>
-    // let ctx = document.getElementById('assetsChart').getContext('2d');
-    // let myChart = new Chart(ctx, {
-    //     type: "line",
-    //     fill: true,
-    //     data: {
-    //         labels: [" ", " ", " ", " ", " ", " ", " "],
-    //         datasets: [{
-    //             label: 'Chart',
-    //             data: [12, 6, 12, 7, 16, 4, 12],
-    //             backgroundColor: [
-    //                 "#3285D2",
-    //                 "#3285D2",
-    //                 "#3285D2",
-    //                 "#3285D2",
-    //                 "#3285D2",
-    //                 "#3285D2"
-    //             ],
-    //             borderColor: [
-    //                 "#3285D2",
-    //                 "#3285D2",
-    //                 "#3285D2",
-    //                 "#3285D2",
-    //                 "#3285D2",
-    //                 "#3285D2"
-    //             ],
-    //             borderWidth: 2
-    //         }]
-    //     },
-    //     options: {
-    //         scales: {
-    //             y: {
-    //                 beginAtZero: true
-    //             }
-    //         }
-    //     }
-    // });
+    let tmpTAG = '<li class="flters-list__item">%VALUE%<div class="-del"></div></li>',
+        output = document.querySelector('.filters-list');
+
+    output.addEventListener('click', function(e) {
+        if (e.target.classList.contains('-del')) {
+            e.target.closest('.flters-list__item').remove();
+        }
+
+        if ($('.flters-list__item').length == 0) {
+            $('.navbar-bottom').removeClass('flex-column')
+            $('.navbar-bottom').addClass('align-items-center')
+            $('.navbar__card-settings').addClass('ml-auto')
+            $('.navbar__card-settings').css('margin-top', '0')
+            $('.filters-dropdown').removeClass('ml-auto')
+            $('.filters-main').fadeOut(1)
+            let top = $('.navbar').height()
+            if (cardToggler == 1) {
+                $('.content').css('padding-top', top + 30 + 45)
+            } else if (cardToggler == 0) {
+                $('.content').css('padding-top', top + 30 + 25 + 63)
+            }
+
+            $('.cards-table').css('top', top + 30)
+        }
+    });
+
+    $('.filters__dropdown-item').bind('click', function() {
+        let val = $(this).text()
+        $('.filters-list').append(tmpTAG.replace(/%VALUE%/gm, val))
+    })
     </script>
 </body>
 

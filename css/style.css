@@ -2487,10 +2487,6 @@ input[type="checkbox"] {
     align-items: center;
 }
 
-.flters-list__item:last-child {
-    display: none;
-}
-
 /* --Login block-- */
 
 .login-bg-gray {
@@ -3457,7 +3453,8 @@ path[data-ac-wrapper-id="60"] {
     font-weight: 400;
 }
 
-.btn_off:active, .btn_off:focus  {
+.btn_off:active,
+.btn_off:focus {
     box-shadow: none !important;
 }
 
@@ -3564,9 +3561,22 @@ path[data-ac-wrapper-id="60"] {
 .output .tag .-del::before {
     content: '✖';
     display: inline-block;
-    color: white;
+    color: black;
 }
 
+.flters-list__item .-del {
+    display: inline-block;
+    margin-left: 8px;
+    cursor: pointer;
+    color: black;
+}
+
+.flters-list__item .-del::before {
+    content: '✖';
+    display: inline-block;
+    color: #333333;
+    opacity: 0.7;
+}
 
 
 /* --Modals-- */
@@ -3673,7 +3683,9 @@ textarea.field:focus {
     /*padding: 0;*/
 }
 
-.btn_off.disabled, .btn_off:disabled, fieldset:disabled .btn_off {
+.btn_off.disabled,
+.btn_off:disabled,
+fieldset:disabled .btn_off {
     box-shadow: none;
 }
 
@@ -3686,9 +3698,9 @@ textarea.field:focus {
     color: #2E364A;
 }
 
- .client-card_stroke .client-card__name {
+.client-card_stroke .client-card__name {
     color: #2E364A;
- }
+}
 
 .client-card .card-header .badge {
     height: 18px;
