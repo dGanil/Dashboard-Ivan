@@ -83,7 +83,7 @@ $('input[name="clientInfo"]').bind('change', function() {
         }
     } else if ($('#newClient').prop('checked')) {
         if (!$('#nameClient').val() == "") {
-            $('#next1').addClass('active') 
+            $('#next1').addClass('active')
         } else if ($('#nameClient').val() == "") {
             $('#next1').removeClass('active')
         }
@@ -343,7 +343,7 @@ $("#sliderRisk").each(function() {
     $(this).slider({
         animate: true,
         range: "min",
-        value: 1,
+        value: 50,
         min: min,
         max: max,
         step: 1,
@@ -364,8 +364,11 @@ $("#sliderRisk").each(function() {
     $(".risk__slider-field").keyup(function() {
         let sum = $(this).val();
         $("#sliderRisk").slider("value", sum);
-
     });
+
+    $(".risk__slider-field").bind('change', function() {
+        $(this).val($(this).val() + '%')
+    })
 
 }).find(".ui-slider-handle").append(tooltip).hover(function() {
     tooltip.show()
@@ -779,6 +782,10 @@ $('.modal-notify-btn').bind('click', function() {
         $('.signal-new').css('opacity', 1)
         $('.signal-new').slideDown(600)
     }, 200)
+
+    setTimeout(function tick2() {
+        $('.signal-new').css('background', '#fff')
+    }, 1000)
 })
 
 $('.close-this').bind('click', function() {
@@ -787,9 +794,8 @@ $('.close-this').bind('click', function() {
 
 $('.btn-login').bind('click', function() {
     $(this).addClass('loading')
-    if ($('#loginEmail').val() == "" || $('#loginPass').val() == "") {
-        $('.login-incorrect').css('bottom', '6px')
-    }
+    $('.login-incorrect').css('bottom', '6px')
+
 })
 
 $('.login-incorrect svg').bind('click', function() {
@@ -842,4 +848,22 @@ $('.badge-edited').bind('click', function() {
         $(this).removeClass('bg-danger')
         $(this).text('Отслеживать')
     }
+})
+
+$('.sidebar-toggler').bind('click', function() {
+    $('.sidebar-fixed').toggleClass('sidebar-open')
+})
+
+$(document).mouseup(function(e) { // событие клика по веб-документу
+    var div = $(".sidebar-fixed"); // тут указываем ID элемента
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        &&
+        div.has(e.target).length === 0) { // и не по его дочерним элементам
+        $('.sidebar-fixed').removeClass('sidebar-open')
+    }
+});
+
+$('.edit').bind('click', function() {
+    $('#changeNameField').attr('contenteditable','true');
+    $('#changeNameField').css('background','#f7f7f7');
 })

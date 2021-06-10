@@ -71,18 +71,22 @@
                 </svg>
             </a>
             <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item waves-effect">
-                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="list-group-item waves-effect sidebar-toggler">
+                    <svg class="sidebar-btn-open" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 1H16" stroke="black" />
                         <path d="M0 6H16" stroke="black" />
                         <path d="M0 11H16" stroke="black" />
                     </svg>
+                    <span class="sidebar-btn-close">
+                        <img src="img/cross.png" alt="">
+                    </span>
                 </a>
                 <a href="index.html" class="list-group-item waves-effect">
                     <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.5 9.50004C15.4342 9.50042 15.369 9.4878 15.3081 9.46292C15.2471 9.43804 15.1917 9.40138 15.145 9.35503L8.00001 2.20503L0.855014 9.35503C0.759363 9.43695 0.636325 9.47975 0.510487 9.47489C0.384649 9.47003 0.265279 9.41786 0.176232 9.32882C0.0871848 9.23977 0.0350186 9.1204 0.030158 8.99456C0.0252975 8.86872 0.0681005 8.74569 0.150014 8.65003L7.65001 1.15004C7.74369 1.05691 7.87042 1.00464 8.00251 1.00464C8.13461 1.00464 8.26133 1.05691 8.35501 1.15004L15.855 8.65003C15.9238 8.72023 15.9704 8.80914 15.989 8.90566C16.0075 9.00219 15.9972 9.10204 15.9593 9.19273C15.9214 9.28343 15.8577 9.36095 15.776 9.41561C15.6943 9.47026 15.5983 9.49963 15.5 9.50004Z" fill="#2E364A" />
                         <path d="M8 3.89502L2 9.91502V16C2 16.2652 2.10536 16.5196 2.29289 16.7071C2.48043 16.8947 2.73478 17 3 17H6.5V12H9.5V17H13C13.2652 17 13.5196 16.8947 13.7071 16.7071C13.8946 16.5196 14 16.2652 14 16V9.88002L8 3.89502Z" fill="#2E364A" />
                     </svg>
+                    <span class="sidebar-open-text">Главная</span>
                 </a>
                 <a href="create.html" class="list-group-item waves-effect">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,6 +94,7 @@
                         <circle cx="10.5" cy="12.2" r="4" fill="#2E3139" stroke="white" />
                         <path d="M8 12.2H13M10.5 9.70001V14.7" stroke="white" />
                     </svg>
+                    <span class="sidebar-open-text">Создать портфель</span>
                 </a>
                 <a href="#" class="list-group-item waves-effect now">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,17 +107,20 @@
                             </clipPath>
                         </defs>
                     </svg>
+                    <span class="sidebar-open-text">Клиенты</span>
                 </a>
-                <a href="#" class="list-group-item waves-effect">
+                <a href="settings.html" class="list-group-item waves-effect">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.405 1.05C8.992 -0.35 7.008 -0.35 6.595 1.05L6.495 1.39C6.43329 1.59959 6.32545 1.79272 6.17939 1.95521C6.03333 2.11771 5.85275 2.24544 5.6509 2.32906C5.44904 2.41268 5.23103 2.45006 5.01285 2.43846C4.79466 2.42685 4.58185 2.36656 4.39 2.262L4.08 2.092C2.797 1.394 1.394 2.797 2.093 4.079L2.262 4.39C2.708 5.21 2.285 6.231 1.39 6.495L1.05 6.595C-0.35 7.008 -0.35 8.992 1.05 9.405L1.39 9.505C1.59959 9.56671 1.79272 9.67455 1.95521 9.82061C2.11771 9.96667 2.24544 10.1472 2.32906 10.3491C2.41268 10.551 2.45006 10.769 2.43846 10.9872C2.42685 11.2053 2.36656 11.4182 2.262 11.61L2.092 11.92C1.394 13.203 2.797 14.606 4.079 13.907L4.39 13.738C4.58185 13.6334 4.79466 13.5731 5.01285 13.5615C5.23103 13.5499 5.44904 13.5873 5.6509 13.6709C5.85275 13.7546 6.03333 13.8823 6.17939 14.0448C6.32545 14.2073 6.43329 14.4004 6.495 14.61L6.595 14.95C7.008 16.35 8.992 16.35 9.405 14.95L9.505 14.61C9.56671 14.4004 9.67455 14.2073 9.82061 14.0448C9.96667 13.8823 10.1472 13.7546 10.3491 13.6709C10.551 13.5873 10.769 13.5499 10.9872 13.5615C11.2053 13.5731 11.4182 13.6334 11.61 13.738L11.92 13.908C13.203 14.606 14.606 13.203 13.907 11.921L13.738 11.61C13.6334 11.4182 13.5731 11.2053 13.5615 10.9872C13.5499 10.769 13.5873 10.551 13.6709 10.3491C13.7546 10.1472 13.8823 9.96667 14.0448 9.82061C14.2073 9.67455 14.4004 9.56671 14.61 9.505L14.95 9.405C16.35 8.992 16.35 7.008 14.95 6.595L14.61 6.495C14.4004 6.43329 14.2073 6.32545 14.0448 6.17939C13.8823 6.03333 13.7546 5.85275 13.6709 5.6509C13.5873 5.44904 13.5499 5.23103 13.5615 5.01285C13.5731 4.79466 13.6334 4.58185 13.738 4.39L13.908 4.08C14.606 2.797 13.203 1.394 11.921 2.093L11.61 2.262C11.4182 2.36656 11.2053 2.42685 10.9872 2.43846C10.769 2.45006 10.551 2.41268 10.3491 2.32906C10.1472 2.24544 9.96667 2.11771 9.82061 1.95521C9.67455 1.79272 9.56671 1.59959 9.505 1.39L9.405 1.05ZM8 10.93C7.22292 10.93 6.47766 10.6213 5.92818 10.0718C5.3787 9.52234 5.07 8.77708 5.07 8C5.07 7.22292 5.3787 6.47766 5.92818 5.92818C6.47766 5.3787 7.22292 5.07 8 5.07C8.77682 5.07 9.52182 5.37859 10.0711 5.92788C10.6204 6.47718 10.929 7.22218 10.929 7.999C10.929 8.77582 10.6204 9.52082 10.0711 10.0701C9.52182 10.6194 8.77682 10.928 8 10.928V10.93Z" fill="#2E364A" />
                     </svg>
+                    <span class="sidebar-open-text">Настройки</span>
                 </a>
                 <a href="login.html" class="list-group-item waves-effect">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.3546 7.00006L11.6046 4.00006L11.6046 6.25006L6.35455 6.25006L6.35455 7.75006L11.6046 7.75006L11.6046 10.0001L15.3546 7.00006Z" fill="#2E364A" />
                         <path d="M2.55556 1.5L2.55556 13.5L8 13.5L8 15L2.55556 15C1.69767 15 1 14.3273 1 13.5L1 1.5C1 0.67275 1.69767 1.48716e-07 2.55555 1.28472e-07L8 0L8 1.5L2.55556 1.5Z" fill="#2E364A" />
                     </svg>
+                    <span class="sidebar-open-text">Выход</span>
                 </a>
             </div>
         </div>
@@ -155,16 +163,9 @@
                 <div class="col-md-4">
                     <div class="card portfolio-info-card">
                         <div class="card-header">
-                            <p class="big-text">James Hoffman Investment Portfolio</p>
+                            <p class="big-text" id="changeNameField">James Hoffman Investment Portfolio</p>
                             <div class="d-flex align-items-center portfolio-info-card__details">
-                                <span class="badge bg-success">On Track</span>
-                                <p class="portfolio-info-card__home d-flex align-items-end">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.8334 7.38878C12.7822 7.38908 12.7315 7.37927 12.6841 7.35991C12.6367 7.34056 12.5937 7.31205 12.5573 7.276L7.00009 1.71489L1.44287 7.276C1.36847 7.33971 1.27278 7.373 1.1749 7.36922C1.07703 7.36544 0.984188 7.32487 0.914929 7.25561C0.84567 7.18635 0.805096 7.09351 0.801315 6.99564C0.797535 6.89776 0.830826 6.80206 0.894536 6.72767L6.72787 0.894336C6.80073 0.821905 6.8993 0.78125 7.00204 0.78125C7.10478 0.78125 7.20334 0.821905 7.2762 0.894336L13.1095 6.72767C13.163 6.78226 13.1993 6.85142 13.2137 6.92649C13.2281 7.00156 13.2201 7.07923 13.1907 7.14977C13.1612 7.22031 13.1116 7.2806 13.0481 7.32311C12.9845 7.36562 12.9099 7.38847 12.8334 7.38878Z" fill="#0068FC" />
-                                        <path d="M6.99992 3.0293L2.33325 7.71152V12.4443C2.33325 12.6506 2.4152 12.8484 2.56106 12.9943C2.70692 13.1401 2.90475 13.2221 3.11103 13.2221H5.83325V9.33319H8.16658V13.2221H10.8888C11.0951 13.2221 11.2929 13.1401 11.4388 12.9943C11.5846 12.8484 11.6666 12.6506 11.6666 12.4443V7.6843L6.99992 3.0293Z" fill="#0068FC" />
-                                    </svg>
-                                    Household detals
-                                </p>
+                                <span class="badge bg-success badge-edited">Отслеживать</span>
                             </div>
                         </div>
                         <div class="card-body">
@@ -304,7 +305,7 @@
                             <p class="monte-carlo">Симуляция Монте-Карло</p>
                         </div>
                         <div class="card-body">
-                            <div id="chart-monte" style="width: 100%; height: 333px;"></div>
+                            <div id="chart-monte" style="width: 100%; height: 489px;"></div>
                         </div>
                     </div>
                     <div class="card distribution card_mt">
@@ -432,6 +433,176 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row fadeIn row_mt">
+                <div class="col-md-12">
+                    <div class="card analytics">
+                        <div class="card-header">
+                            <p class="card-title">Аналитика портфеля</p>
+                        </div>
+                        <div class="card-body d-flex align-items-start justify-content-between">
+                            <div class="analytics__block">
+                                <p class="analytics__heading">Распределение активов</p>
+                                <p class="analytics__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            </div>
+                            <div class="analytics__block">
+                                <p class="analytics__heading">Разбивка по секторам</p>
+                                <p class="analytics__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            </div>
+                            <div class="analytics__block">
+                                <p class="analytics__heading">Фокус портфеля</p>
+                                <p class="analytics__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row fadeIn row_mt">
+                <div class="col-md-12">
+                    <div class="card fonds">
+                        <div class="card-header">
+                            <p class="card-title">Фонды денежного рынка и их эквиваленты</p>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-view">
+                                <thead>
+                                    <tr>
+                                        <th>Тикер</th>
+                                        <th>Наименование</th>
+                                        <th>Сектор</th>
+                                        <th>Количество</th>
+                                        <th>Цена</th>
+                                        <th>Доля</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>7.541.0</td>
+                                        <td>$ 152,54</td>
+                                        <td>75%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row fadeIn row_mt">
+                <div class="col-md-12">
+                    <div class="card fonds">
+                        <div class="card-header">
+                            <p class="card-title">Акции</p>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-view">
+                                <thead>
+                                    <tr>
+                                        <th>Тикер</th>
+                                        <th>Наименование</th>
+                                        <th>Сектор</th>
+                                        <th>Количество</th>
+                                        <th>Цена</th>
+                                        <th>Доля</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>7.541.0</td>
+                                        <td>$ 152,54</td>
+                                        <td>75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>7.541.0</td>
+                                        <td>$ 152,54</td>
+                                        <td>75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>7.541.0</td>
+                                        <td>$ 152,54</td>
+                                        <td>75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>7.541.0</td>
+                                        <td>$ 152,54</td>
+                                        <td>75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>7.541.0</td>
+                                        <td>$ 152,54</td>
+                                        <td>75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>7.541.0</td>
+                                        <td>$ 152,54</td>
+                                        <td>75%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row fadeIn row_mt">
+                <div class="col-md-12">
+                    <div class="card fonds">
+                        <div class="card-header">
+                            <p class="card-title">ETF</p>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-view">
+                                <thead>
+                                    <tr>
+                                        <th>Тикер</th>
+                                        <th>Наименование</th>
+                                        <th>Сектор</th>
+                                        <th>Количество</th>
+                                        <th>Цена</th>
+                                        <th>Доля</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>7.541.0</td>
+                                        <td>$ 152,54</td>
+                                        <td>75%</td>
+                                    </tr>
+                                    <!--  <tr>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>Name</td>
+                                        <td>7.541.0</td>
+                                        <td>$ 152,54</td>
+                                        <td>75%</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -760,88 +931,181 @@
     })
 
     anychart.onDocumentReady(function() {
-        var dataTable = anychart.data.table();
-        // data comes from the function in https://cdn.anychart.com/csv-data/dji-daily-short.js
-        dataTable.addData(get_dji_daily_short_data());
+        // var dataTable = anychart.data.table();
+        // // data comes from the function in https://cdn.anychart.com/csv-data/dji-daily-short.js
+        // dataTable.addData(get_dji_daily_short_data());
 
-        var mapping = dataTable.mapAs({ value: 1 });
+        // var mapping = dataTable.mapAs({ value: 1 });
 
 
 
-        var rangeSelector = anychart.ui.rangeSelector();
-        var rangePicker = anychart.ui.rangePicker();
+        // var rangeSelector = anychart.ui.rangeSelector();
+        // var rangePicker = anychart.ui.rangePicker();
 
-        var chart = anychart.stock();
-        var series_1 = chart.plot(0).area(mapping);
-        chart.padding(10, 45, 10, 10);
-        var plot = chart.plot();
-        var tooltip = chart.tooltip();
+        // var chart = anychart.stock();
+        // var series_1 = chart.plot(0).area(mapping);
+        // chart.padding(10, 45, 10, 10);
+        // var plot = chart.plot();
+        // var tooltip = chart.tooltip();
 
-        var currentPlot = chart.plot();
-        currentPlot.area(mapping);
-        var scroller = chart.scroller();
-        var currentPlot = chart.scroller();
-        var thumbsSettings = scroller.thumbs();
+        // var currentPlot = chart.plot();
+        // currentPlot.area(mapping);
+        // var scroller = chart.scroller();
+        // var currentPlot = chart.scroller();
+        // var thumbsSettings = scroller.thumbs();
 
-        var currentScroller = chart.scroller();
-        rangePicker.format('dd.MM.yyyy');
-        // chart.plot().yMinorGrid().stroke('#F44336');
-        currentScroller.line(mapping);
-        chart.plot().legend(false)
-        chart.plot().yAxis().orientation("right");
-        series_1.fill(false);
-        tooltip.background({ corners: 2 });
-        tooltip.fontColor('#ffffff');
-        tooltip.fontWeight(500);
-        tooltip.fontSize(10);
-        thumbsSettings.enabled(false)
-        rangePicker.fromLabelText('от');
-        rangePicker.toLabelText('до');
+        // var currentScroller = chart.scroller();
+        // rangePicker.format('dd.MM.yyyy');
+        // // chart.plot().yMinorGrid().stroke('#F44336');
+        // currentScroller.line(mapping);
+        // chart.plot().legend(false)
+        // chart.plot().yAxis().orientation("right");
+        // series_1.fill(false);
+        // tooltip.background({ corners: 2 });
+        // tooltip.fontColor('#ffffff');
+        // tooltip.fontWeight(500);
+        // tooltip.fontSize(10);
+        // thumbsSettings.enabled(false)
+        // rangePicker.fromLabelText('от');
+        // rangePicker.toLabelText('до');
 
-        rangeSelector.ranges([{
-            'type': "Unit",
-            'unit': "Day",
-            'count': 30,
-            'anchor': "first-date",
-            'text': "1 Month"
-        }, {
-            'type': "Unit",
-            'unit': "quarter",
-            'count': 1,
-            'anchor': "first-date",
-            'text': "3 Month"
-        }, {
-            'type': "Unit",
-            'unit': "quarter",
-            'count': 2,
-            'anchor': "first-date",
-            'text': "6 Month"
-        }, {
-            'type': 'ytd',
-            'text': 'YTD'
-        }, {
-            'type': "Unit",
-            'unit': "year",
-            'count': 1,
-            'anchor': "first-date",
-            'text': "1 year"
-        }, {
-            'type': 'max',
-            'text': 'All Time'
-        }]);
-        tooltip.format(function() {
-            return 'Распределение ' + this.value
-        });
-        // series_1.color('#c5e1a5');
-        series_1.highStroke('#ffffff', 2, '5 2', 'round');
-        series_1.stroke({ color: '#3285D2', thickness: 2 });
-        // yGrid.stroke('#F44336');
-        chart.title();
-        chart.container("chart-monte");
-        chart.draw();
+        // rangeSelector.ranges([{
+        //     'type': "Unit",
+        //     'unit': "Day",
+        //     'count': 30,
+        //     'anchor': "first-date",
+        //     'text': "1 Month"
+        // }, {
+        //     'type': "Unit",
+        //     'unit': "quarter",
+        //     'count': 1,
+        //     'anchor': "first-date",
+        //     'text': "3 Month"
+        // }, {
+        //     'type': "Unit",
+        //     'unit': "quarter",
+        //     'count': 2,
+        //     'anchor': "first-date",
+        //     'text': "6 Month"
+        // }, {
+        //     'type': 'ytd',
+        //     'text': 'YTD'
+        // }, {
+        //     'type': "Unit",
+        //     'unit': "year",
+        //     'count': 1,
+        //     'anchor': "first-date",
+        //     'text': "1 year"
+        // }, {
+        //     'type': 'max',
+        //     'text': 'All Time'
+        // }]);
+        // tooltip.format(function() {
+        //     return 'Распределение ' + this.value
+        // });
+        // // series_1.color('#c5e1a5');
+        // series_1.highStroke('#ffffff', 2, '5 2', 'round');
+        // series_1.stroke({ color: '#3285D2', thickness: 2 });
+        // // yGrid.stroke('#F44336');
+        // chart.title();
+        // chart.container("chart-monte");
+        // chart.draw();
 
-        rangePicker.render(chart);
-        rangeSelector.render(chart);
+        // rangePicker.render(chart);
+        // rangeSelector.render(chart);
+        anychart.data.loadCsvFile(
+            'https://cdn.anychart.com/samples/stock-general-features/displaying-data-in-millisecond/data.csv',
+            function(data) {
+                // create data table on loaded data
+                var dataTable = anychart.data.table();
+                dataTable.addData(data);
+
+                var rangeSelector = anychart.ui.rangeSelector();
+                var rangePicker = anychart.ui.rangePicker();
+
+
+                var chart = anychart.stock();
+
+                chart.padding(10, 45, 10, 10);
+                var plot = chart.plot();
+                var tooltip = chart.tooltip();
+
+                var currentPlot = chart.plot();
+
+                var scroller = chart.scroller();
+                var currentPlot = chart.scroller();
+                var thumbsSettings = scroller.thumbs();
+
+                var currentScroller = chart.scroller();
+                rangePicker.format('dd.MM.yyyy');
+                plot.line(dataTable.mapAs({ value: 1 })).name('Sapphire');
+                plot.line(dataTable.mapAs({ value: 3 })).name('Topaz');
+                var mapping = dataTable.mapAs({ value: 1 });
+                var mapping2 = dataTable.mapAs({ value: 3 });
+                var series_1 = plot.area(mapping);
+                var series_2 = plot.area(mapping2);
+
+
+                // currentPlot.area(mapping);
+                currentScroller.line(mapping);
+                currentScroller.line(mapping2);
+                chart.plot().legend(false)
+                chart.plot().yAxis().orientation("right");
+                series_2.fill(false);
+                series_1.stroke(false);
+                series_2.stroke('red')
+                series_1.fill(['#E3F2FF', '#CDE5FC'], 1, 0.5, null, 1, 0.9, 0.31);
+                tooltip.background({ corners: 2 });
+                tooltip.fontColor('#ffffff');
+                tooltip.fontWeight(500);
+                tooltip.fontSize(10);
+                thumbsSettings.enabled(false)
+                rangePicker.fromLabelText('от');
+                rangePicker.toLabelText('до');
+
+                rangeSelector.ranges([{
+                    'type': "Unit",
+                    'unit': "Day",
+                    'count': 30,
+                    'anchor': "first-date",
+                    'text': "1 Month"
+                }, {
+                    'type': "Unit",
+                    'unit': "quarter",
+                    'count': 1,
+                    'anchor': "first-date",
+                    'text': "3 Month"
+                }, {
+                    'type': "Unit",
+                    'unit': "quarter",
+                    'count': 2,
+                    'anchor': "first-date",
+                    'text': "6 Month"
+                }, {
+                    'type': 'ytd',
+                    'text': 'YTD'
+                }, {
+                    'type': "Unit",
+                    'unit': "year",
+                    'count': 1,
+                    'anchor': "first-date",
+                    'text': "1 year"
+                }, {
+                    'type': 'max',
+                    'text': 'All Time'
+                }]);
+                tooltip.format(function() {
+                    return 'Распределение ' + this.value
+                });
+
+
+                chart.title();
+                rangePicker.render(chart);
+                rangeSelector.render(chart);
+                chart.container("chart-monte");
+                chart.draw();
+
+            });
     });
 
 

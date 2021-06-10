@@ -616,9 +616,9 @@ ul {
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
-    color: #206ad4;
+    color: #0068FC;
     /*opacity: 0.7;*/
-    margin-right: 10px;
+    /*margin-right: 10px;*/
     cursor: pointer;
 }
 
@@ -2821,6 +2821,10 @@ input[type="checkbox"] {
     line-height: 16px;
 }
 
+.portfolios-table tbody td:nth-child(6) .badge {
+    font-size: 14px;
+}
+
 .portfolios-table tbody td:first-child {
     padding-left: 15px;
     font-weight: 500;
@@ -2892,7 +2896,7 @@ input[type="checkbox"] {
 .portfolios-table .badge {
     font-size: 12px;
     line-height: 14px;
-    padding: 0.5px 11px;
+    padding: 1px 11px;
 }
 
 .fio {
@@ -3531,6 +3535,10 @@ path[data-ac-wrapper-id="60"] {
     background: #3285d2;
 }
 
+.securities .dropdown-item.active, .dropdown-item:active, .dropdown-item:focus, .dropdown-item:hover {
+    background: #3285d2;
+}
+
 .securities .dropdown-item {
     color: white;
     font-size: 14px;
@@ -3711,4 +3719,61 @@ fieldset:disabled .btn_off {
 .modal .already-read {
     opacity: 0.7;
     color: #2E364A;
+}
+
+
+.sidebar-open {
+    width: 200px;
+    text-align: left;
+    z-index: 1000000;
+    border-right: 2px solid #f1f6ff;
+}
+
+.sidebar-open a {
+    padding: 0 20px !important;
+    text-align: left !important;
+    display: flex;
+    align-items: flex-end;
+    height: 25px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #2E364A;
+}
+
+.sidebar-open a.now {
+    color: #206ad4;
+}
+
+.sidebar-open-text {
+    display: none;
+}
+
+.sidebar-open .sidebar-open-text {
+    display: block;
+    margin-left: 15px;
+}
+
+.sidebar-btn-close img {
+    width: 22px;
+}
+
+.sidebar-btn-close {
+    display: none;
+}
+
+.sidebar-open .sidebar-btn-close {
+    display: block;
+}
+
+.sidebar-open .sidebar-btn-open {
+    display: none;
+}
+
+.sidebar-toggler {
+    cursor: pointer;
+}
+
+#changeNameField:focus-visible {
+    background: #f7f7f7;
+    outline: 0;
 }
