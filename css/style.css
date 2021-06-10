@@ -713,11 +713,18 @@ ul {
 .card .dropdown-menu {
     width: 150px;
     min-width: 0;
-    padding: 15px 0;
+    padding: 0;
     border-radius: 3px;
     box-shadow: 0px 2px 10px rgba(46, 54, 74, 0.07);
     border: 2px solid #F4F4F6;
 }
+
+.dropdown-menu>li:last-child,
+.dropdown-menu>li:last-child .dropdown-item {
+    border-radius: 0;
+}
+
+
 
 .dropdown-menu .dropdown-item {
     padding: 10px;
@@ -1052,7 +1059,7 @@ label {
     height: 30px;
     font-weight: 500;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 1;
     text-transform: capitalize;
     background: #EAE8EA;
     border-radius: 3px;
@@ -1976,6 +1983,12 @@ input[type="checkbox"] {
     border: 0;
     background: none;
     padding: 0;
+    text-transform: unset;
+    box-shadow: none;
+}
+
+.btn_off:hover {
+    box-shadow: none;
 }
 
 .save-draft {
@@ -2476,6 +2489,42 @@ input[type="checkbox"] {
     justify-content: center;
 }
 
+.login-incorrect {
+    width: 426px;
+    height: 56px;
+    background: #FFFFFF;
+    box-shadow: -4px -4px 10px rgba(46, 54, 74, 0.07), 4px 4px 10px rgba(46, 54, 74, 0.07);
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 1;
+    padding: 20px 25px;
+    position: fixed;
+    right: 30px;
+    bottom: -65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s linear;
+}
+
+.login-incorrect svg {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-login.loading {
+    color: #2E364A;
+    background: #EAE8EA;
+}
+
+.btn-login.loading .loader-05 {
+    display: block;
+}
+
+.btn-login.loading .loader-05:before {
+    border: 0.2em solid #eae8ea;
+}
+
 .login-block {
     width: 366px;
     text-align: center;
@@ -2747,8 +2796,8 @@ input[type="checkbox"] {
     padding-top: 16px;
     padding-bottom: 13px;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .portfolios-table thead td:first-child {
@@ -2759,8 +2808,8 @@ input[type="checkbox"] {
 .portfolios-table tbody td {
     text-align: right;
     padding: 23px 0;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .portfolios-table tbody td:first-child {
@@ -2832,8 +2881,8 @@ input[type="checkbox"] {
 }
 
 .portfolios-table .badge {
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 12px;
+    line-height: 14px;
     padding: 0.5px 11px;
 }
 
@@ -3245,6 +3294,7 @@ path[data-ac-wrapper-id="89"] {
     font-family: "Roboto" !important;
     font-size: 10px;
 }
+
 /*
 path[data-ac-wrapper-id="59"],
 path[data-ac-wrapper-id="60"] {
@@ -3292,4 +3342,251 @@ path[data-ac-wrapper-id="60"] {
 
 .bb-chart text {
     display: none !important;
+}
+
+
+.signal-new {
+    /*transition: all 0.1s linear;*/
+    display: none;
+    opacity: 0;
+}
+
+.signal-bottom__buttons .already-read {
+    margin-right: 0;
+    margin-bottom: 5px;
+}
+
+.signal-bottom__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.overview-client__dropdown rect {
+    opacity: 0;
+}
+
+.overview-client__dropdown:hover rect {
+    opacity: 1;
+}
+
+.dz-error-message,
+.dz-size,
+.dz-success-mark,
+.dz-error-mark,
+.dz-image,
+.dz-remove {
+    display: none;
+}
+
+.loader-05 {
+    /*display: inline-block;*/
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    pointer-events: none;
+    border: 0.2em solid transparent;
+    border-top-color: currentcolor;
+    border-radius: 50%;
+    -webkit-animation: 1s loader-05 linear infinite;
+    animation: 1s loader-05 linear infinite;
+    position: relative;
+    /*margin-right: 5px;*/
+    display: none;
+    margin-left: -18px;
+}
+
+.login-block .loader-05 {
+    width: 20px;
+    height: 20px;
+    border-right-color: currentColor;
+    border-left-color: currentColor;
+    margin-right: 10px;
+    border-top-color: #C4C4C4;
+    border-left-color: #C4C4C4;
+    border-right-color: #C4C4C4;
+    display: none;
+}
+
+.btn-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.loader-05:before {
+    content: "";
+    display: block;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: -0.2em;
+    left: -0.2em;
+    border: 0.2em solid #3285D2;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+
+.uploud-wrap {
+    margin-left: 27px;
+    /*display: flex;*/
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    display: none;
+}
+
+.uploud-wrap button {
+    font-size: 14px;
+    color: #0e65e0;
+    font-weight: 500;
+}
+
+@-webkit-keyframes loader-05 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-05 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.dz-preview {
+    display: flex;
+    margin-top: -20px;
+}
+
+.upload__remove {
+    margin-left: 10px;
+    color: red;
+}
+
+
+.output .tag {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.output {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 455px;
+    margin-top: 15px;
+}
+
+.securities .dropdown {
+    width: 455px !important;
+}
+
+.securities .dropdown-menu {
+    width: 156px;
+    background: #232427;
+    border: 0;
+}
+
+.securities .bootstrap-select .dropdown-item:hover {
+    background: #3285d2;
+}
+
+.securities .dropdown-item {
+    color: white;
+    font-size: 14px;
+    padding: 7.5px 10px;
+}
+
+.output .tag {
+    display: block;
+    background: #3285D2;
+    color: #2E364A;
+    padding: 4px 13px;
+    margin: 0 3px 3px 0;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 2px;
+    padding-right: 8px;
+}
+
+.output .tag .-del {
+    display: inline-block;
+    margin-left: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.output .tag .-del::before {
+    content: '✖';
+    display: inline-block;
+    color: white;
+}
+
+/* --Modals-- */
+
+.save-bag-as-draft .modal-dialog {
+    width: 754px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.modal-title {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    color: #0068FC;
+    margin-left: 15px;
+}
+
+.save-bag-as-draft .modal-header {
+    padding: 40px 39px 28px;
+    border-bottom: 2px solid #F4F4F6;
+}
+
+.save-bag-as-draft .modal-body {
+    padding: 40px 28px;
+}
+
+.modal-medium-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #2E364A;
+    margin-bottom: 28px;
+}
+
+.btn-type-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #0068FC;
+}
+
+.discard-changes {
+    margin-left: 20px;
+}
+
+.save-bag-as-draft .btn-primary {
+    width: 173px;
+    height: 40px;
+    padding: 0;
+}
+
+.save-bag-as-draft .pay-offer-btn {
+    width: 98px;
 }
