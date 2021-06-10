@@ -616,8 +616,8 @@ ul {
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
-    color: #2E364A;
-    opacity: 0.7;
+    color: #206ad4;
+    /*opacity: 0.7;*/
     margin-right: 10px;
     cursor: pointer;
 }
@@ -3700,8 +3700,15 @@ fieldset:disabled .btn_off {
 
 .client-card_stroke .client-card__name {
     color: #2E364A;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 .client-card .card-header .badge {
     height: 18px;
+}
+
+.modal .already-read {
+    opacity: 0.7;
+    color: #2E364A;
 }

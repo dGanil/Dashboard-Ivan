@@ -784,6 +784,7 @@ $('.login-incorrect svg').bind('click', function() {
 })
 
 $('.already-read').bind('click', function() {
+    $(this).parents('.signal').removeClass('signal-new')
     $(this).parents('.signal').find('.badge.bg-danger').addClass('bg-gray')
     $(this).parents('.signal').find('.badge.bg-danger').text('Прочитанный')
     $(this).parents('.signal').find('.badge.bg-danger').removeClass('bg-danger')
