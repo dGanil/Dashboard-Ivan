@@ -33,14 +33,14 @@
                 </div>
                 <div class="navbar-bottom d-flex align-items-center justify-content-between w-100">
                     <p class="welcome">Welcome back, Jack!</p>
-                    <button type="button" class="btn btn-primary">
+                    <a class="btn btn-primary" href="create.html">
                         <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="2" width="12" height="15" rx="1" fill="white" />
                             <circle cx="10.5" cy="12.2" r="4" fill="white" stroke="#0068FC" />
                             <path d="M8 12.2H13M10.5 9.70001V14.7" stroke="#2E3139" />
                         </svg>
-                        <span>Добавить в портфель</span>
-                    </button>
+                        <span>Добавить портфель</span>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -113,7 +113,7 @@
                                 </button>
                                 <input type="text" class="search__field" placeholder="Поиск">
                             </div>
-                            <a href="#" class="clients__add-client d-flex align-items-center">
+                            <a href="#" class="clients__add-client d-flex align-items-center" data-mdb-toggle="modal" data-mdb-target="#addClientModal">
                                 <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 12C1 12 0 12 0 11C0 10 1 7 6 7C11 7 12 10 12 11C12 12 11 12 11 12H1ZM6 6C6.79565 6 7.55871 5.68393 8.12132 5.12132C8.68393 4.55871 9 3.79565 9 3C9 2.20435 8.68393 1.44129 8.12132 0.87868C7.55871 0.316071 6.79565 0 6 0C5.20435 0 4.44129 0.316071 3.87868 0.87868C3.31607 1.44129 3 2.20435 3 3C3 3.79565 3.31607 4.55871 3.87868 5.12132C4.44129 5.68393 5.20435 6 6 6Z" fill="#0068FC" />
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 3C13.6326 3 13.7598 3.05268 13.8536 3.14645C13.9473 3.24021 14 3.36739 14 3.5V5H15.5C15.6326 5 15.7598 5.05268 15.8536 5.14645C15.9473 5.24021 16 5.36739 16 5.5C16 5.63261 15.9473 5.75979 15.8536 5.85355C15.7598 5.94732 15.6326 6 15.5 6H14V7.5C14 7.63261 13.9473 7.75979 13.8536 7.85355C13.7598 7.94732 13.6326 8 13.5 8C13.3674 8 13.2402 7.94732 13.1464 7.85355C13.0527 7.75979 13 7.63261 13 7.5V6H11.5C11.3674 6 11.2402 5.94732 11.1464 5.85355C11.0527 5.75979 11 5.63261 11 5.5C11 5.36739 11.0527 5.24021 11.1464 5.14645C11.2402 5.05268 11.3674 5 11.5 5H13V3.5C13 3.36739 13.0527 3.24021 13.1464 3.14645C13.2402 3.05268 13.3674 3 13.5 3Z" fill="#0068FC" />
@@ -183,7 +183,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr onclick="window.location.href='overview-client.html'; return false">
                                         <td>Joan Smith</th>
                                         <td><span class="badge bg-success">Отслеживать</span></td>
                                         <td>
@@ -199,7 +199,7 @@
                                         <td>3 <a href="#" data-mdb-toggle="tooltip" title="2 drafts">(2)</a></td>
                                         <td>$929.407.994</td>
                                     </tr>
-                                    <tr>
+                                    <tr onclick="window.location.href='overview-client.html'; return false">
                                         <td>Teodorico MacCombe</th>
                                         <td><span class="badge bg-danger">Не уведомлять</span></td>
                                         <td>
@@ -216,7 +216,7 @@
                                         <td>3</td>
                                         <td>$9.407.994</td>
                                     </tr>
-                                    <tr>
+                                    <tr onclick="window.location.href='overview-client.html'; return false">
                                         <td>Misly Treverton</th>
                                         <td><span class="badge bg-success">Отслеживать</span></td>
                                         <td>
@@ -232,7 +232,7 @@
                                         <td>3 <a href="#" data-mdb-toggle="tooltip" title="2 drafts">(2)</a></td>
                                         <td>$12.407.994</td>
                                     </tr>
-                                    <tr>
+                                    <tr onclick="window.location.href='overview-client.html'; return false">
                                         <td>Joan Smith</th>
                                         <td><span class="badge bg-danger">Не уведомлять</span></td>
                                         <td>
@@ -248,7 +248,7 @@
                                         <td>3</td>
                                         <td>$929.454.994</td>
                                     </tr>
-                                    <tr>
+                                    <tr onclick="window.location.href='overview-client.html'; return false">
                                         <td>Teodorico MacCombe</th>
                                         <td><span class="badge bg-success">Отслеживать</span></td>
                                         <td>
@@ -264,7 +264,7 @@
                                         <td>3</td>
                                         <td>$80.407.994</td>
                                     </tr>
-                                    <tr>
+                                    <tr onclick="window.location.href='overview-client.html'; return false">
                                         <td>Misly Treverton</th>
                                         <td><span class="badge bg-success">Отслеживать</span></td>
                                         <td>
@@ -280,7 +280,7 @@
                                         <td>3 <a href="#" data-mdb-toggle="tooltip" title="2 drafts">(2)</a></td>
                                         <td>$929.407.994</td>
                                     </tr>
-                                    <tr>
+                                    <tr onclick="window.location.href='overview-client.html'; return false">
                                         <td>Teodorico MacCombe</th>
                                         <td><span class="badge bg-success">Отслеживать</span></td>
                                         <td>
@@ -458,21 +458,21 @@
                                             <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed </p>
                                         </div>
                                         <div class="signal__footer">
-                                            <div class="author">
+                                            <a href="overview-client.html" class="author">
                                                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
                                                 </svg>
                                                 Craig Gordon
-                                            </div>
+                                            </a>
                                             <div class="d-flex signal__bottom align-items-center justify-content-between">
-                                                <div class="signal__note">
+                                                <a href="view.html" class="signal__note">
                                                     <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <rect width="7" height="8" rx="1" fill="#A5A8C3" />
                                                     </svg>
                                                     Portfolio: Craig Gordon Investment Portfolio
-                                                </div>
+                                                </a>
                                                 <p class="already-read ml-auto">Прочитано</p>
-                                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                                <a href="view.html" class="open-potfolio">Открыть портфель</a>
                                             </div>
                                         </div>
                                     </div>
@@ -496,21 +496,21 @@
                                             <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed </p>
                                         </div>
                                         <div class="signal__footer">
-                                            <div class="author">
+                                            <a href="overview-client.html" class="author">
                                                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
                                                 </svg>
                                                 Craig Gordon
-                                            </div>
+                                            </a>
                                             <div class="d-flex signal__bottom align-items-center justify-content-between">
-                                                <div class="signal__note">
+                                                <a href="view.html" class="signal__note">
                                                     <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <rect width="7" height="8" rx="1" fill="#A5A8C3" />
                                                     </svg>
                                                     Portfolio: Craig Gordon Investment Portfolio
-                                                </div>
+                                                </a>
                                                 <p class="already-read ml-auto">Прочитано</p>
-                                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                                <a href="view.html" class="open-potfolio">Открыть портфель</a>
                                             </div>
                                         </div>
                                     </div>
@@ -536,21 +536,21 @@
                                             <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed</p>
                                         </div>
                                         <div class="signal__footer">
-                                            <div class="author">
+                                            <a href="overview-client.html" class="author">
                                                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3"></path>
                                                 </svg>
                                                 Craig Gordon
-                                            </div>
+                                            </a>
                                             <div class="d-flex signal__bottom align-items-center justify-content-between">
-                                                <div class="signal__note">
+                                                <a href="view.html" class="signal__note">
                                                     <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <rect width="7" height="8" rx="1" fill="#A5A8C3"></rect>
                                                     </svg>
                                                     Portfolio: Craig Gordon Investment Portfolio
-                                                </div>
+                                                </a>
                                                 <p class="already-read ml-auto">Прочитано</p>
-                                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                                <a href="view.html" class="open-potfolio">Открыть портфель</a>
                                             </div>
                                         </div>
                                     </div>
@@ -576,21 +576,21 @@
                                             <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed </p>
                                         </div>
                                         <div class="signal__footer">
-                                            <div class="author">
+                                            <a href="overview-client.html" class="author">
                                                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
                                                 </svg>
                                                 Craig Gordon
-                                            </div>
+                                            </a>
                                             <div class="d-flex signal__bottom align-items-center justify-content-between">
-                                                <div class="signal__note">
+                                                <a href="view.html" class="signal__note">
                                                     <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <rect width="7" height="8" rx="1" fill="#A5A8C3" />
                                                     </svg>
                                                     Portfolio: Craig Gordon Investment Portfolio
-                                                </div>
+                                                </a>
                                                 <p class="already-read ml-auto">Прочитано</p>
-                                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                                <a href="view.html" class="open-potfolio">Открыть портфель</a>
                                             </div>
                                         </div>
                                     </div>
@@ -614,21 +614,21 @@
                                             <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed </p>
                                         </div>
                                         <div class="signal__footer">
-                                            <div class="author">
+                                            <a href="overview-client.html" class="author">
                                                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
                                                 </svg>
                                                 Craig Gordon
-                                            </div>
+                                            </a>
                                             <div class="d-flex signal__bottom align-items-center justify-content-between">
-                                                <div class="signal__note">
+                                                <a href="view.html" class="signal__note">
                                                     <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <rect width="7" height="8" rx="1" fill="#A5A8C3" />
                                                     </svg>
                                                     Portfolio: Craig Gordon Investment Portfolio
-                                                </div>
+                                                </a>
                                                 <p class="already-read ml-auto">Прочитано</p>
-                                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                                <a href="view.html" class="open-potfolio">Открыть портфель</a>
                                             </div>
                                         </div>
                                     </div>
@@ -652,21 +652,21 @@
                                             <p class="signal__text">Your saved portfolio for Client X(Mr Smith) has been waiting for more than 14 days. This portfolio will be automatically deletsd after 15 days unless it is refreshed or executed</p>
                                         </div>
                                         <div class="signal__footer">
-                                            <div class="author">
+                                            <a href="overview-client.html" class="author">
                                                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3"></path>
                                                 </svg>
                                                 Craig Gordon
-                                            </div>
+                                            </a>
                                             <div class="d-flex signal__bottom align-items-center justify-content-between">
-                                                <div class="signal__note">
+                                                <a href="view.html" class="signal__note">
                                                     <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <rect width="7" height="8" rx="1" fill="#A5A8C3"></rect>
                                                     </svg>
                                                     Portfolio: Craig Gordon Investment Portfolio
-                                                </div>
+                                                </a>
                                                 <p class="already-read ml-auto">Прочитано</p>
-                                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                                <a href="view.html" class="open-potfolio">Открыть портфель</a>
                                             </div>
                                         </div>
                                     </div>
@@ -725,18 +725,18 @@
                                     </p>
                                 </div>
                                 <div class="notification__footer">
-                                    <div class="author">
+                                    <a href="overview-client.html" class="author">
                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
                                         </svg>
                                         Craig Gordon
-                                    </div>
-                                    <div class="notification__note">
+                                    </a>
+                                    <a href="view.html" class="notification__note">
                                         <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect width="7" height="8" rx="1" fill="#A5A8C3" />
                                         </svg>
                                         Portfolio: Craig Gordon Investment Portfolio
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="notification">
@@ -758,18 +758,18 @@
                                     <span class="badge bg-light">PGE, Pacitic Gas Electric Co.</span>
                                 </div>
                                 <div class="notification__footer">
-                                    <div class="author">
+                                    <a href="overview-client.html" class="author">
                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0.833333 10C0.833333 10 0 10 0 9.16667C0 8.33333 0.833333 5.83333 5 5.83333C9.16667 5.83333 10 8.33333 10 9.16667C10 10 9.16667 10 9.16667 10H0.833333ZM5 5C5.66304 5 6.29893 4.73661 6.76777 4.26777C7.23661 3.79893 7.5 3.16304 7.5 2.5C7.5 1.83696 7.23661 1.20107 6.76777 0.732233C6.29893 0.263392 5.66304 0 5 0C4.33696 0 3.70107 0.263392 3.23223 0.732233C2.76339 1.20107 2.5 1.83696 2.5 2.5C2.5 3.16304 2.76339 3.79893 3.23223 4.26777C3.70107 4.73661 4.33696 5 5 5V5Z" fill="#A5A8C3" />
                                         </svg>
                                         Craig Gordon
-                                    </div>
-                                    <div class="notification__note">
+                                    </a>
+                                    <a href="view.html" class="notification__note">
                                         <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect width="7" height="8" rx="1" fill="#A5A8C3" />
                                         </svg>
                                         Portfolio: Craig Gordon Investment Portfolio
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -860,7 +860,7 @@
                                 <div class="signal-bottom__buttons">
                                     <button class="btn_off already-read">Прочитано</button>
                                     <a href="#" class="open-potfolio">Открыть портфель</a>
-                                </div>        
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -903,6 +903,51 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade usual-template-modal" id="addClientModal" data-mdb-backdrop="static" data-mdb-keyboard="false" tabindex="-1" aria-labelledby="addClientModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-flex align-items-center justify-content-start">
+                    <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.25 15C1.25 15 0 15 0 13.75C0 12.5 1.25 8.75 7.5 8.75C13.75 8.75 15 12.5 15 13.75C15 15 13.75 15 13.75 15H1.25ZM7.5 7.5C8.49456 7.5 9.44839 7.10491 10.1517 6.40165C10.8549 5.69839 11.25 4.74456 11.25 3.75C11.25 2.75544 10.8549 1.80161 10.1517 1.09835C9.44839 0.395088 8.49456 0 7.5 0C6.50544 0 5.55161 0.395088 4.84835 1.09835C4.14509 1.80161 3.75 2.75544 3.75 3.75C3.75 4.74456 4.14509 5.69839 4.84835 6.40165C5.55161 7.10491 6.50544 7.5 7.5 7.5Z" fill="#0068FC" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.875 4.25C17.0408 4.25 17.1997 4.31585 17.3169 4.43306C17.4342 4.55027 17.5 4.70924 17.5 4.875V6.75H19.375C19.5408 6.75 19.6997 6.81585 19.8169 6.93306C19.9342 7.05027 20 7.20924 20 7.375C20 7.54076 19.9342 7.69973 19.8169 7.81694C19.6997 7.93415 19.5408 8 19.375 8H17.5V9.875C17.5 10.0408 17.4342 10.1997 17.3169 10.3169C17.1997 10.4342 17.0408 10.5 16.875 10.5C16.7092 10.5 16.5503 10.4342 16.4331 10.3169C16.3158 10.1997 16.25 10.0408 16.25 9.875V8H14.375C14.2092 8 14.0503 7.93415 13.9331 7.81694C13.8158 7.69973 13.75 7.54076 13.75 7.375C13.75 7.20924 13.8158 7.05027 13.9331 6.93306C14.0503 6.81585 14.2092 6.75 14.375 6.75H16.25V4.875C16.25 4.70924 16.3158 4.55027 16.4331 4.43306C16.5503 4.31585 16.7092 4.25 16.875 4.25Z" fill="#0068FC" />
+                    </svg>
+                    <div class="modal-title">Добавить клиента</div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-wrap-400">
+                        <div class="field-row">
+                            <label for="addClientName">Имя</label>
+                            <input class="field" id="addClientName" type="text">
+                        </div>
+                        <div class="field-row">
+                            <label for="addClienDesc">Описание</label>
+                            <textarea class="field" id="addClienDesc"></textarea>
+                        </div>
+                        <div class="field-row">
+                            <label for="addClientDate">Дата рождения</label>
+                            <input class="field" id="addClientDate" type="text">
+                        </div>
+                        <div class="field-row">
+                            <label for="addClientPension">Выход на пенсию</label>
+                            <input class="field" id="addClientPension" type="text">
+                        </div>
+                        <div class="field-row">
+                            <label for="addClientBysiness">Статус занятости</label>
+                            <input class="field" id="addClientBysiness" type="text">
+                        </div>
+                        <div class="field-row">
+                            <label for="addClientDraws">Поведение при просадках</label>
+                            <input class="field" id="addClientDraws" type="text">
+                        </div>
+                    </div>
+                    <div class="case-btns">
+                        <button class="btn btn-primary modal-main-btn">Добавить клиента</button>
+                        <button class="btn_off btn-type-link" data-mdb-dismiss="modal">Отмена</button>
                     </div>
                 </div>
             </div>

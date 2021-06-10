@@ -224,6 +224,10 @@ ul {
     padding: 0;
 }
 
+.clients__table tbody tr {
+    cursor: pointer;
+}
+
 .clients__table thead th {
     padding-bottom: 14px;
     font-size: 12px;
@@ -575,6 +579,11 @@ ul {
     line-height: 12px;
     color: #2D3C64;
     opacity: 0.3;
+    display: block;
+}
+
+.signal .badge {
+    height: 18px;
 }
 
 
@@ -610,7 +619,9 @@ ul {
     color: #2E364A;
     opacity: 0.7;
     margin-right: 10px;
+    cursor: pointer;
 }
+
 
 .notify .long-search {
     margin-top: 20px;
@@ -1030,13 +1041,12 @@ label {
     margin-bottom: 0;
 }
 
-.field,
-.selectize-input {
+.field {
     border-radius: 3px;
     border: 2px solid #F4F4F6;
     width: 100%;
-    height: 35px !important;
-    padding: 0 15px !important;
+    height: 35px;
+    padding: 0 15px;
     font-size: 12px;
     line-height: 14px;
     color: #2E364A;
@@ -1728,6 +1738,9 @@ input[type="checkbox"] {
 
 .export-btn {
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .target-cost-card .card-body {
@@ -2227,8 +2240,8 @@ input[type="checkbox"] {
 
 
 .client-card .badge.bg-danger {
-    padding: 2px;
-    line-height: 1;
+    /*padding: 2px;*/
+    /*line-height: 1;*/
 }
 
 .client-card .text-success {
@@ -3230,9 +3243,9 @@ input:disabled {
     display: none;
 }
 
-.radio-money input:checked+label {
+/*.radio-money input:checked+label {
     border-color: #3285D2;
-}
+}*/
 
 .radio-money label {
     transition: all 0.2s linear;
@@ -3441,7 +3454,26 @@ path[data-ac-wrapper-id="60"] {
 .uploud-wrap button {
     font-size: 14px;
     color: #0e65e0;
-    font-weight: 500;
+    font-weight: 400;
+}
+
+.btn_off:active, .btn_off:focus  {
+    box-shadow: none !important;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    background: #b9b9b9;
+    color: #555;
+    opacity: 1;
+}
+
+.btn_off.disabled,
+.btn_off:disabled {
+    color: #555;
+    background: transparent;
+    opacity: 1;
+    cursor: default;
 }
 
 @-webkit-keyframes loader-05 {
@@ -3535,6 +3567,8 @@ path[data-ac-wrapper-id="60"] {
     color: white;
 }
 
+
+
 /* --Modals-- */
 
 .save-bag-as-draft .modal-dialog {
@@ -3582,11 +3616,80 @@ path[data-ac-wrapper-id="60"] {
 }
 
 .save-bag-as-draft .btn-primary {
-    width: 173px;
-    height: 40px;
-    padding: 0;
+    padding: 12px 18px;
 }
 
-.save-bag-as-draft .pay-offer-btn {
+/*.save-bag-as-draft .pay-offer-btn {
     width: 98px;
+}
+*/
+.usual-template-modal .modal-header {
+    padding: 40px 40px 28px;
+    border-bottom: 2px solid #F4F4F6;
+}
+
+.usual-template-modal .modal-dialog {
+    width: 560px;
+}
+
+.usual-template-modal .modal-body {
+    padding: 28px 40px;
+}
+
+.modal-wrap-400 {
+    width: 400px;
+}
+
+.usual-template-modal .field-row,
+.usual-template-modal .field {
+    width: 100%;
+}
+
+textarea.field {
+    resize: none;
+    height: 120px;
+    padding: 15px;
+}
+
+textarea.field:focus {
+    outline: none;
+}
+
+.case-btns {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.case-btns button:first-child {
+    margin-right: 20px;
+}
+
+
+
+.modal-main-btn {
+    padding: 12px 18px;
+    height: 40px;
+    /*padding: 0;*/
+}
+
+.btn_off.disabled, .btn_off:disabled, fieldset:disabled .btn_off {
+    box-shadow: none;
+}
+
+.badge-edited {
+    cursor: pointer;
+}
+
+.client-card .card-title {
+    display: block;
+    color: #2E364A;
+}
+
+ .client-card_stroke .client-card__name {
+    color: #2E364A;
+ }
+
+.client-card .card-header .badge {
+    height: 18px;
 }

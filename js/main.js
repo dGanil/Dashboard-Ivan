@@ -783,3 +783,50 @@ $('.btn-login').bind('click', function() {
 $('.login-incorrect svg').bind('click', function() {
     $('.login-incorrect').css('bottom', '-65px')
 })
+
+$('.already-read').bind('click', function() {
+    $(this).parents('.signal').find('.badge.bg-danger').addClass('bg-gray')
+    $(this).parents('.signal').find('.badge.bg-danger').text('Прочитанный')
+    $(this).parents('.signal').find('.badge.bg-danger').removeClass('bg-danger')
+    
+})
+
+$('.pay-offer').bind('click', function() {
+    $(this).text('Портфель сохранен')
+    $(this).addClass('disabled')
+})
+
+$('.save-draft').bind('click', function() {
+    $(this).addClass('disabled')
+})
+
+$('.pay-offer-btn').bind('click', function() {
+    $(this).text('Портфель сохранен')
+    $(this).addClass('disabled')
+})
+
+$('.discard-changes').bind('click', function() {
+    $(this).addClass('disabled')
+})
+
+$('#tabOverview').bind('click', function() {
+    $('.export-txt').fadeOut(100)
+})
+
+$('#tabOverviewNotify').bind('click', function() {
+    $('.export-txt').fadeIn(100)
+})
+
+$('.badge-edited').bind('click', function() {
+    let textBadge = $(this).text()
+
+    if (textBadge == 'Отслеживать') {
+        $(this).removeClass('bg-success')
+        $(this).addClass('bg-danger')
+        $(this).text('Не уведомлять')
+    } else if (textBadge == 'Не уведомлять') {
+        $(this).addClass('bg-success')
+        $(this).removeClass('bg-danger')
+        $(this).text('Отслеживать')
+    }
+})

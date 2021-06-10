@@ -36,7 +36,7 @@
             <div class="container-fluid">
                 <div class="navbar-top d-flex align-items-center justify-content-between w-100">
                     <a href="/" class="navbar-brand waves-effect">Клиенты</a>
-                    <a href="#" class="bell waves-effect" data-mdb-toggle="modal" data-mdb-target="#notificationsModal">
+                    <a href="#" class="bell waves-effect modal-notify-btn" data-mdb-toggle="modal" data-mdb-target="#notificationsModal">
                         <i class="fas fa-bell"></i>
                         <span class="badge rounded-pill badge-notification">3</span>
                     </a>
@@ -484,7 +484,7 @@
                     <p class="signals__date modals-notify__date">October 03, 2019 </p>
                 </div>
                 <div class="modal-body">
-                    <div class="signal">
+                    <div class="signal signal-new">
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="badge bg-danger">
                                 Новый
@@ -517,11 +517,14 @@
                                     </svg>
                                     Portfolio: Craig Gordon Investment Portfolio
                                 </div>
-                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                <div class="signal-bottom__buttons">
+                                    <button class="btn_off already-read">Прочитано</button>
+                                    <a href="#" class="open-potfolio">Открыть портфель</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="signal">
+                    <div class="signal signal-new">
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="badge bg-danger">
                                 Новый
@@ -554,7 +557,10 @@
                                     </svg>
                                     Portfolio: Craig Gordon Investment Portfolio
                                 </div>
-                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                <div class="signal-bottom__buttons">
+                                    <button class="btn_off already-read">Прочитано</button>
+                                    <a href="#" class="open-potfolio">Открыть портфель</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -743,7 +749,7 @@
                     return 'Распределение ' + this.value
                 });
 
-                
+
                 chart.title();
                 rangePicker.render(chart);
                 rangeSelector.render(chart);

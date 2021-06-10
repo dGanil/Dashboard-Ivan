@@ -38,16 +38,15 @@
             <div class="container-fluid">
                 <div class="navbar-top d-flex align-items-center justify-content-between w-100">
                     <a href="#" class="navbar-brand waves-effect">СОЗДАНИЕ ПОРТФЕЛЯ</a>
-                    <a href="#" class="bell waves-effect" data-mdb-toggle="modal" data-mdb-target="#notificationsModal">
+                    <a href="#" class="bell waves-effect modal-notify-btn" data-mdb-toggle="modal" data-mdb-target="#notificationsModal">
                         <i class="fas fa-bell"></i>
                     </a>
                 </div>
                 <div class="navbar-settings d-flex align-items-center w-100">
-                    <button class="cancel">Отмена</button>
-                    <button type="button" class="go-start ml-auto">
+                    <a href="create.html" class="btn_off go-start ml-auto">
                         Начать сначала
-                    </button>
-                    <button class="btn btn-primary btn_small export-btn">Экспорт</button>
+                    </a>
+                    <a href="doc/file.docx" class="btn btn-primary btn_small export-btn" download>Экспорт</a>
                     <button class="btn btn-primary btn_small" data-mdb-toggle="modal" data-mdb-target="#payOfferModal">Выполнить</button>
                 </div>
             </div>
@@ -610,7 +609,7 @@
                     <p class="signals__date modals-notify__date">October 03, 2019 </p>
                 </div>
                 <div class="modal-body">
-                    <div class="signal">
+                    <div class="signal signal-new">
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="badge bg-danger">
                                 Новый
@@ -643,11 +642,14 @@
                                     </svg>
                                     Portfolio: Craig Gordon Investment Portfolio
                                 </div>
-                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                <div class="signal-bottom__buttons">
+                                    <button class="btn_off already-read">Прочитано</button>
+                                    <a href="#" class="open-potfolio">Открыть портфель</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="signal">
+                    <div class="signal signal-new">
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="badge bg-danger">
                                 Новый
@@ -680,7 +682,10 @@
                                     </svg>
                                     Portfolio: Craig Gordon Investment Portfolio
                                 </div>
-                                <a href="#" class="open-potfolio">Открыть портфель</a>
+                                <div class="signal-bottom__buttons">
+                                    <button class="btn_off already-read">Прочитано</button>
+                                    <a href="#" class="open-potfolio">Открыть портфель</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -729,7 +734,6 @@
             </div>
         </div>
     </div>
-
     <!-- End your project here-->
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
