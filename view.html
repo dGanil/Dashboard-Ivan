@@ -894,6 +894,7 @@
             // plot.line(dataTable.mapAs({ value: 3 })).name('Topaz');
             var mapping = dataTable.mapAs({ value: 1 });
             var mapping2 = dataTable.mapAs({ value: 3 });
+            var mapping3 = dataTable.mapAs({ value: 2 });
             var series_1 = plot.area(mapping);
             var series_2 = plot.area(mapping2);
 
@@ -901,6 +902,7 @@
             // currentPlot.area(mapping);
             currentScroller.line(mapping);
             currentScroller.line(mapping2);
+            currentScroller.line(mapping3);
             chart.plot().legend(false)
             chart.plot().yAxis().orientation("right");
             series_2.fill(false);
