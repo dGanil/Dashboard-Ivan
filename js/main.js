@@ -295,7 +295,6 @@ let step3key1, step3key2, step3key3, step3key4, step3key5
 function check3() {
     if (step3key1 == 1 &&
         step3key2 == 1 &&
-        step3key3 == 1 &&
         step3key4 == 1 &&
         step3key5 == 1) {
         $('#next3').addClass('active')
