@@ -847,225 +847,146 @@
 
 
 
-    $('.dropdown-add-graph .dropdown-item').bind('click', function() {
+    $('.dropdown-add-graph_2 .dropdown-item').bind('click', function() {
         // The data used in this sample can be obtained from the CDN
         // https://cdn.anychart.com/samples/stock-general-features/displaying-data-in-millisecond/data.csv
-
-        if ($('#tabSimulation').hasClass('active')) {
-            $('#chart-monte-2').empty()
-
-            anychart.data.loadCsvFile(
-                'https://cdn.anychart.com/samples/stock-general-features/displaying-data-in-millisecond/data.csv',
-                function(data) {
-                    // create data table on loaded data
-                    var dataTable = anychart.data.table();
-                    dataTable.addData(data);
-
-                    var rangeSelector = anychart.ui.rangeSelector();
-                    var rangePicker = anychart.ui.rangePicker();
-
-
-                    var chart = anychart.stock();
-
-                    chart.padding(10, 45, 10, 10);
-                    var plot = chart.plot();
-                    var tooltip = chart.tooltip();
-
-                    var currentPlot = chart.plot();
-
-                    var scroller = chart.scroller();
-                    var currentPlot = chart.scroller();
-                    var thumbsSettings = scroller.thumbs();
-
-                    var currentScroller = chart.scroller();
-                    rangePicker.format('dd.MM.yyyy');
-                    plot.line(dataTable.mapAs({ value: 1 })).name('Sapphire');
-                    plot.line(dataTable.mapAs({ value: 3 })).name('Topaz');
-                    var mapping = dataTable.mapAs({ value: 1 });
-                    var mapping2 = dataTable.mapAs({ value: 3 });
-                    var series_1 = plot.area(mapping);
-                    var series_2 = plot.area(mapping2);
-
-
-                    // currentPlot.area(mapping);
-                    currentScroller.line(mapping);
-                    currentScroller.line(mapping2);
-                    chart.plot().legend(false)
-                    chart.plot().yAxis().orientation("right");
-                    series_2.fill(false);
-                    series_1.stroke(false);
-                    series_2.stroke('red')
-                    series_1.fill(['#E3F2FF', '#CDE5FC'], 1, 0.5, null, 1, 0.9, 0.31);
-                    tooltip.background({ corners: 2 });
-                    tooltip.fontColor('#ffffff');
-                    tooltip.fontWeight(500);
-                    tooltip.fontSize(10);
-                    thumbsSettings.enabled(false)
-                    rangePicker.fromLabelText('от');
-                    rangePicker.toLabelText('до');
-
-                    rangeSelector.ranges([{
-                        'type': "Unit",
-                        'unit': "Day",
-                        'count': 30,
-                        'anchor': "first-date",
-                        'text': "1 Month"
-                    }, {
-                        'type': "Unit",
-                        'unit': "quarter",
-                        'count': 1,
-                        'anchor': "first-date",
-                        'text': "3 Month"
-                    }, {
-                        'type': "Unit",
-                        'unit': "quarter",
-                        'count': 2,
-                        'anchor': "first-date",
-                        'text': "6 Month"
-                    }, {
-                        'type': 'ytd',
-                        'text': 'YTD'
-                    }, {
-                        'type': "Unit",
-                        'unit': "year",
-                        'count': 1,
-                        'anchor': "first-date",
-                        'text': "1 year"
-                    }, {
-                        'type': 'max',
-                        'text': 'All Time'
-                    }]);
-                    tooltip.format(function() {
-                        return 'Распределение ' + this.value
-                    });
-
-
-                    chart.title();
-                    rangePicker.render(chart);
-                    rangeSelector.render(chart);
-                    chart.container("chart-monte-2");
-                    chart.draw();
-
-                });
-        } else if ($('#tabBacktest').hasClass('active')) {
             $('#chart-monte').empty()
 
-            anychart.data.loadCsvFile(
-                'https://cdn.anychart.com/samples/stock-general-features/displaying-data-in-millisecond/data.csv',
-                function(data) {
-                    // create data table on loaded data
-                    var dataTable = anychart.data.table();
-                    dataTable.addData(data);
+            // anychart.data.loadCsvFile(
+            // create data table on loaded data
+            var chart = anychart.stock();
+            var dataTable = anychart.data.table();
+            // dataTable.addData(data);
 
-                    var rangeSelector = anychart.ui.rangeSelector();
-                    var rangePicker = anychart.ui.rangePicker();
+            var rangeSelector = anychart.ui.rangeSelector();
+            var rangePicker = anychart.ui.rangePicker();
 
+            chart.padding(10, 45, 10, 10);
+            var plot = chart.plot();
+            var tooltip = chart.tooltip();
 
-                    var chart = anychart.stock();
+            dataTable.addData([
+                ['2015-02-02', 138.18, 138.18, 138.18],
+                ['2015-02-03', 139.5302932, 145.7971576, 138.9571237],
+                ['2015-02-04', 137.3698241, 145.4004307, 137.2548527],
+                ['2015-02-05', 140.4529935, 142.8217054, 139.6972416],
+                ['2015-02-06', 144.7289218, 148.3758829, 140.622388859132],
+                ['2015-02-09', 147.5645375, 147.185701981051, 139.142153186931],
+                ['2015-02-10', 146.281759, 141.353815676141, 139.993288698447],
+                ['2015-02-11', 146.5518176, 139.846253229974, 140.622388859132],
+                ['2015-02-12', 151.2553388, 143.813522825151, 145.766207820032]
+            ]);
 
-                    chart.padding(10, 45, 10, 10);
-                    var plot = chart.plot();
-                    var tooltip = chart.tooltip();
-
-                    var currentPlot = chart.plot();
-
-                    var scroller = chart.scroller();
-                    var currentPlot = chart.scroller();
-                    var thumbsSettings = scroller.thumbs();
-
-                    var currentScroller = chart.scroller();
-                    rangePicker.format('dd.MM.yyyy');
-                    plot.line(dataTable.mapAs({ value: 1 })).name('Sapphire');
-                    plot.line(dataTable.mapAs({ value: 3 })).name('Topaz');
-                    var mapping = dataTable.mapAs({ value: 1 });
-                    var mapping2 = dataTable.mapAs({ value: 3 });
-                    var series_1 = plot.area(mapping);
-                    var series_2 = plot.area(mapping2);
+            plot.line(dataTable.mapAs({ value: 1 })).name('Sapphire');
+            plot.line(dataTable.mapAs({ value: 2 })).name('Cobalt');
+            plot.line(dataTable.mapAs({ value: 3 })).name('Next');
 
 
-                    // currentPlot.area(mapping);
-                    currentScroller.line(mapping);
-                    currentScroller.line(mapping2);
-                    chart.plot().legend(false)
-                    chart.plot().yAxis().orientation("right");
-                    series_2.fill(false);
-                    series_1.stroke(false);
-                    series_2.stroke('red')
-                    series_1.fill(['#E3F2FF', '#CDE5FC'], 1, 0.5, null, 1, 0.9, 0.31);
-                    tooltip.background({ corners: 2 });
-                    tooltip.fontColor('#ffffff');
-                    tooltip.fontWeight(500);
-                    tooltip.fontSize(10);
-                    thumbsSettings.enabled(false)
-                    rangePicker.fromLabelText('от');
-                    rangePicker.toLabelText('до');
+            var currentPlot = chart.plot();
 
-                    rangeSelector.ranges([{
-                        'type': "Unit",
-                        'unit': "Day",
-                        'count': 30,
-                        'anchor': "first-date",
-                        'text': "1 Month"
-                    }, {
-                        'type': "Unit",
-                        'unit': "quarter",
-                        'count': 1,
-                        'anchor': "first-date",
-                        'text': "3 Month"
-                    }, {
-                        'type': "Unit",
-                        'unit': "quarter",
-                        'count': 2,
-                        'anchor': "first-date",
-                        'text': "6 Month"
-                    }, {
-                        'type': 'ytd',
-                        'text': 'YTD'
-                    }, {
-                        'type': "Unit",
-                        'unit': "year",
-                        'count': 1,
-                        'anchor': "first-date",
-                        'text': "1 year"
-                    }, {
-                        'type': 'max',
-                        'text': 'All Time'
-                    }]);
-                    tooltip.format(function() {
-                        return 'Распределение ' + this.value
-                    });
+            var scroller = chart.scroller();
+            var currentPlot = chart.scroller();
+            var thumbsSettings = scroller.thumbs();
+
+            var currentScroller = chart.scroller();
+            rangePicker.format('dd.MM.yyyy');
+            // plot.line(dataTable.mapAs({ value: 1 })).name('Sapphire');
+            // plot.line(dataTable.mapAs({ value: 3 })).name('Topaz');
+            var mapping = dataTable.mapAs({ value: 1 });
+            var mapping2 = dataTable.mapAs({ value: 3 });
+            var series_1 = plot.area(mapping);
+            var series_2 = plot.area(mapping2);
 
 
-                    chart.title();
-                    rangePicker.render(chart);
-                    rangeSelector.render(chart);
-                    chart.container("chart-monte");
-                    chart.draw();
+            // currentPlot.area(mapping);
+            currentScroller.line(mapping);
+            currentScroller.line(mapping2);
+            chart.plot().legend(false)
+            chart.plot().yAxis().orientation("right");
+            series_2.fill(false);
+            series_1.stroke(false);
+            series_2.stroke('red')
+            series_1.fill(['#E3F2FF', '#CDE5FC'], 1, 0.5, null, 1, 0.9, 0.31);
+            tooltip.background({ corners: 2 });
+            tooltip.fontColor('#ffffff');
+            tooltip.fontWeight(500);
+            tooltip.fontSize(10);
+            thumbsSettings.enabled(false)
+            rangePicker.fromLabelText('от');
+            rangePicker.toLabelText('до');
 
-                });
-        }
-        // $('#chart-monte-2').fadeIn()
+            rangeSelector.ranges([{
+                'type': "Unit",
+                'unit': "Day",
+                'count': 30,
+                'anchor': "first-date",
+                'text': "1 Month"
+            }, {
+                'type': "Unit",
+                'unit': "quarter",
+                'count': 1,
+                'anchor': "first-date",
+                'text': "3 Month"
+            }, {
+                'type': "Unit",
+                'unit': "quarter",
+                'count': 2,
+                'anchor': "first-date",
+                'text': "6 Month"
+            }, {
+                'type': 'ytd',
+                'text': 'YTD'
+            }, {
+                'type': "Unit",
+                'unit': "year",
+                'count': 1,
+                'anchor': "first-date",
+                'text': "1 year"
+            }, {
+                'type': 'max',
+                'text': 'All Time'
+            }]);
+            tooltip.format(function() {
+                return 'Распределение ' + this.value
+            });
 
-    })
+
+            chart.title();
+            rangePicker.render(chart);
+            rangeSelector.render(chart);
+            chart.container("chart-monte");
+            chart.draw();
+
+            // });
+        })
+
+
 
 
     anychart.onDocumentReady(function() {
         var dataTable = anychart.data.table();
         // data comes from the function in https://cdn.anychart.com/csv-data/dji-daily-short.js
         // dataTable.addData(get_dji_daily_short_data());
-
-        var mapping = dataTable.mapAs({ value: 1 });
         dataTable.addData([
-            ['2015-02-02', 138.18],
-            ['2015-02-03', 139.5302932],
-            ['2015-02-04', 137.3698241],
-            ['2015-02-05', 140.4529935],
-            ['2015-02-06', 144.7289218],
-            ['2015-02-09', 147.5645375],
-            ['2015-02-10', 146.281759],
-            ['2015-02-11', 146.5518176],
-            ['2015-02-12', 151.2553388]
+            ['2015-02-02', 138.18, 138.18],
+            ['2015-02-03', 139.5302932, 145.7971576],
+            ['2015-02-04', 137.3698241, 145.4004307],
+            ['2015-02-05', 140.4529935, 142.8217054],
+            ['2015-02-06', 144.7289218, 148.3758829],
+            ['2015-02-09', 147.5645375, 147.185701981051],
+            ['2015-02-10', 146.281759, 141.353815676141],
+            ['2015-02-11', 146.5518176, 139.846253229974],
+            ['2015-02-12', 151.2553388, 143.813522825151]
         ]);
+
+        var mapping = dataTable.mapAs({ value: 1 })
+
+
+
+
+
+        // dataTable.append({x: '2015-02-02', value: 138.18});
+        // dataTable.append({x: '2015-02-03', value: 145.7971576});
 
 
         var rangeSelector = anychart.ui.rangeSelector();
@@ -1076,6 +997,9 @@
         chart.padding(10, 45, 10, 10);
         var plot = chart.plot();
         var tooltip = chart.tooltip();
+
+        plot.line(dataTable.mapAs({ value: 1 })).name('Sapphire');
+        plot.line(dataTable.mapAs({ value: 2 })).name('Cobalt');
 
         // var currentPlot = chart.plot();
         // currentPlot.area(mapping);
@@ -1089,6 +1013,9 @@
         currentScroller.line(mapping);
         chart.plot().legend(false)
         chart.plot().yAxis().orientation("right");
+
+        chart.scroller().line(dataTable.mapAs({ value: 1 }));
+        chart.scroller().line(dataTable.mapAs({ value: 2 }));
         // chart.area(
 
         //     // data for first series
@@ -1272,6 +1199,13 @@
         rangeSelector2.render(chart2);
     });
     // });
+
+    $('#tabSimulation').bind('click', function() {
+        $('.dropdown-add-graph_2').fadeOut()
+    })
+    $('#tabBacktest').bind('click', function() {
+        $('.dropdown-add-graph_2').fadeIn()
+    })
 
 
     $('.scrollbar-inner').scrollbar();

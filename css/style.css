@@ -3822,3 +3822,7 @@ fieldset:disabled .btn_off {
 .dropdown-add-graph_2 {
     margin-right: 20px;
 }
+
+.dropdown-add-graph_2 {
+    display: none;
+}

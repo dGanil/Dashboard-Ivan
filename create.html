@@ -221,11 +221,20 @@
                                         </div>
                                         <div class="field-row">
                                             <label for="busyness">Статус Занятости</label>
-                                            <input class="field" id="busyness" type="text">
+                                            <!-- <input class="field" id="busyness" type="text"> -->
+                                            <select class="bs-select" id="busynessSelect" title="Выберите из списка">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
                                         </div>
                                         <div class="field-row">
                                             <label for="drawdowns">Поведение при просадках</label>
-                                            <input class="field" id="drawdowns" type="text">
+                                            <select class="bs-select" id="dawdownsSelect" title="Выберите из списка">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -542,7 +551,7 @@
                                     <h3 class="quiz__heading">
                                         Есть ли ценные бумаги, которые должны быть исключены из портфеля?
                                     </h3>
-                                    <select class="bs-select" id="securitiesField" data-live-search="true">
+                                    <select class="bs-select" id="securitiesField" data-live-search="true" title="Выберите из списка">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -1015,21 +1024,27 @@
 
         } else if ($('.tag').text().indexOf(`${valString}`) == -1) {
             // if (valString == 'null') {
-                
+
             // } else {
-                $('.output').append(tmpTAG.replace(/%VALUE%/gm, valString))
-                // $('.tag').text('')
+            $('.output').append(tmpTAG.replace(/%VALUE%/gm, valString))
+            $('#securitiesField').val('Выберите из списка')
+            // $('.tag').text('')
             // }
         }
 
+        $('.tag').each(function() {
+            if ($(this).text() == 'null') {
+                $(this).remove()
+            }
+        });
+
     })
 
-    $(document).on('click','.-del',function(){
+    $(document).on('click', '.-del', function() {
         let tagText = $(this).parents('.tag').text()
         $(this).parents('.tag').remove()
         $('#securitiesField option').prop('disabled', false)
     });
-
     </script>
 </body>
 
