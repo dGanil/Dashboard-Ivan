@@ -213,7 +213,7 @@
                                         </div>
                                         <div class="field-row">
                                             <label for="birthday">Дата рождения</label>
-                                            <input class="field" id="birthday" type="text">
+                                            <input class="field" id="birthday" type="date">
                                         </div>
                                         <div class="field-row">
                                             <label for="pension">Выход на пенсию</label>
@@ -542,7 +542,7 @@
                                     <h3 class="quiz__heading">
                                         Есть ли ценные бумаги, которые должны быть исключены из портфеля?
                                     </h3>
-                                    <select class="bs-select" id="securitiesField" title="Выберите из списка" data-live-search="true">
+                                    <select class="bs-select" id="securitiesField" data-live-search="true">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -963,23 +963,7 @@
         $('select').selectpicker();
     });
 
-    // $('#securitiesField').selectize({
-    //     plugins: ['remove_button'],
-    //     delimiter: ',',
-    //     placeholder: '',
-    //     persist: false,
-    //     create: function(input) {
-    //         return {
-    //             value: input,
-    //             text: input
-    //         }
-    //     }
-    // });
-
     Dropzone.autoDiscover = false;
-
-    // $("#dropzone").dropzone({ url: "/file/post" });
-
 
     $('#dropzone').dropzone({
         url: "/",
@@ -1021,19 +1005,31 @@
     let tmpTAG = '<div class="tag">%VALUE%<div class="-del"></div></div>',
         output = document.querySelector('.output');
 
-    output.addEventListener('click', function(e) {
-        if (e.target.classList.contains('-del')) {
-            e.target.closest('.tag').remove();
-        }
-    });
+
 
     $('#securitiesField').bind('change', function() {
-        let val = $('#securitiesField').val()
-        $("#securitiesField").val('');
-        $("#securitiesField").selectpicker("refresh");
-        $('.output').append(tmpTAG.replace(/%VALUE%/gm, val))
+        var valString = $('#securitiesField').val();
+        $('#securitiesField option:selected').prop('disabled', true)
+
+        if ($('.tag').text().indexOf(`${valString}`) !== -1) {
+
+        } else if ($('.tag').text().indexOf(`${valString}`) == -1) {
+            // if (valString == 'null') {
+                
+            // } else {
+                $('.output').append(tmpTAG.replace(/%VALUE%/gm, valString))
+                // $('.tag').text('')
+            // }
+        }
 
     })
+
+    $(document).on('click','.-del',function(){
+        let tagText = $(this).parents('.tag').text()
+        $(this).parents('.tag').remove()
+        $('#securitiesField option').prop('disabled', false)
+    });
+
     </script>
 </body>
 

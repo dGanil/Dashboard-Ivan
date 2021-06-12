@@ -1837,6 +1837,10 @@ input[type="checkbox"] {
     padding: 20px 15px;
 }
 
+
+.distribution {
+    height: 331px;
+}
 /*.canvas-wrapper {
     width: 190px;
     height: 190px;
@@ -3754,7 +3758,7 @@ fieldset:disabled .btn_off {
 }
 
 .sidebar-btn-close img {
-    width: 22px;
+    width: 16px;
 }
 
 .sidebar-btn-close {
@@ -3776,4 +3780,45 @@ fieldset:disabled .btn_off {
 #changeNameField:focus-visible {
     background: #f7f7f7;
     outline: 0;
+}
+
+.open-potfolio {
+    display: none;
+}
+
+.modal-body .signal {
+    border-bottom: 2px solid #F4F4F6;
+
+}
+
+.modal-body .signal:last-child {
+    border: 0;
+}
+
+.modal-body .open-potfolio {
+    display: block;
+}
+
+
+.blok-grower {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.flex-grow-100 {
+    flex-grow: 100;
+}
+
+
+.securities .bootstrap-select .dropdown-item.active.selected {
+    background: #3285d2;
+}
+
+.profit-graph .tab-content, .profit-graph .tab-pane {
+    height: 100%;
+}
+
+.dropdown-add-graph_2 {
+    margin-right: 20px;
 }

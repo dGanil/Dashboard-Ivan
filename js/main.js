@@ -162,6 +162,7 @@ $('#typeProfile').bind('change', function() {
 })
 
 $('#investHorizont').bind('input', function() {
+    
 
     if ($('#newPortfolio').prop('checked')) {
         if ($('#taxPortfolio').prop('checked')) {
@@ -187,6 +188,25 @@ $('#investHorizont').bind('input', function() {
     //     $('#next2').removeClass('active')
     // }
 
+})
+
+$('#investHorizont').bind('change', function() {
+	var txt = $(this).val(),
+    count = txt % 100;
+    if (count >= 5 && count <= 20) {
+        txt = 'лет';
+    } else {
+        count = count % 10;
+        if (count == 1) {
+            txt = 'год';
+        } else if (count >= 2 && count <= 4) {
+            txt = 'года';
+        } else {
+            txt = 'лет';
+        }
+    }
+
+    $(this).val($(this).val() + ' ' + txt)
 })
 
 $('input[name="typePortfolio"]').bind('change', function() {
@@ -460,6 +480,8 @@ function calculte() {
     riskPriority = $("#clientPriority").val()
     riskDrawdowns = $("#clientVolatility").val()
     riskFocus = $("input[name='focus-potfolio']:checked").val()
+    items = []
+    removeSectors = []
 
     var texts = [];
 
@@ -483,7 +505,7 @@ function calculte() {
         if ($(this).val() == '') {
 
         } else {
-            value = $(this).attr('value')
+            value = $(this).val()
             items.push(value);
         }
 
@@ -491,7 +513,7 @@ function calculte() {
 
 
     $('input[name="sectors"]:checked').each(function() {
-        value2 = $(this).attr('value')
+        value2 = $(this).val()
         removeSectors.push(value2);
 
     });
@@ -863,7 +885,17 @@ $(document).mouseup(function(e) { // событие клика по веб-до�
     }
 });
 
+$(document).mouseup(function(e) { // событие клика по веб-документу
+    var div = $("#changeNameField"); // тут указываем ID элемента
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        &&
+        div.has(e.target).length === 0) { // и не по его дочерним элементам
+        $('#changeNameField').attr('contenteditable', 'false');
+        $('#changeNameField').css('background', 'transparent');
+    }
+});
+
 $('.edit').bind('click', function() {
-    $('#changeNameField').attr('contenteditable','true');
-    $('#changeNameField').css('background','#f7f7f7');
+    $('#changeNameField').attr('contenteditable', 'true');
+    $('#changeNameField').css('background', '#f7f7f7');
 })
