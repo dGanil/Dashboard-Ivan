@@ -108,14 +108,14 @@ $('#nameClient').bind('input', function() {
 
 
 $('#next2').bind('click', function() {
-    if ($('#existingPortfolio').prop('checked')) {
-        if ($('.added-file').length > 0) {
-            $('.quiz__card_2').fadeOut(1)
-            $('.quiz__card_3').fadeIn(500)
-            $('#step2').addClass('closed')
-            $('#step3').addClass('active')
-        } else {}
-    } else if ($('#newPortfolio').prop('checked')) {
+    // if ($('#existingPortfolio').prop('checked')) {
+    //     if ($('.added-file').length > 0) {
+    //         $('.quiz__card_2').fadeOut(1)
+    //         $('.quiz__card_3').fadeIn(500)
+    //         $('#step2').addClass('closed')
+    //         $('#step3').addClass('active')
+    //     } else {}
+    // } else if ($('#newPortfolio').prop('checked')) {
         if ($('#investHorizont').val() == "") {
             $('#investHorizont').addClass('req')
             setTimeout(function() {
@@ -149,7 +149,7 @@ $('#next2').bind('click', function() {
                 $('#step3').addClass('active')
             }
         }
-    }
+    // }
 })
 
 
@@ -164,7 +164,7 @@ $('#typeProfile').bind('change', function() {
 $('#investHorizont').bind('input', function() {
     
 
-    if ($('#newPortfolio').prop('checked')) {
+    // if ($('#newPortfolio').prop('checked')) {
         if ($('#taxPortfolio').prop('checked')) {
             if (!$('#investHorizont').val() == "" && !$('#typeProfile').val() == "") {
                 $('#next2').addClass('active')
@@ -178,7 +178,7 @@ $('#investHorizont').bind('input', function() {
                 $('#next2').removeClass('active')
             }
         }
-    }
+    // }
 
 
     // if (!$(this).val() == "" && !$('#typeProfile').val() == "") {
@@ -241,10 +241,8 @@ $('#next3').bind('click', function() {
 
 
     if (!$('#startCapital').val() == "" &&
-        !$('#fullPortfolioCost').val() == "" &&
         !$('.risk__slider-field').val() == "" &&
-        !$('#clientPriority').val() == "" &&
-        !$('#clientVolatility').val() == "") {
+        !$('#clientPriority').val() == "") {
         $('.quiz__card_3').fadeOut(1)
         $('.quiz__card_4').fadeIn(500)
         $('#step3').addClass('closed')
@@ -257,12 +255,12 @@ $('#next3').bind('click', function() {
             }, 2000);
         }
 
-        if ($('#fullPortfolioCost').val() == "") {
-            $('#fullPortfolioCost').addClass('req')
-            setTimeout(function() {
-                $('#fullPortfolioCost').removeClass('req')
-            }, 2000);
-        }
+        // if ($('#fullPortfolioCost').val() == "") {
+        //     $('#fullPortfolioCost').addClass('req')
+        //     setTimeout(function() {
+        //         $('#fullPortfolioCost').removeClass('req')
+        //     }, 2000);
+        // }
 
         if ($('.risk__slider-field').val() == "") {
             $('.risk__slider-field').addClass('req')
@@ -278,12 +276,12 @@ $('#next3').bind('click', function() {
             }, 2000);
         }
 
-        if ($('#clientVolatility').val() == "") {
-            $('#clientVolatility').siblings('button').addClass('req')
-            setTimeout(function() {
-                $('#clientVolatility').siblings('button').removeClass('req')
-            }, 2000);
-        }
+        // if ($('#clientVolatility').val() == "") {
+        //     $('#clientVolatility').siblings('button').addClass('req')
+        //     setTimeout(function() {
+        //         $('#clientVolatility').siblings('button').removeClass('req')
+        //     }, 2000);
+        // }
 
     }
 })
@@ -294,9 +292,7 @@ let step3key1, step3key2, step3key3, step3key4, step3key5
 
 function check3() {
     if (step3key1 == 1 &&
-        step3key2 == 1 &&
-        step3key4 == 1 &&
-        step3key5 == 1) {
+        step3key4 == 1) {
         $('#next3').addClass('active')
     } else {
         $('#next3').removeClass('active')
@@ -315,16 +311,16 @@ $('#startCapital').bind('input', function() {
 
 })
 
-$('#fullPortfolioCost').bind('input', function() {
-    if (!$(this).val() == "") {
-        step3key2 = 1
-    } else {
-        step3key2 = 0
-    }
+// $('#fullPortfolioCost').bind('input', function() {
+//     if (!$(this).val() == "") {
+//         step3key2 = 1
+//     } else {
+//         step3key2 = 0
+//     }
 
-    check3();
+//     check3();
 
-})
+// })
 
 $('.risk__slider-field').bind('input', function() {
     if (!$(this).val() == "") {
@@ -344,10 +340,10 @@ $('#clientPriority').bind('change', function() {
     check3();
 })
 
-$('#clientVolatility').bind('change', function() {
-    step3key5 = 1
-    check3();
-})
+// $('#clientVolatility').bind('change', function() {
+//     step3key5 = 1
+//     check3();
+// })
 
 var tooltip = $('<div class="slider-tooltip" id="tooltip" />').css({
     position: 'absolute',
@@ -538,14 +534,14 @@ function calculte() {
     $("#infoTimeInvest").text(timeInvest)
     $('#infoStartCapital').text('')
     $("#infoStartCapital").text(riskCapital)
-    $('#infoFullCost').text('')
-    $("#infoFullCost").text(riskFull)
+    // $('#infoFullCost').text('')
+    // $("#infoFullCost").text(riskFull)
     $('#infoRiskPercent').text('')
     $("#infoRiskPercent").text(riskPercent)
     $('#infoInvestPriority').text('')
     $("#infoInvestPriority").text(riskPriority)
-    $('#infoDoDrawdowns').text('')
-    $("#infoDoDrawdowns").text(riskDrawdowns)
+    // $('#infoDoDrawdowns').text('')
+    // $("#infoDoDrawdowns").text(riskDrawdowns)
     $('#infoFocus').text('')
     $("#infoFocus").text(riskFocus)
     $('#infoActives').text('')
